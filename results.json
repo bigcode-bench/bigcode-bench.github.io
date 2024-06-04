@@ -1,7 +1,7 @@
 {
     "Magicoder-S-DS-6.7B": {
-        "link": "",
-        "open-data": "None",
+        "link": "https://huggingface.co/Artigenz/Artigenz-Coder-DS-6.7B",
+        "open-data": "Partial",
         "pass@1": {
             "complete": 47.5,
             "instruct": 36.0,
@@ -9,11 +9,11 @@
             "instruct-cal": 36.2
         },
         "prompted": true,
-        "size": "6.7"
+        "size": 6.7
     },
-    "StarCoder2-15B-Instruct": {
-        "link": "",
-        "open-data": "None",
+    "StarCoder2-15B-Instruct-v0.1": {
+        "link": "https://huggingface.co/bigcode/starcoder2-15b-instruct-v0.1",
+        "open-data": "Full",
         "pass@1": {
             "complete": 43.7,
             "instruct": 36.7,
@@ -21,82 +21,82 @@
             "instruct-cal": 37.6
         },
         "prompted": true,
-        "size": "15"
+        "size": 15
     },
     "StarCoder2-3B": {
-        "link": "",
-        "open-data": "None",
+        "link": "https://huggingface.co/bigcode/starcoder2-3b",
+        "open-data": "Full",
         "pass@1": {
             "complete": 21.4,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 21.4,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "3"
+        "size": 3
     },
     "StarCoder2-7B": {
-        "link": "",
-        "open-data": "None",
+        "link": "https://huggingface.co/bigcode/starcoder2-7b",
+        "open-data": "Full",
         "pass@1": {
             "complete": 27.7,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 27.7,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "7"
+        "size": 7
     },
     "StarCoder2-15B": {
-        "link": "",
-        "open-data": "None",
+        "link": "https://huggingface.co/bigcode/starcoder2-15b",
+        "open-data": "Full",
         "pass@1": {
             "complete": 38.4,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 38.4,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "15"
+        "size": 15
     },
     "CodeQwen1.5-7B": {
-        "link": "",
+        "link": "https://huggingface.co/Qwen/CodeQwen1.5-7B",
         "open-data": "None",
         "pass@1": {
             "complete": 45.6,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 45.6,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "7"
+        "size": 7
     },
     "CodeGemma-2B": {
-        "link": "",
+        "link": "https://huggingface.co/google/codegemma-2b",
         "open-data": "None",
         "pass@1": {
             "complete": 23.9,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 23.9,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "2"
+        "size": 2
     },
     "CodeGemma-7B": {
-        "link": "",
+        "link": "https://huggingface.co/google/codegemma-7b",
         "open-data": "None",
         "pass@1": {
             "complete": 38.3,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 38.3,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "7"
+        "size": 7
     },
     "CodeGemma-7B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/google/codegemma-7b-it",
         "open-data": "None",
         "pass@1": {
             "complete": 38.3,
@@ -105,10 +105,10 @@
             "instruct-cal": 32.3
         },
         "prompted": true,
-        "size": "7"
+        "size": 7
     },
     "GPT-3.5-Turbo-0125": {
-        "link": "",
+        "link": "https://openai.com/index/new-embedding-models-and-api-updates",
         "open-data": "None",
         "pass@1": {
             "complete": 50.5,
@@ -120,7 +120,7 @@
         "size": null
     },
     "GPT-4o": {
-        "link": "",
+        "link": "https://openai.com/index/hello-gpt-4o/",
         "open-data": "None",
         "pass@1": {
             "complete": 60.0,
@@ -132,7 +132,7 @@
         "size": null
     },
     "GPT-4-Turbo-2024-04-09": {
-        "link": "",
+        "link": "https://openai.com/blog/new-models-and-developer-products-announced-at-devday",
         "open-data": "None",
         "pass@1": {
             "complete": 58.1,
@@ -144,7 +144,7 @@
         "size": null
     },
     "GPT-4-0613": {
-        "link": "",
+        "link": "https://openai.com/blog/new-models-and-developer-products-announced-at-devday",
         "open-data": "None",
         "pass@1": {
             "complete": 48.2,
@@ -156,31 +156,31 @@
         "size": null
     },
     "CodeLlama-7B-Base": {
-        "link": "",
+        "link": "https://huggingface.co/codellama/CodeLlama-7b-hf",
         "open-data": "None",
         "pass@1": {
             "complete": 28.7,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 28.7,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "7"
+        "size": 7
     },
     "CodeLlama-13B-Base": {
-        "link": "",
+        "link": "https://huggingface.co/codellama/CodeLlama-13b-hf",
         "open-data": "None",
         "pass@1": {
             "complete": 32.0,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 32.0,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "13"
+        "size": 13
     },
     "CodeLlama-7B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf",
         "open-data": "None",
         "pass@1": {
             "complete": 25.4,
@@ -189,10 +189,10 @@
             "instruct-cal": null
         },
         "prompted": true,
-        "size": "7"
+        "size": 7
     },
     "CodeLlama-13B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/codellama/CodeLlama-13b-Instruct-hf",
         "open-data": "None",
         "pass@1": {
             "complete": 29.7,
@@ -201,10 +201,10 @@
             "instruct-cal": null
         },
         "prompted": true,
-        "size": "13"
+        "size": 13
     },
     "Mistral-Large-2402": {
-        "link": "",
+        "link": "https://mistral.ai/news/mistral-large/",
         "open-data": "None",
         "pass@1": {
             "complete": 37.6,
@@ -216,7 +216,7 @@
         "size": null
     },
     "Mistral-Small-2402": {
-        "link": "",
+        "link": "https://mistral.ai/news/mistral-large/",
         "open-data": "None",
         "pass@1": {
             "complete": 38.9,
@@ -228,19 +228,19 @@
         "size": null
     },
     "Mixtral-8x22B-Base": {
-        "link": "",
+        "link": "https://huggingface.co/mistralai/Mixtral-8x22B-v0.1",
         "open-data": "None",
         "pass@1": {
             "complete": 45.3,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 45.3,
             "instruct-cal": null
         },
         "prompted": false,
         "size": null
     },
     "Mixtral-8x22B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/mistralai/Mixtral-8x22B-Instruct-v0.1",
         "open-data": "None",
         "pass@1": {
             "complete": 49.6,
@@ -252,19 +252,19 @@
         "size": null
     },
     "CodeLlama-34B-Base": {
-        "link": "",
+        "link": "https://huggingface.co/codellama/CodeLlama-34b-hf",
         "open-data": "None",
         "pass@1": {
             "complete": 37.1,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 37.1,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "34"
+        "size": 34
     },
     "CodeLlama-34B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/codellama/CodeLlama-34b-Instruct-hf",
         "open-data": "None",
         "pass@1": {
             "complete": 35.1,
@@ -273,22 +273,22 @@
             "instruct-cal": 29.0
         },
         "prompted": true,
-        "size": "34"
+        "size": 34
     },
     "CodeLlama-70B-Base": {
-        "link": "",
+        "link": "https://huggingface.co/codellama/CodeLlama-70b-hf",
         "open-data": "None",
         "pass@1": {
             "complete": 44.0,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 44.0,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "70"
+        "size": 70
     },
     "CodeLlama-70B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/codellama/CodeLlama-70b-Instruct-hf",
         "open-data": "None",
         "pass@1": {
             "complete": 48.9,
@@ -297,10 +297,10 @@
             "instruct-cal": 40.7
         },
         "prompted": true,
-        "size": "70"
+        "size": 70
     },
     "CodeQwen1.5-7B-Chat": {
-        "link": "",
+        "link": "https://huggingface.co/Qwen/CodeQwen1.5-7B-Chat",
         "open-data": "None",
         "pass@1": {
             "complete": 43.7,
@@ -309,10 +309,10 @@
             "instruct-cal": null
         },
         "prompted": true,
-        "size": "7"
+        "size": 7
     },
     "Qwen1.5-110B-Chat": {
-        "link": "",
+        "link": "https://huggingface.co/Qwen/Qwen1.5-110B-Chat",
         "open-data": "None",
         "pass@1": {
             "complete": 43.2,
@@ -321,10 +321,10 @@
             "instruct-cal": 35.0
         },
         "prompted": true,
-        "size": null
+        "size": 110
     },
     "Qwen1.5-72B-Chat": {
-        "link": "",
+        "link": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat",
         "open-data": "None",
         "pass@1": {
             "complete": 39.8,
@@ -333,10 +333,10 @@
             "instruct-cal": 33.2
         },
         "prompted": true,
-        "size": null
+        "size": 72
     },
     "Qwen1.5-32B-Chat": {
-        "link": "",
+        "link": "https://huggingface.co/Qwen/Qwen1.5-32B-Chat",
         "open-data": "None",
         "pass@1": {
             "complete": 41.0,
@@ -345,10 +345,10 @@
             "instruct-cal": 32.3
         },
         "prompted": true,
-        "size": null
+        "size": 32
     },
     "DeepSeek-V2-Chat": {
-        "link": "",
+        "link": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
         "open-data": "None",
         "pass@1": {
             "complete": 49.4,
@@ -357,22 +357,22 @@
             "instruct-cal": 40.4
         },
         "prompted": true,
-        "size": "236"
+        "size": 236
     },
     "DeepSeek-Coder-1.3B-Base": {
-        "link": "",
+        "link": "https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base",
         "open-data": "None",
         "pass@1": {
             "complete": 22.2,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 22.2,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "1.3"
+        "size": 1.3
     },
     "DeepSeek-Coder-1.3B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-instruct",
         "open-data": "None",
         "pass@1": {
             "complete": 29.3,
@@ -381,22 +381,22 @@
             "instruct-cal": 22.8
         },
         "prompted": true,
-        "size": "1.3"
+        "size": 1.3
     },
     "DeepSeek-Coder-33B-Base": {
-        "link": "",
+        "link": "https://huggingface.co/deepseek-ai/deepseek-coder-33b-base",
         "open-data": "None",
         "pass@1": {
             "complete": 46.6,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 46.6,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "33"
+        "size": 33
     },
     "DeepSeek-Coder-33B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/deepseek-ai/deepseek-coder-33b-instruct",
         "open-data": "None",
         "pass@1": {
             "complete": 50.9,
@@ -405,22 +405,22 @@
             "instruct-cal": 42.0
         },
         "prompted": true,
-        "size": "33"
+        "size": 33
     },
     "DeepSeek-Coder-6.7B-Base": {
-        "link": "",
+        "link": "https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-base",
         "open-data": "None",
         "pass@1": {
             "complete": 41.8,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 41.8,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "6.7"
+        "size": 6.7
     },
     "DeepSeek-Coder-6.7B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-instruct",
         "open-data": "None",
         "pass@1": {
             "complete": 43.2,
@@ -429,22 +429,22 @@
             "instruct-cal": 35.5
         },
         "prompted": true,
-        "size": "6.7"
+        "size": 6.7
     },
     "Llama-3-70B-Base": {
-        "link": "",
+        "link": "https://huggingface.co/meta-llama/Meta-Llama-3-70B",
         "open-data": "None",
         "pass@1": {
             "complete": 43.3,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 43.3,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "70"
+        "size": 70
     },
     "Llama-3-70B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct",
         "open-data": "None",
         "pass@1": {
             "complete": 53.9,
@@ -453,22 +453,22 @@
             "instruct-cal": 43.6
         },
         "prompted": true,
-        "size": "70"
+        "size": 70
     },
     "Llama-3-8B-Base": {
-        "link": "",
+        "link": "https://huggingface.co/meta-llama/Meta-Llama-3-8B",
         "open-data": "None",
         "pass@1": {
             "complete": 28.8,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 28.8,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "8"
+        "size": 8
     },
     "Llama-3-8B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct",
         "open-data": "None",
         "pass@1": {
             "complete": 36.8,
@@ -477,10 +477,10 @@
             "instruct-cal": 31.9
         },
         "prompted": true,
-        "size": "8"
+        "size": 8
     },
     "Granite-Code-3B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/ibm-granite/granite-3b-code-instruct",
         "open-data": "None",
         "pass@1": {
             "complete": 31.5,
@@ -489,10 +489,10 @@
             "instruct-cal": null
         },
         "prompted": true,
-        "size": "3"
+        "size": 3
     },
     "Granite-Code-8B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/ibm-granite/granite-8b-code-instruct",
         "open-data": "None",
         "pass@1": {
             "complete": 39.2,
@@ -501,10 +501,10 @@
             "instruct-cal": null
         },
         "prompted": true,
-        "size": "8"
+        "size": 8
     },
     "Granite-Code-20B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/ibm-granite/granite-20b-code-instruct",
         "open-data": "None",
         "pass@1": {
             "complete": 42.1,
@@ -513,10 +513,10 @@
             "instruct-cal": 34.0
         },
         "prompted": true,
-        "size": "20"
+        "size": 20
     },
     "Granite-Code-34B-Instruct": {
-        "link": "",
+        "link": "https://huggingface.co/ibm-granite/granite-34b-code-instruct",
         "open-data": "None",
         "pass@1": {
             "complete": 43.8,
@@ -525,58 +525,58 @@
             "instruct-cal": 36.1
         },
         "prompted": true,
-        "size": "34"
+        "size": 34
     },
     "Granite-Code-3B-Base": {
-        "link": "",
+        "link": "https://huggingface.co/ibm-granite/granite-3b-code-base",
         "open-data": "None",
         "pass@1": {
             "complete": 20.0,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 20.0,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "3"
+        "size": 3
     },
     "Granite-Code-8B-Base": {
-        "link": "",
+        "link": "https://huggingface.co/ibm-granite/granite-8b-code-base",
         "open-data": "None",
         "pass@1": {
             "complete": 35.7,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 35.7,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "8"
+        "size": 8
     },
     "Granite-Code-20B-Base": {
-        "link": "",
+        "link": "https://huggingface.co/ibm-granite/granite-20b-code-base",
         "open-data": "None",
         "pass@1": {
             "complete": 25.6,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 25.6,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "20"
+        "size": 20
     },
     "Granite-Code-34B-Base": {
-        "link": "",
+        "link": "https://huggingface.co/ibm-granite/granite-34b-code-base",
         "open-data": "None",
         "pass@1": {
             "complete": 38.4,
             "instruct": null,
-            "complete-cal": null,
+            "complete-cal": 38.4,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "34"
+        "size": 34
     },
     "Claude-3-Haiku-20240307": {
-        "link": "",
+        "link": "https://www.anthropic.com/news/claude-3-family",
         "open-data": "None",
         "pass@1": {
             "complete": 50.1,
@@ -588,7 +588,7 @@
         "size": null
     },
     "Claude-3-Sonnet-20240229": {
-        "link": "",
+        "link": "https://www.anthropic.com/news/claude-3-family",
         "open-data": "None",
         "pass@1": {
             "complete": 53.4,
@@ -600,7 +600,7 @@
         "size": null
     },
     "Claude-3-Opus-20240229": {
-        "link": "",
+        "link": "https://www.anthropic.com/news/claude-3-family",
         "open-data": "None",
         "pass@1": {
             "complete": 56.8,
@@ -612,7 +612,7 @@
         "size": null
     },
     "Yi-1.5-34B-Chat": {
-        "link": "",
+        "link": "https://huggingface.co/01-ai/Yi-1.5-34B-Chat",
         "open-data": "None",
         "pass@1": {
             "complete": 43.3,
@@ -621,10 +621,10 @@
             "instruct-cal": 33.9
         },
         "prompted": true,
-        "size": "34"
+        "size": 34
     },
     "Yi-1.5-34B": {
-        "link": "",
+        "link": "https://huggingface.co/01-ai/Yi-1.5-34B",
         "open-data": "None",
         "pass@1": {
             "complete": 40.0,
@@ -633,10 +633,10 @@
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "34"
+        "size": 34
     },
     "Yi-1.5-9B-Chat": {
-        "link": "",
+        "link": "https://huggingface.co/01-ai/Yi-1.5-9B-Chat",
         "open-data": "None",
         "pass@1": {
             "complete": 42.2,
@@ -645,10 +645,10 @@
             "instruct-cal": 34.5
         },
         "prompted": true,
-        "size": "9"
+        "size": 9
     },
     "Yi-1.5-9B": {
-        "link": "",
+        "link": "https://huggingface.co/01-ai/Yi-1.5-9B",
         "open-data": "None",
         "pass@1": {
             "complete": 35.5,
@@ -657,10 +657,10 @@
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "9"
+        "size": 9
     },
     "Yi-1.5-6B-Chat": {
-        "link": "",
+        "link": "https://huggingface.co/01-ai/Yi-1.5-6B-Chat",
         "open-data": "None",
         "pass@1": {
             "complete": 33.8,
@@ -669,18 +669,18 @@
             "instruct-cal": 25.6
         },
         "prompted": true,
-        "size": "9"
+        "size": 9
     },
     "Yi-1.5-6B": {
-        "link": "",
+        "link": "https://huggingface.co/01-ai/Yi-1.5-6B",
         "open-data": "None",
         "pass@1": {
             "complete": 27.4,
             "instruct": null,
-            "complete-cal": 27.5,
+            "complete-cal": 27.4,
             "instruct-cal": null
         },
         "prompted": false,
-        "size": "9"
+        "size": 9
     }
 }

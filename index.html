@@ -17,7 +17,7 @@
     <!-- <link rel="icon" href="/favicon.svg" /> -->
     <link
       rel="icon"
-      href="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/1024px/1f9d1-1f4bb.png"
+      href="https://cdn-avatars.huggingface.co/v1/production/uploads/1659521200179-5e48005437cb5b49818287a5.png"
     />
     <link
       rel="stylesheet"
@@ -100,7 +100,7 @@
       <h1 class="text-nowrap mt-5">🏆 BigCodeBench Leaderboard 🏆</h1>
       <h3 class="fw-light text-nowrap">
         <small id="warning"
-          >BigCodeBench evaluates LLMs with <strong><u>challenging</u></strong>           and <strong><u>practical</u></strong> programming tasks.<br
+          >BigCodeBench evaluates LLMs with <strong><u>challenging</u></strong> and <strong><u>practical</u></strong> programming tasks.<br
         /></small>
       </h3>
       <div class="d-flex flex-row justify-content-center gap-3">
@@ -174,18 +174,16 @@
           <ol>
             <li>
               Evaluated using
-              <a href="https://github.com/evalplus/completeplus_release"
-                >Complete+</a
+              <a href="https://github.com/bigcode-project/bigcodebench-annotation/releases/tag/v0.1.0"
+                >BigCodeBench</a
               >
-              version 0.1.10;
-              <a href="https://github.com/evalplus/instructplus_release">Instruct+</a>
-              version 0.2.0.
+              version 0.1.0;
             </li>
             <li>
               Models are ranked according to pass@1 using greedy decoding. Setup
               details can be found
               <a
-                href="https://github.com/evalplus/evalplus/blob/master/codegen/model.py"
+                href="https://github.com/bigcode-project/bigcodebench/blob/main/bigcodebench/generate.py"
                 >here</a
               >.
             </li>
@@ -224,6 +222,12 @@
         benchmarks and leaderboards, such as:
         <div class="inline-block mt-3">
           <ol>
+            <li>
+              <a
+                href="https://evalplus.github.io/leaderboard.html"
+                >EvalPlus Leaderboard</a
+              >
+            </li>
             <li>
               <a
                 href="https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard"
@@ -282,8 +286,18 @@
           </ol>
         </div>
       </div>
+    
+      <div id="notes">
+        <h3>🙏 Acknowledgements</h3>
+        <div class="inline-block mt-3">
+          <li>
+            We thank the EvalPlus team for providing the leaderboard template.
+          </li>
+          <li>
+            We are grateful for the significant contributions from the BigCodeBench community.
+          </li>
+      </div>
     </div>
-
     <script>
       const calibTable = document.getElementById("calib");
       const originTable = document.getElementById("origin");
