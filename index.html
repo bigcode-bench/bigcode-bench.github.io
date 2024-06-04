@@ -152,18 +152,18 @@
       <div id="chart" style="width: 100%; height: 600px"></div>
       <div class="container-fluid d-flex flex-row flex-nowrap">
         <div class="container-fluid d-flex flex-column align-items-center">
-          <label for="plused" class="text-success mb-3"
+          <label for="origin" class="text-success mb-3"
             >⚡Original⚡</label
           >
           <table
-            id="plused"
+            id="origin"
             class="table table-responsive table-striped table-bordered flex-shrink-1 border border-success border-3"
           ></table>
         </div>
         <div class="container-fluid d-flex flex-column align-items-center">
-          <label for="origin" class="text-danger mb-3">Calibrated</label>
+          <label for="calib" class="text-danger mb-3">Calibrated</label>
           <table
-            id="origin"
+            id="calib"
             class="table table-responsive table-striped table-bordered flex-shrink-1 border border-danger border-3"
           ></table>
         </div>
@@ -285,8 +285,8 @@
     </div>
 
     <script>
+      const calibTable = document.getElementById("calib");
       const originTable = document.getElementById("origin");
-      const plusedTable = document.getElementById("plused");
       const benchmarkRadio = document.getElementById("Benchmark");
       const chartDom = document.getElementById("chart");
       var chart = echarts.init(chartDom);
@@ -317,16 +317,6 @@
     */
       if (xhr.status === 200) {
         data = JSON.parse(xhr.responseText);
-        Object.keys(data).forEach((key) => {
-          data[key]["pass@1"]["average"] = calcAverage(
-            data[key]["pass@1"]["complete"],
-            data[key]["pass@1"]["instruct"],
-          );
-          data[key]["pass@1"]["average+"] = calcAverage(
-            data[key]["pass@1"]["complete-cal"],
-            data[key]["pass@1"]["instruct-cal"],
-          );
-        });
         data = Object.keys(data).map((key) => {
           return {
             Model: key,
@@ -340,8 +330,8 @@
       const globalData = data;
 
       const clearTable = () => {
+        calibTable.innerHTML = "";
         originTable.innerHTML = "";
-        plusedTable.innerHTML = "";
       };
 
       const clearChart = () => {
@@ -533,9 +523,9 @@
           }
           dataRow.appendChild(modelCell);
           var passCell = document.createElement("td");
-          if (table == originTable) {
+          if (table == calibTable) {
             passCell.classList.add("text-danger");
-          } else if (table == plusedTable) {
+          } else if (table == originTable) {
             passCell.textContent = "⚡";
             passCell.classList.add("text-success");
           }
@@ -641,7 +631,7 @@
       completeRadio.addEventListener("click", function () {
         clearTable();
         displayTable(originTable, "complete");
-        displayTable(plusedTable, "complete-cal");
+        displayTable(calibTable, "complete-cal");
         clearChart();
         displayChart("complete");
       });
@@ -649,7 +639,7 @@
       instructRadio.addEventListener("click", function () {
         clearTable();
         displayTable(originTable, "instruct");
-        displayTable(plusedTable, "instruct-cal");
+        displayTable(calibTable, "instruct-cal");
         clearChart();
         displayChart("instruct-cal");
       });
