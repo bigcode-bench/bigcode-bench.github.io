@@ -682,5 +682,41 @@
         },
         "prompted": false,
         "size": 9
+    },
+    "Qwen2-57B-A14B": {
+        "link": "https://huggingface.co/Qwen/Qwen2-57B-A14B",
+        "open-data": "None",
+        "pass@1": {
+            "complete": 46.5,
+            "instruct": 35.7,
+            "complete-cal": 46.8,
+            "instruct-cal": 36.1
+        },
+        "prompted": true,
+        "size": 57
+    },
+    "Qwen2-7B-Instruct": {
+        "link": "https://huggingface.co/Qwen/Qwen2-7B-Instruct",
+        "open-data": "None",
+        "pass@1": {
+            "complete": 40.6,
+            "instruct": 28.0,
+            "complete-cal": 42.1,
+            "instruct-cal": 29.1
+        },
+        "prompted": true,
+        "size": 7
+    },
+    "Qwen2-72B-Chat": {
+        "link": "https://huggingface.co/Qwen/Qwen2-72B-Chat",
+        "open-data": "None",
+        "pass@1": {
+            "complete": 53.9,
+            "instruct": null,
+            "complete-cal": 54.0,
+            "instruct-cal": 38.5
+        },
+        "prompted": true,
+        "size": 72
     }
 }
