@@ -712,7 +712,7 @@
         "open-data": "None",
         "pass@1": {
             "complete": 53.9,
-            "instruct": null,
+            "instruct": 38.2,
             "complete-cal": 54.0,
             "instruct-cal": 38.5
         },
