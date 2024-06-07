@@ -527,7 +527,7 @@
           var passCell = document.createElement("td");
           passCell.classList.add("text-nowrap");
           if (lazy) {
-            passCell.textContent = "💤" + row["pass@1"][score];
+            passCell.textContent = row["pass@1"][score] + "💤";
           } else {
             passCell.textContent = row["pass@1"][score];
           }
