@@ -170,12 +170,19 @@
               version 0.1.0;
             </li>
             <li>
-              Models are ranked according to pass@1 using greedy decoding. Setup
+              Models are ranked according to Pass@1 using greedy decoding. Setup
               details can be found
               <a
                 href="https://github.com/bigcode-project/bigcodebench/blob/main/bigcodebench/generate.py"
                 >here</a
               >.
+            </li>
+            <li>
+              <i>Complete</i> vs <i>Instruct</i>:
+                  <br />
+                  <u><i>Complete:</i></u> Code Completion based on the (verbose) structured docstrings.
+                  <br />
+                  <u><i>Instruct:</i></u> Code Generation based on the (less verbose) NL-oriented instructions.
             </li>
             <li>
               💤 indicates the models having at least a difference of 1% between the calibrated Pass@1 and the original one. What does this imply? Instruction-tuned models <u><a href="https://community.openai.com/t/why-i-think-gpt-is-now-lazy">can be lazy</a></u>, omitting essential code parts and thus failing on some tasks.
