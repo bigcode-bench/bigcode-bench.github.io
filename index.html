@@ -178,8 +178,8 @@
               >.
             </li>
             <li>
-              💤 indicates the models having at least a difference of 1% from the original Pass@1. What does this imply? Instruction-tuned models <u><a href="https://community.openai.com/t/why-i-think-gpt-is-now-lazy">can be lazy</a></u>, omitting essential code parts and thus failing on some tasks.
-              Therefore, we report the calibrated Pass@1 score as default.
+              💤 indicates the models having at least a difference of 1% between the calibrated Pass@1 and the original one. What does this imply? Instruction-tuned models <u><a href="https://community.openai.com/t/why-i-think-gpt-is-now-lazy">can be lazy</a></u>, omitting essential code parts and thus failing on some tasks.
+              Therefore, we add the missing parts during evaluation, and report the calibrated Pass@1 score as default, 
             <li>
               ✨ marks models evaluated using a chat setting, while others
               perform direct code completion.
