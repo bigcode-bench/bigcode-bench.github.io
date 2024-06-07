@@ -4,7 +4,6 @@
         "open-data": "Partial",
         "pass@1": {
             "instruct": 36.0,
-            "instruct-cal": 36.2,
             "complete": 47.6
         },
         "prompted": true,
@@ -16,7 +15,6 @@
         "open-data": "Full",
         "pass@1": {
             "instruct": 36.7,
-            "instruct-cal": 37.6,
             "complete": 45.1
         },
         "prompted": true,
@@ -28,7 +26,6 @@
         "open-data": "Full",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 21.4
         },
         "prompted": false,
@@ -40,7 +37,6 @@
         "open-data": "Full",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 27.7
         },
         "prompted": false,
@@ -52,7 +48,6 @@
         "open-data": "Full",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 38.4
         },
         "prompted": false,
@@ -64,7 +59,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 45.6
         },
         "prompted": false,
@@ -76,7 +70,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 23.9
         },
         "prompted": false,
@@ -88,7 +81,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 38.3
         },
         "prompted": false,
@@ -100,7 +92,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 32.4,
-            "instruct-cal": 32.3,
             "complete": 39.3
         },
         "prompted": true,
@@ -112,7 +103,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 38.2,
-            "instruct-cal": 39.1,
             "complete": 50.6
         },
         "prompted": true,
@@ -124,7 +114,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 49.9,
-            "instruct-cal": 51.1,
             "complete": 61.1
         },
         "prompted": true,
@@ -136,7 +125,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 48.0,
-            "instruct-cal": 48.2,
             "complete": 58.2
         },
         "prompted": true,
@@ -148,7 +136,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 45.9,
-            "instruct-cal": 46.0,
             "complete": 57.2
         },
         "prompted": true,
@@ -160,7 +147,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 28.7
         },
         "prompted": false,
@@ -172,7 +158,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 32.0
         },
         "prompted": false,
@@ -183,8 +168,7 @@
         "link": "https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf",
         "open-data": "None",
         "pass@1": {
-            "instruct": null,
-            "instruct-cal": null,
+            "instruct": 21.8,
             "complete": 25.7
         },
         "prompted": true,
@@ -195,8 +179,7 @@
         "link": "https://huggingface.co/codellama/CodeLlama-13b-Instruct-hf",
         "open-data": "None",
         "pass@1": {
-            "instruct": null,
-            "instruct-cal": null,
+            "instruct": 28.2,
             "complete": 31.7
         },
         "prompted": true,
@@ -208,7 +191,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 29.6,
-            "instruct-cal": 30.0,
             "complete": 38.3
         },
         "prompted": true,
@@ -220,7 +202,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 31.8,
-            "instruct-cal": 32.1,
             "complete": 41.3
         },
         "prompted": true,
@@ -232,7 +213,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 45.3
         },
         "prompted": false,
@@ -244,7 +224,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 40.4,
-            "instruct-cal": 40.6,
             "complete": 50.2
         },
         "prompted": true,
@@ -256,7 +235,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 37.1
         },
         "prompted": false,
@@ -268,7 +246,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 28.9,
-            "instruct-cal": 29.0,
             "complete": 35.6
         },
         "prompted": true,
@@ -280,7 +257,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 44.0
         },
         "prompted": false,
@@ -292,7 +268,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 40.5,
-            "instruct-cal": 40.7,
             "complete": 49.6
         },
         "prompted": true,
@@ -303,8 +278,7 @@
         "link": "https://huggingface.co/Qwen/CodeQwen1.5-7B-Chat",
         "open-data": "None",
         "pass@1": {
-            "instruct": null,
-            "instruct-cal": null,
+            "instruct": 39.3,
             "complete": 43.6
         },
         "prompted": true,
@@ -316,7 +290,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 33.6,
-            "instruct-cal": 35.0,
             "complete": 44.4
         },
         "prompted": true,
@@ -328,7 +301,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 32.6,
-            "instruct-cal": 33.2,
             "complete": 40.3
         },
         "prompted": true,
@@ -340,7 +312,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 31.8,
-            "instruct-cal": 32.3,
             "complete": 42.0
         },
         "prompted": true,
@@ -352,7 +323,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 40.4,
-            "instruct-cal": 40.4,
             "complete": 49.0
         },
         "prompted": true,
@@ -364,7 +334,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 22.2
         },
         "prompted": false,
@@ -376,7 +345,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 22.7,
-            "instruct-cal": 22.8,
             "complete": 29.6
         },
         "prompted": true,
@@ -388,7 +356,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 46.6
         },
         "prompted": false,
@@ -400,7 +367,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 41.8,
-            "instruct-cal": 42.0,
             "complete": 51.1
         },
         "prompted": true,
@@ -412,7 +378,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 41.8
         },
         "prompted": false,
@@ -424,7 +389,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 35.3,
-            "instruct-cal": 35.5,
             "complete": 43.8
         },
         "prompted": true,
@@ -436,7 +400,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 43.3
         },
         "prompted": false,
@@ -448,7 +411,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 43.2,
-            "instruct-cal": 43.6,
             "complete": 54.5
         },
         "prompted": true,
@@ -460,7 +422,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 28.8
         },
         "prompted": false,
@@ -472,7 +433,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 31.7,
-            "instruct-cal": 31.9,
             "complete": 36.9
         },
         "prompted": true,
@@ -484,7 +444,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 31.4
         },
         "prompted": true,
@@ -496,7 +455,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 39.7
         },
         "prompted": true,
@@ -508,7 +466,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 33.7,
-            "instruct-cal": 34.0,
             "complete": 42.0
         },
         "prompted": true,
@@ -520,7 +477,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 35.8,
-            "instruct-cal": 36.1,
             "complete": 44.4
         },
         "prompted": true,
@@ -532,7 +488,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 20.0
         },
         "prompted": false,
@@ -544,7 +499,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 35.7
         },
         "prompted": false,
@@ -556,7 +510,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 25.6
         },
         "prompted": false,
@@ -568,7 +521,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 38.4
         },
         "prompted": false,
@@ -580,7 +532,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 39.2,
-            "instruct-cal": 39.4,
             "complete": 50.1
         },
         "prompted": true,
@@ -592,7 +543,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 42.5,
-            "instruct-cal": 42.7,
             "complete": 53.8
         },
         "prompted": true,
@@ -604,7 +554,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 45.2,
-            "instruct-cal": 45.5,
             "complete": 57.4
         },
         "prompted": true,
@@ -616,7 +565,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 33.5,
-            "instruct-cal": 33.9,
             "complete": 43.8
         },
         "prompted": true,
@@ -628,7 +576,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 40.3
         },
         "prompted": false,
@@ -640,7 +587,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 34.3,
-            "instruct-cal": 34.5,
             "complete": 42.4
         },
         "prompted": true,
@@ -652,7 +598,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 35.5
         },
         "prompted": false,
@@ -664,7 +609,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 25.5,
-            "instruct-cal": 25.6,
             "complete": 33.9
         },
         "prompted": true,
@@ -676,7 +620,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "instruct-cal": null,
             "complete": 27.4
         },
         "prompted": false,
@@ -688,7 +631,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 35.7,
-            "instruct-cal": 36.1,
             "complete": 46.8
         },
         "prompted": true,
@@ -700,7 +642,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 28.0,
-            "instruct-cal": 29.1,
             "complete": 42.1
         },
         "prompted": true,
@@ -712,7 +653,6 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 38.2,
-            "instruct-cal": 38.5,
             "complete": 54.0
         },
         "prompted": true,
