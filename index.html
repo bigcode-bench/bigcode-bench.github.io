@@ -152,9 +152,6 @@
       <div id="chart" style="width: 100%; height: 600px"></div>
       <div class="container-fluid d-flex flex-row flex-nowrap">
         <div class="container-fluid d-flex flex-column align-items-center">
-          <label for="origin" class="text-nowrap mb-3"
-            >⚡Original⚡</label
-          >
           <table
             id="origin"
             class="table table-responsive table-striped table-bordered flex-shrink-1 border border-3"
@@ -181,6 +178,9 @@
               >.
             </li>
             <li>
+              💤 indicates the models having at least a difference of 1% from the original Pass@1. What does this imply? Instruction-tuned models <u><a href="https://community.openai.com/t/why-i-think-gpt-is-now-lazy">can be lazy</a></u>, omitting essential code parts and thus failing on some tasks.
+              Therefore, we report the calibrated Pass@1 score as default.
+            <li>
               ✨ marks models evaluated using a chat setting, while others
               perform direct code completion.
             </li>
@@ -196,7 +196,7 @@
               concretely reason about contamination.
             </li>
             <li>
-              "Size" here is the amount of activated model weight during
+              "Size" here is the amount of model weight during
               inference.
             </li>
           </ol>
