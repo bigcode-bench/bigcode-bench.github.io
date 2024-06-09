@@ -1,6 +1,6 @@
 {
     "Magicoder-S-DS-6.7B": {
-        "link": "https://huggingface.co/Artigenz/Artigenz-Coder-DS-6.7B",
+        "link": "https://huggingface.co/ise-uiuc/Magicoder-S-DS-6.7B",
         "open-data": "Partial",
         "pass@1": {
             "instruct": 36.0,
@@ -216,7 +216,7 @@
             "complete": 45.3
         },
         "prompted": false,
-        "size": null,
+        "size": 44,
         "lazy": false
     },
     "Mixtral-8x22B-Instruct": {
@@ -227,7 +227,7 @@
             "complete": 50.2
         },
         "prompted": true,
-        "size": null,
+        "size": 44,
         "lazy": false
     },
     "CodeLlama-34B-Base": {
@@ -634,7 +634,7 @@
             "complete": 46.8
         },
         "prompted": true,
-        "size": 57,
+        "size": 14,
         "lazy": false
     },
     "Qwen2-7B-Instruct": {
