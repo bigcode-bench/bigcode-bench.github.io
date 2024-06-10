@@ -8,7 +8,8 @@
         },
         "prompted": true,
         "size": 6.7,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1103
     },
     "StarCoder2-15B-Instruct-v0.1": {
         "link": "https://huggingface.co/bigcode/starcoder2-15b-instruct-v0.1",
@@ -19,7 +20,8 @@
         },
         "prompted": true,
         "size": 15,
-        "lazy": true
+        "lazy": true,
+        "elo_mle": 1063
     },
     "StarCoder2-3B": {
         "link": "https://huggingface.co/bigcode/starcoder2-3b",
@@ -30,7 +32,8 @@
         },
         "prompted": false,
         "size": 3,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 740
     },
     "StarCoder2-7B": {
         "link": "https://huggingface.co/bigcode/starcoder2-7b",
@@ -41,7 +44,8 @@
         },
         "prompted": false,
         "size": 7,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 822
     },
     "StarCoder2-15B": {
         "link": "https://huggingface.co/bigcode/starcoder2-15b",
@@ -52,7 +56,8 @@
         },
         "prompted": false,
         "size": 15,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 974
     },
     "CodeQwen1.5-7B": {
         "link": "https://huggingface.co/Qwen/CodeQwen1.5-7B",
@@ -63,7 +68,8 @@
         },
         "prompted": false,
         "size": 7,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1071
     },
     "CodeGemma-2B": {
         "link": "https://huggingface.co/google/codegemma-2b",
@@ -74,7 +80,8 @@
         },
         "prompted": false,
         "size": 2,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 766
     },
     "CodeGemma-7B": {
         "link": "https://huggingface.co/google/codegemma-7b",
@@ -85,7 +92,8 @@
         },
         "prompted": false,
         "size": 7,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 974
     },
     "CodeGemma-7B-Instruct": {
         "link": "https://huggingface.co/google/codegemma-7b-it",
@@ -96,7 +104,8 @@
         },
         "prompted": true,
         "size": 7,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 985
     },
     "GPT-3.5-Turbo-0125": {
         "link": "https://openai.com/index/new-embedding-models-and-api-updates",
@@ -107,7 +116,8 @@
         },
         "prompted": true,
         "size": null,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1133
     },
     "GPT-4o-2024-05-13": {
         "link": "https://openai.com/index/hello-gpt-4o/",
@@ -118,7 +128,8 @@
         },
         "prompted": true,
         "size": null,
-        "lazy": true
+        "lazy": true,
+        "elo_mle": 1283
     },
     "GPT-4-Turbo-2024-04-09": {
         "link": "https://openai.com/blog/new-models-and-developer-products-announced-at-devday",
@@ -129,7 +140,8 @@
         },
         "prompted": true,
         "size": null,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1230
     },
     "GPT-4-0613": {
         "link": "https://openai.com/blog/new-models-and-developer-products-announced-at-devday",
@@ -140,7 +152,8 @@
         },
         "prompted": true,
         "size": null,
-        "lazy": true
+        "lazy": true,
+        "elo_mle": 1229
     },
     "CodeLlama-7B-Base": {
         "link": "https://huggingface.co/codellama/CodeLlama-7b-hf",
@@ -151,7 +164,8 @@
         },
         "prompted": false,
         "size": 7,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 838
     },
     "CodeLlama-13B-Base": {
         "link": "https://huggingface.co/codellama/CodeLlama-13b-hf",
@@ -162,7 +176,8 @@
         },
         "prompted": false,
         "size": 13,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 886
     },
     "CodeLlama-7B-Instruct": {
         "link": "https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf",
@@ -173,7 +188,8 @@
         },
         "prompted": true,
         "size": 7,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 793
     },
     "CodeLlama-13B-Instruct": {
         "link": "https://huggingface.co/codellama/CodeLlama-13b-Instruct-hf",
@@ -184,7 +200,8 @@
         },
         "prompted": true,
         "size": 13,
-        "lazy": true
+        "lazy": true,
+        "elo_mle": 880
     },
     "Mistral-Large-2402": {
         "link": "https://mistral.ai/news/mistral-large/",
@@ -195,7 +212,8 @@
         },
         "prompted": true,
         "size": null,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 968
     },
     "Mistral-Small-2402": {
         "link": "https://mistral.ai/news/mistral-large/",
@@ -206,7 +224,8 @@
         },
         "prompted": true,
         "size": null,
-        "lazy": true
+        "lazy": true,
+        "elo_mle": 1008
     },
     "Mixtral-8x22B-Base": {
         "link": "https://huggingface.co/mistralai/Mixtral-8x22B-v0.1",
@@ -217,7 +236,8 @@
         },
         "prompted": false,
         "size": 44,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1065
     },
     "Mixtral-8x22B-Instruct": {
         "link": "https://huggingface.co/mistralai/Mixtral-8x22B-Instruct-v0.1",
@@ -228,7 +248,8 @@
         },
         "prompted": true,
         "size": 44,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1131
     },
     "CodeLlama-34B-Base": {
         "link": "https://huggingface.co/codellama/CodeLlama-34b-hf",
@@ -239,7 +260,8 @@
         },
         "prompted": false,
         "size": 34,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 956
     },
     "CodeLlama-34B-Instruct": {
         "link": "https://huggingface.co/codellama/CodeLlama-34b-Instruct-hf",
@@ -250,7 +272,8 @@
         },
         "prompted": true,
         "size": 34,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 933
     },
     "CodeLlama-70B-Base": {
         "link": "https://huggingface.co/codellama/CodeLlama-70b-hf",
@@ -261,7 +284,8 @@
         },
         "prompted": false,
         "size": 70,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1050
     },
     "CodeLlama-70B-Instruct": {
         "link": "https://huggingface.co/codellama/CodeLlama-70b-Instruct-hf",
@@ -272,7 +296,8 @@
         },
         "prompted": true,
         "size": 70,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1129
     },
     "CodeQwen1.5-7B-Chat": {
         "link": "https://huggingface.co/Qwen/CodeQwen1.5-7B-Chat",
@@ -283,7 +308,8 @@
         },
         "prompted": true,
         "size": 7,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1046
     },
     "Qwen1.5-110B-Chat": {
         "link": "https://huggingface.co/Qwen/Qwen1.5-110B-Chat",
@@ -294,7 +320,8 @@
         },
         "prompted": true,
         "size": 110,
-        "lazy": true
+        "lazy": true,
+        "elo_mle": 1045
     },
     "Qwen1.5-72B-Chat": {
         "link": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat",
@@ -305,7 +332,8 @@
         },
         "prompted": true,
         "size": 72,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 993
     },
     "Qwen1.5-32B-Chat": {
         "link": "https://huggingface.co/Qwen/Qwen1.5-32B-Chat",
@@ -316,7 +344,8 @@
         },
         "prompted": true,
         "size": 32,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1018
     },
     "DeepSeek-V2-Chat": {
         "link": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
@@ -327,7 +356,8 @@
         },
         "prompted": true,
         "size": 21,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1112
     },
     "DeepSeek-Coder-1.3B-Base": {
         "link": "https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base",
@@ -338,7 +368,8 @@
         },
         "prompted": false,
         "size": 1.3,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 741
     },
     "DeepSeek-Coder-1.3B-Instruct": {
         "link": "https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-instruct",
@@ -349,7 +380,8 @@
         },
         "prompted": true,
         "size": 1.3,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 852
     },
     "DeepSeek-Coder-33B-Base": {
         "link": "https://huggingface.co/deepseek-ai/deepseek-coder-33b-base",
@@ -360,7 +392,8 @@
         },
         "prompted": false,
         "size": 33,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1078
     },
     "DeepSeek-Coder-33B-Instruct": {
         "link": "https://huggingface.co/deepseek-ai/deepseek-coder-33b-instruct",
@@ -371,7 +404,8 @@
         },
         "prompted": true,
         "size": 33,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1146
     },
     "DeepSeek-Coder-6.7B-Base": {
         "link": "https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-base",
@@ -382,7 +416,8 @@
         },
         "prompted": false,
         "size": 6.7,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1019
     },
     "DeepSeek-Coder-6.7B-Instruct": {
         "link": "https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-instruct",
@@ -393,7 +428,8 @@
         },
         "prompted": true,
         "size": 6.7,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1042
     },
     "Llama-3-70B-Base": {
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3-70B",
@@ -404,7 +440,8 @@
         },
         "prompted": false,
         "size": 70,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1041
     },
     "Llama-3-70B-Instruct": {
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct",
@@ -415,7 +452,8 @@
         },
         "prompted": true,
         "size": 70,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1186
     },
     "Llama-3-8B-Base": {
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3-8B",
@@ -426,7 +464,8 @@
         },
         "prompted": false,
         "size": 8,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 833
     },
     "Llama-3-8B-Instruct": {
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct",
@@ -437,7 +476,8 @@
         },
         "prompted": true,
         "size": 8,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 949
     },
     "Granite-Code-3B-Instruct": {
         "link": "https://huggingface.co/ibm-granite/granite-3b-code-instruct",
@@ -448,7 +488,8 @@
         },
         "prompted": true,
         "size": 3,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 875
     },
     "Granite-Code-8B-Instruct": {
         "link": "https://huggingface.co/ibm-granite/granite-8b-code-instruct",
@@ -459,7 +500,8 @@
         },
         "prompted": true,
         "size": 8,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 990
     },
     "Granite-Code-20B-Instruct": {
         "link": "https://huggingface.co/ibm-granite/granite-20b-code-instruct",
@@ -470,7 +512,8 @@
         },
         "prompted": true,
         "size": 20,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1025
     },
     "Granite-Code-34B-Instruct": {
         "link": "https://huggingface.co/ibm-granite/granite-34b-code-instruct",
@@ -481,7 +524,8 @@
         },
         "prompted": true,
         "size": 34,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1058
     },
     "Granite-Code-3B-Base": {
         "link": "https://huggingface.co/ibm-granite/granite-3b-code-base",
@@ -492,7 +536,8 @@
         },
         "prompted": false,
         "size": 3,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 697
     },
     "Granite-Code-8B-Base": {
         "link": "https://huggingface.co/ibm-granite/granite-8b-code-base",
@@ -503,7 +548,8 @@
         },
         "prompted": false,
         "size": 8,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 937
     },
     "Granite-Code-20B-Base": {
         "link": "https://huggingface.co/ibm-granite/granite-20b-code-base",
@@ -514,7 +560,8 @@
         },
         "prompted": false,
         "size": 20,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 804
     },
     "Granite-Code-34B-Base": {
         "link": "https://huggingface.co/ibm-granite/granite-34b-code-base",
@@ -525,7 +572,8 @@
         },
         "prompted": false,
         "size": 34,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 974
     },
     "Claude-3-Haiku-20240307": {
         "link": "https://www.anthropic.com/news/claude-3-family",
@@ -536,7 +584,8 @@
         },
         "prompted": true,
         "size": null,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1129
     },
     "Claude-3-Sonnet-20240229": {
         "link": "https://www.anthropic.com/news/claude-3-family",
@@ -547,7 +596,8 @@
         },
         "prompted": true,
         "size": null,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1173
     },
     "Claude-3-Opus-20240229": {
         "link": "https://www.anthropic.com/news/claude-3-family",
@@ -558,7 +608,8 @@
         },
         "prompted": true,
         "size": null,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1224
     },
     "Yi-1.5-34B-Chat": {
         "link": "https://huggingface.co/01-ai/Yi-1.5-34B-Chat",
@@ -569,7 +620,8 @@
         },
         "prompted": true,
         "size": 34,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1041
     },
     "Yi-1.5-34B": {
         "link": "https://huggingface.co/01-ai/Yi-1.5-34B",
@@ -580,7 +632,8 @@
         },
         "prompted": false,
         "size": 34,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 995
     },
     "Yi-1.5-9B-Chat": {
         "link": "https://huggingface.co/01-ai/Yi-1.5-9B-Chat",
@@ -591,7 +644,8 @@
         },
         "prompted": true,
         "size": 9,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1022
     },
     "Yi-1.5-9B": {
         "link": "https://huggingface.co/01-ai/Yi-1.5-9B",
@@ -602,7 +656,8 @@
         },
         "prompted": false,
         "size": 9,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 933
     },
     "Yi-1.5-6B-Chat": {
         "link": "https://huggingface.co/01-ai/Yi-1.5-6B-Chat",
@@ -613,7 +668,8 @@
         },
         "prompted": true,
         "size": 9,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 909
     },
     "Yi-1.5-6B": {
         "link": "https://huggingface.co/01-ai/Yi-1.5-6B",
@@ -624,7 +680,8 @@
         },
         "prompted": false,
         "size": 9,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 820
     },
     "Qwen2-57B-A14B": {
         "link": "https://huggingface.co/Qwen/Qwen2-57B-A14B",
@@ -635,7 +692,8 @@
         },
         "prompted": true,
         "size": 14,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1081
     },
     "Qwen2-7B-Instruct": {
         "link": "https://huggingface.co/Qwen/Qwen2-7B-Instruct",
@@ -646,7 +704,8 @@
         },
         "prompted": true,
         "size": 7,
-        "lazy": true
+        "lazy": true,
+        "elo_mle": 1019
     },
     "Qwen2-72B-Chat": {
         "link": "https://huggingface.co/Qwen/Qwen2-72B-Chat",
@@ -657,6 +716,7 @@
         },
         "prompted": true,
         "size": 72,
-        "lazy": false
+        "lazy": false,
+        "elo_mle": 1183
     }
 }
