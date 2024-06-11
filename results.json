@@ -45,7 +45,7 @@
         "prompted": false,
         "size": 7,
         "lazy": false,
-        "elo_mle": 822
+        "elo_mle": 823
     },
     "StarCoder2-15B": {
         "link": "https://huggingface.co/bigcode/starcoder2-15b",
@@ -93,7 +93,7 @@
         "prompted": false,
         "size": 7,
         "lazy": false,
-        "elo_mle": 974
+        "elo_mle": 973
     },
     "CodeGemma-7B-Instruct": {
         "link": "https://huggingface.co/google/codegemma-7b-it",
@@ -201,7 +201,7 @@
         "prompted": true,
         "size": 13,
         "lazy": true,
-        "elo_mle": 880
+        "elo_mle": 879
     },
     "Mistral-Large-2402": {
         "link": "https://mistral.ai/news/mistral-large/",
@@ -237,7 +237,7 @@
         "prompted": false,
         "size": 44,
         "lazy": false,
-        "elo_mle": 1065
+        "elo_mle": 1066
     },
     "Mixtral-8x22B-Instruct": {
         "link": "https://huggingface.co/mistralai/Mixtral-8x22B-Instruct-v0.1",
@@ -321,7 +321,7 @@
         "prompted": true,
         "size": 110,
         "lazy": true,
-        "elo_mle": 1045
+        "elo_mle": 1046
     },
     "Qwen1.5-72B-Chat": {
         "link": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat",
@@ -393,7 +393,7 @@
         "prompted": false,
         "size": 33,
         "lazy": false,
-        "elo_mle": 1078
+        "elo_mle": 1079
     },
     "DeepSeek-Coder-33B-Instruct": {
         "link": "https://huggingface.co/deepseek-ai/deepseek-coder-33b-instruct",
@@ -405,7 +405,7 @@
         "prompted": true,
         "size": 33,
         "lazy": false,
-        "elo_mle": 1146
+        "elo_mle": 1145
     },
     "DeepSeek-Coder-6.7B-Base": {
         "link": "https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-base",
@@ -585,7 +585,7 @@
         "prompted": true,
         "size": null,
         "lazy": false,
-        "elo_mle": 1129
+        "elo_mle": 1130
     },
     "Claude-3-Sonnet-20240229": {
         "link": "https://www.anthropic.com/news/claude-3-family",
