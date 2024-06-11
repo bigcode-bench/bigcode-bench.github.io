@@ -307,7 +307,7 @@
       const chartDom = document.getElementById("chart");
       var chart = echarts.init(chartDom);
 
-      const dataUrl = "https://github.com/bigcode-project/bigcodebench/raw/main/analysis/results.json";
+      const dataUrl = "results.json";
 
       var xhr = new XMLHttpRequest();
       xhr.open("GET", dataUrl, false); // false makes the request synchronous
