@@ -50,7 +50,7 @@ We host the BigCodeBench leaderboard on both [Hugging Face Space](https://huggin
 	src="https://gradio.s3-us-west-2.amazonaws.com/4.36.1/gradio.js"
 ></script>
 
-<gradio-app src="https://bigcode-bigcodebench-leaderboard.hf.space"></gradio-app>
+<gradio-app eager="true" space="bigcode/bigcodebench-leaderboard"></gradio-app>
 </div>
 
 We use Pass@1 with greedy decoding as the main evaluation metric on BigCodeBench. Interestingly, we observe that instruction-tuned LLMs like GPT-4 can omit the essential import statements of the given prompts
