@@ -75,8 +75,6 @@ pip install bigcodebench[generate] --upgrade
 ```
 
 <details><summary>⏬ Using BigCodeBench as a local repo? <i>:: click to expand ::</i></summary>
-<div>
-
 
 ```bash
 git clone https://github.com/bigcode-project/bigcodebench.git
@@ -85,7 +83,6 @@ export PYTHONPATH=$PYTHONPATH:$(pwd)
 pip install -e .
 ```
 
-</div>
 </details>
 
 ### Code Generation
