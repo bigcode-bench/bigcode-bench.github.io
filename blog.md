@@ -19,7 +19,7 @@ Ready to deep dive into BigCodeBench? Let's get started! 🚀
 
 ## What does the task in BigCodeBench look like? 🕵️‍♂️
 
-![png](asset/tease.png)
+<img src="asset/tease.png" alt="png" style="display: block; margin-left: auto; margin-right: auto;">
 
 One important feature of BigCodeBench is that it contains complex and user-oriented instructions (e.g., clear functionality descriptions, input and output formats, error handling, and verified interactive examples) for each task. We do not describe the step-by-step instructions for the tasks, as we believe that _the capable LLMs should be able to understand the task descriptions from the user's perspective and solve the tasks in the open-ended manner_. To examine whether LLMs can follow the instructions to do the implementation, we verify the specific features with certain test cases.
 
@@ -29,13 +29,15 @@ Another feature is that the tasks in BigCodeBench are designed to utilize divers
 
 We compare the tasks in BigCodeBench with those in representative benchmarks, including [APPS](https://github.com/hendrycks/apps), [DS-1000](https://github.com/HKUNLP/DS-1000), [ODEX](https://github.com/zorazrw/odex), [APIBench](https://github.com/ShishirPatil/gorilla/tree/main/data/apibench), [MBPP](https://github.com/google-research/google-research/tree/master/mbpp),  [NumpyEval](https://github.com/microsoft/PyCodeGPT/tree/main/cert/pandas-numpy-eval), [PandasEval](https://github.com/microsoft/PyCodeGPT/tree/main/cert/pandas-numpy-eval), [HumanEval](https://github.com/openai/human-eval), and [TorchDataEval](https://github.com/microsoft/PyCodeGPT/tree/main/apicoder/private-eval). We find that the tasks in BigCodeBench require more complex reasoning and problem-solving skills to implement comprehensive functionalities.
 
-![png](asset/bigcodebench_prompt.png)
+<img src="asset/bigcodebench_prompt.png" alt="png" style="display: block; margin-left: auto; margin-right: auto;">
 
 As we can see from the task figure, the main target scenario is code completion (denoted as BigCodeBench-Complete), where LLMs are required to finish the implementation of the function based on the verbose instruction inside the docstring. However, considering the downstream applications such as multi-turn dialogue, users may tend to describe the requirements in a more conversational and less verbose manner. Instruction-tuned LLMs here come in handy, as they are trained to follow the natural-language-oriented instructions and generate code snippets accordingly. To test if the models are really capable enough to understand human intents to code, we create BigCodeBench-Instruct, a more challenging variant of BigCodeBench to particularly evaluate instruction-tuned LLMs.
 
 ## Where does the task come from? 🤔
 
-![png](asset/construct_pipeline.png)
+<!-- ![png](asset/construct_pipeline.png) -->
+<img src="asset/construct_pipeline.png" alt="png" style="display: block; margin-left: auto; margin-right: auto;>
+
 We guarantee the quality of the tasks in BigCodeBench by a systematic Human-LLM collaboration process. First, we choose [ODEX](https://github.com/zorazrw/odex) as the seed dataset, which contains short but realistic human intents and corresponding Python one-liners from Stack Overflow. We utilize GPT-4 to enrich the one-liners into comprehensive function-level tasks. Then, 20 human experts where most of them hold PhD degrees and 5+ years of Python programming experience voluntarily ground GPT-4 in the execution-based sandbox and continually instruct it to refactor the synthesized tasks and add test cases. Finally, we manually examine the tasks and test cases in the local environment, pre-evaluate the tasks on the other LLMs, and cross-check the tasks with 7 additional human experts to ensure the quality of the tasks. We sample tasks for 11 human experts to solve, and the average human performance is 97%.
 
 ## How well do LLMs perform on BigCodeBench? 📊
@@ -43,12 +45,12 @@ We guarantee the quality of the tasks in BigCodeBench by a systematic Human-LLM 
 We host the BigCodeBench leaderboard on both [Hugging Face Space](https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard) and [GitHub Pages](https://bigcode-bench.github.io/). The main difference between the two leaderboards is that the Hugging Face one is more interactive and provides more detailed information to analyze the performance of LLMs, while the GitHub Pages one is more stable and can be easily accessed by the community.
 
 <div>
-<iframe
-	src="https://bigcode-bigcodebench-leaderboard.hf.space"
-	frameborder="0"
-	width="850"
-	height="450"
-></iframe>
+<script
+	type="module"
+	src="https://gradio.s3-us-west-2.amazonaws.com/4.36.1/gradio.js"
+></script>
+
+<gradio-app src="https://bigcode-bigcodebench-leaderboard.hf.space"></gradio-app>
 </div>
 
 We use Pass@1 with greedy decoding as the main evaluation metric on BigCodeBench. Interestingly, we observe that instruction-tuned LLMs like GPT-4 can omit the essential import statements of the given prompts
