@@ -44,7 +44,7 @@ We host the BigCodeBench leaderboard on both [Hugging Face Space](https://huggin
 
 <script
 	type="module"
-	src="https://gradio.s3-us-west-2.amazonaws.com/4.36.1/gradio.js"
+	src="https://gradio.s3-us-west-2.amazonaws.com/4.20.1/gradio.js"
 ></script>
 
 <gradio-app src="https://bigcode-bigcodebench-leaderboard.hf.space"></gradio-app>
