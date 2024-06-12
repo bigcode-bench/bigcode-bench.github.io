@@ -36,7 +36,7 @@ As we can see from the task figure, the main target scenario is code completion 
 ## Where does the task come from? 🤔
 
 <!-- ![png](asset/construct_pipeline.png) -->
-<img src="asset/construct_pipeline.png" alt="png" style="display: block; margin-left: auto; margin-right: auto;>
+<img src="asset/construct_pipeline.png" alt="png" style="display: block; margin-left: auto; margin-right: auto;">
 
 We guarantee the quality of the tasks in BigCodeBench by a systematic Human-LLM collaboration process. First, we choose [ODEX](https://github.com/zorazrw/odex) as the seed dataset, which contains short but realistic human intents and corresponding Python one-liners from Stack Overflow. We utilize GPT-4 to enrich the one-liners into comprehensive function-level tasks. Then, 20 human experts where most of them hold PhD degrees and 5+ years of Python programming experience voluntarily ground GPT-4 in the execution-based sandbox and continually instruct it to refactor the synthesized tasks and add test cases. Finally, we manually examine the tasks and test cases in the local environment, pre-evaluate the tasks on the other LLMs, and cross-check the tasks with 7 additional human experts to ensure the quality of the tasks. We sample tasks for 11 human experts to solve, and the average human performance is 97%.
 
