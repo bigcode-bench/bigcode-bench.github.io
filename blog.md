@@ -42,12 +42,8 @@ We guarantee the quality of the tasks in BigCodeBench by a systematic Human-LLM 
 
 We host the BigCodeBench leaderboard on both [Hugging Face Space](https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard) and [GitHub Pages](https://bigcode-bench.github.io/). The main difference between the two leaderboards is that the Hugging Face one is more interactive and provides more detailed information to analyze the performance of LLMs, while the GitHub Pages one is more stable and can be easily accessed by the community.
 
-<script
-	type="module"
-	src="https://gradio.s3-us-west-2.amazonaws.com/4.20.1/gradio.js"
-></script>
-
-<gradio-app src="https://bigcode-bigcodebench-leaderboard.hf.space"></gradio-app>
+<scrip type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.36.1/gradio.js"></script>
+<gradio-app theme_mode="light" src="https://bigcode-bigcodebench-leaderboard.hf.space"></gradio-app>
 
 
 We use Pass@1 with greedy decoding as the main evaluation metric on BigCodeBench. Interestingly, we observe that instruction-tuned LLMs like GPT-4 can omit the essential import statements of the given prompts
