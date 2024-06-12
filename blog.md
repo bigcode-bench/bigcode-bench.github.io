@@ -49,7 +49,7 @@ We host the BigCodeBench leaderboard on both [Hugging Face Space](https://huggin
 	src="https://gradio.s3-us-west-2.amazonaws.com/4.36.1/gradio.js"
 ></script>
 
-<gradio-app eager="true" space="bigcode/bigcodebench-leaderboard"></gradio-app>
+<gradio-app theme_mode="light" eager="true" space="bigcode/bigcodebench-leaderboard"></gradio-app>
 
 We use Pass@1 with greedy decoding as the main evaluation metric on BigCodeBench. Interestingly, we observe that instruction-tuned LLMs like GPT-4 can omit the essential import statements of the given prompts
 in BigCodeBench-Complete, which can lead to task failure due to the lack of proper module and constant definitions. Such behaviors are denoted as "model laziness" in long-context interactions, as [discussed in the community](https://community.openai.com/t/why-i-think-gpt-is-now-lazy/534332). To show the true capability of the models, we add the missing setup back during the Pass@1 evaluation, which is denoted as calibrated Pass@1. <u>Compared to human performance, we find that LLMs perform significantly lower on BigCodeBench-Complete, and even lower on BigCodeBench-Instruct, with the best model (GPT-4o) achieving the calibrated Pass@1 of 61.1% and 51.1%, respectively.</u> In addition, we observe a big performance gap between the close LLMs and open ones.
