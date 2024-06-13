@@ -1,59 +1,75 @@
 ---
-title: ""
+title: "Introducing the BigCodeBench Leaderboard: Benchmarking Large Language Models on Solving Practical and Challenging Programming Tasks"
 thumbnail: 
 authors:
 - user: terryyz
   guest: true
+- user: ganler
+  guest: true
+- user: zijwang
+  guest: true
+- user: SivilTaram
+  guest: true
+- user: huybery
+  guest: true
+- user: Muennighoff
+  guest: true
+- user: dpfried
+  guest: true
+- user: harmdevries
+  guest: true
+- user: lvwerra
+- user: clefourrier
 ---
 
-# BigCodeBench: Benchmarking Large Language Models on Solving Practical and Challenging Programming Tasks
+# Introducing the BigCodeBench Leaderboard: Benchmarking Large Language Models on Solving Practical and Challenging Programming Tasks
 
 [HumanEval](https://github.com/openai/human-eval) is a widely used benchmark for evaluating large language models (LLMs) on code generation tasks. One main reason is that it is easy to evaluate a condense function-level code snippet. There are growing concerns about the effectiveness of HumanEval in evaluating programming capabilities of LLMs. The main concern is that the tasks in HumanEval are too simple and may not be representative of real-world programming tasks.
 
 While there have been some efforts to address this issue, they are either domain-specific, solution-specific, or hard-to-deploy (sorry [DS-1000](https://github.com/HKUNLP/DS-1000), [ODEX](https://github.com/zorazrw/odex), and [SWE-bench](https://github.com/princeton-nlp/SWE-bench) 💔).
 The community still lacks an easy-to-use benchmark that can fundamentally evaluate the programming capabilities of LLMs.
 
-To address aforementioned limitations, we spent a whole year developing a new benchmark with the BigCode community. We are excited to announce the release of BigCodeBench, a benchmark that evaluates LLMs on solving practical and challenging programming tasks. Specifically, BigCodeBench contain 1,140 function-level tasks to challenge LLMs to follow instruction and compose multiple function calls as tools from 139 libraries. To evaluate LLMs rigorously, each programming task encompasses 5.6 test cases with an average branch coverage of 99%.
+To address aforementioned limitations, we spent a whole year developing a new benchmark from scratch with the BigCode community. We are excited to announce the release of BigCodeBench, the benchmark that evaluates LLMs on solving practical and challenging programming tasks. Specifically, BigCodeBench contain 1,140 function-level tasks to challenge LLMs to follow instruction and compose multiple function calls as tools from 139 libraries. To evaluate LLMs rigorously, each programming task encompasses 5.6 test cases with an average branch coverage of 99%.
 
 Ready to deep dive into BigCodeBench? Let's get started! 🚀
 
 ## What does the task in BigCodeBench look like? 🕵️‍♂️
 
-<img src="asset/tease.png" alt="png" style="display: block; margin-left: auto; margin-right: auto;">
+<img src="https://github.com/bigcode-bench/bigcode-bench.github.io/blob/main/asset/tease.png?raw=true" alt="png" style="display: block; margin-left: auto; margin-right: auto;">
 
 One important feature of BigCodeBench is that it contains complex and user-oriented instructions (e.g., clear functionality descriptions, input and output formats, error handling, and verified interactive examples) for each task. We do not describe the step-by-step instructions for the tasks, as we believe that _the capable LLMs should be able to understand the task descriptions from the user's perspective and solve the tasks in the open-ended manner_. To examine whether LLMs can follow the instructions to do the implementation, we verify the specific features with certain test cases.
 
 Another feature is that the tasks in BigCodeBench are designed to utilize diverse function calls (or APIs) from popular libraries. We do not restrict the specific function calls that the LLMs can use, as we believe that the capable LLMs should be able to _choose the appropriate function calls as tools and flexibly combine them to solve the tasks_. Instead of checking the specific function calls, we design the test cases as test harnesses to examine the expected program behaviors during the runtime.
 
-<img src="asset/depth-breadth.png" alt="png" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+<img src="https://github.com/bigcode-bench/bigcode-bench.github.io/blob/main/asset/depth-breadth.png?raw=true" alt="png" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
 
-We compare the tasks in BigCodeBench with those in representative benchmarks, including [APPS](https://github.com/hendrycks/apps), [DS-1000](https://github.com/HKUNLP/DS-1000), [ODEX](https://github.com/zorazrw/odex), [APIBench](https://github.com/ShishirPatil/gorilla/tree/main/data/apibench), [MBPP](https://github.com/google-research/google-research/tree/master/mbpp),  [NumpyEval](https://github.com/microsoft/PyCodeGPT/tree/main/cert/pandas-numpy-eval), [PandasEval](https://github.com/microsoft/PyCodeGPT/tree/main/cert/pandas-numpy-eval), [HumanEval](https://github.com/openai/human-eval), and [TorchDataEval](https://github.com/microsoft/PyCodeGPT/tree/main/apicoder/private-eval). We find that the tasks in BigCodeBench require more complex reasoning and problem-solving skills to implement comprehensive functionalities.
+To better understand the implementation complexity and tool-use diversity, we compare the tasks in BigCodeBench with those in representative benchmarks, including [APPS](https://github.com/hendrycks/apps), [DS-1000](https://github.com/HKUNLP/DS-1000), [ODEX](https://github.com/zorazrw/odex), [APIBench](https://github.com/ShishirPatil/gorilla/tree/main/data/apibench), [MBPP](https://github.com/google-research/google-research/tree/master/mbpp),  [NumpyEval](https://github.com/microsoft/PyCodeGPT/tree/main/cert/pandas-numpy-eval), [PandasEval](https://github.com/microsoft/PyCodeGPT/tree/main/cert/pandas-numpy-eval), [HumanEval](https://github.com/openai/human-eval), and [TorchDataEval](https://github.com/microsoft/PyCodeGPT/tree/main/apicoder/private-eval). We find that the tasks in BigCodeBench require more complex reasoning and problem-solving skills to implement comprehensive functionalities.
 
-<img src="asset/bigcodebench_prompt.png" alt="png" style="display: block; margin-left: auto; margin-right: auto;">
+<img src="https://github.com/bigcode-bench/bigcode-bench.github.io/blob/main/asset/bigcodebench_prompt.png?raw=true" alt="png" style="display: block; margin-left: auto; margin-right: auto;">
 
 As we can see from the task figure, the main target scenario is code completion (denoted as BigCodeBench-Complete), where LLMs are required to finish the implementation of the function based on the verbose instruction inside the docstring. However, considering the downstream applications such as multi-turn dialogue, users may tend to describe the requirements in a more conversational and less verbose manner. Instruction-tuned LLMs here come in handy, as they are trained to follow the natural-language-oriented instructions and generate code snippets accordingly. To test if the models are really capable enough to understand human intents to code, we create BigCodeBench-Instruct, a more challenging variant of BigCodeBench to particularly evaluate instruction-tuned LLMs.
 
 ## Where does the task come from? 🤔
 
-<img src="asset/construct_pipeline.png" alt="png" style="display: block; margin-left: auto; margin-right: auto;">
+<img src="https://github.com/bigcode-bench/bigcode-bench.github.io/blob/main/asset/construct_pipeline.png?raw=true" alt="png" style="display: block; margin-left: auto; margin-right: auto;">
 
 We guarantee the quality of the tasks in BigCodeBench by a systematic Human-LLM collaboration process. First, we choose [ODEX](https://github.com/zorazrw/odex) as the seed dataset, which contains short but realistic human intents and corresponding Python one-liners from Stack Overflow. We utilize GPT-4 to enrich the one-liners into comprehensive function-level tasks. Then, 20 human experts where most of them hold PhD degrees and 5+ years of Python programming experience voluntarily ground GPT-4 in the execution-based sandbox and continually instruct it to refactor the synthesized tasks and add test cases. Finally, we manually examine the tasks and test cases in the local environment, pre-evaluate the tasks on the other LLMs, and cross-check the tasks with 7 additional human experts to ensure the quality of the tasks. We sample tasks for 11 human experts to solve, and the average human performance is 97%.
 
 ## How well do LLMs perform on BigCodeBench? 📊
 
-We host the BigCodeBench leaderboard on both [Hugging Face Space](https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard) and [GitHub Pages](https://bigcode-bench.github.io/). The main difference between the two leaderboards is that the Hugging Face one is more interactive and provides more detailed information to analyze the performance of LLMs, while the GitHub Pages one is more stable and can be easily accessed by the community.
+We host the BigCodeBench leaderboard on both [Hugging Face Space](https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard) and [GitHub Pages](https://bigcode-bench.github.io/). The main difference between the two leaderboards is that the Hugging Face one is more interactive and provides more detailed information to analyze the performance of LLMs, while the GitHub Pages one is more stable and can be easily accessed by the community. So far, we have evaluated 71 LLMs across different sizes.
 
 <script
 	type="module"
 	src="https://gradio.s3-us-west-2.amazonaws.com/4.36.1/gradio.js"
 ></script>
 
-<gradio-app theme_mode="light" eager="true" space="bigcode/bigcodebench-leaderboard"></gradio-app>
+<gradio-app theme_mode="light" space="bigcode/bigcodebench-leaderboard"></gradio-app>
 
 We use Pass@1 with greedy decoding as the main evaluation metric on BigCodeBench. Interestingly, we observe that instruction-tuned LLMs like GPT-4 can omit the essential import statements of the given prompts
 in BigCodeBench-Complete, which can lead to task failure due to the lack of proper module and constant definitions. Such behaviors are denoted as "model laziness" in long-context interactions, as [discussed in the community](https://community.openai.com/t/why-i-think-gpt-is-now-lazy/534332). To show the true capability of the models, we add the missing setup back during the Pass@1 evaluation, which is denoted as calibrated Pass@1. <u>Compared to human performance, we find that LLMs perform significantly lower on BigCodeBench-Complete, and even lower on BigCodeBench-Instruct, with the best model (GPT-4o) achieving the calibrated Pass@1 of 61.1% and 51.1%, respectively.</u> In addition, we observe a big performance gap between the close LLMs and open ones.
 
-While Pass@1 is a good metric to show the overall performance of the models, it is not informative enough to do the pairwise comparison between the models. Inspired by [Chatbot Arena](https://lmsys.org/blog/2023-05-03-arena/), we employ Elo rating to rank the models on BigCodeBench-Complete. The Elo rating is a widely used method in chess to rank the players based on their performance in the games. We adapt the Elo rating to the programming tasks by treating each task as a game and each model as a player. The Elo rating is updated after each game based on the outcome of the game and the expected outcome of the game. We use the calibrated Pass@1 as the outcome of the game and exclude the tie results. We set the initial Elo rating of the models to 1000, fit it using maximum likelihood estimation, and bootstrap with 500 iterations to get the final scores. <u>We see that GPT-4o outperforms the other models by a large margin, and LLMs like Gemini-1.5-Pro, GPT-4-Turbo, GPT-4, Claude-3-Opus are in the tier-2 group.</u>
+While Pass@1 is a good metric to show the overall performance of the models, it is not informative enough to do the pairwise comparison between the models. Inspired by [Chatbot Arena](https://lmsys.org/blog/2023-05-03-arena/), we employ Elo rating to rank the models on BigCodeBench-Complete. The Elo rating is a widely used method in chess to rank the players based on their performance in the games. We adapt the Elo rating to the programming tasks by treating each task as a game and each model as a player. The Elo rating is updated after each game based on the outcome of the game and the expected outcome of the game. We use the calibrated Pass@1 as the outcome of the game and exclude the tie results. We set the initial Elo rating of the models to 1000, fit it using maximum likelihood estimation, and bootstrap with 500 iterations to get the final scores. <u>We see that GPT-4o outperforms the other models by a large margin, and LLMs like Gemini-1.5-Pro, GPT-4-Turbo, GPT-4, Claude-3-Opus are in the second tier.</u>
 
 To help the community better understand how the models perform on each task, we provide the progress of solve rate, measured by calibrated Pass@1. On BigCodeBench-Complete, 151 tasks have not been solved by by all 71 models and 6 have been completely solved. For BigCodeBench-Instruct, there are 281 tasks remain unsolved and 14 fully solved by all models. As there is a significant number of unsolved tasks and only small number of fully solved tasks, we deem BigCodeBench as a challenging benchmark for LLMs.
 
@@ -69,17 +85,8 @@ pip install bigcodebench --upgrade
 pip install -I -r https://raw.githubusercontent.com/bigcode-project/bigcodebench/main/Requirements/requirements-eval.txt
 
 # Install to use bigcodebench.generate
-# You are strongly recommended to install the generate dependencies in a separate environment
+# You are strongly recommended to install the [generate] dependencies in a separate environment
 pip install bigcodebench[generate] --upgrade
-```
-
-<details><summary>⏬ Using BigCodeBench as a local repo? <i>:: click to expand ::</i></summary>
-
-```bash
-git clone https://github.com/bigcode-project/bigcodebench.git
-cd bigcodebench
-export PYTHONPATH=$PYTHONPATH:$(pwd)
-pip install -e .
 ```
 
 </details>
@@ -140,14 +147,14 @@ docker run -v $(pwd):/bigcodebench terryzho/bigcodebench-evaluate:latest --subse
 First, install the dependencies for BigCodeBench:
 
 ```bash
-pip install -r https://raw.githubusercontent.com/bigcode-project/bigcodebench-annotation/main/requirements.txt
+pip install -r https://raw.githubusercontent.com/bigcode-project/bigcodebench/main/Requirements/requirements-eval.txt
 ```
 
 Then, run the evaluation:
 
 ```bash
 bigcodebench.evaluate --subset [complete|instruct] --samples samples-calibrated.jsonl
-# ...If the ground truth is not working locally
+# ...if the ground truth is not working locally
 bigcodebench.evaluate --subset [complete|instruct] --samples samples-calibrated.jsonl --no-gt
 ```
 
@@ -168,6 +175,15 @@ completion and reasoning provide the possibility towards artificial general inte
 
 
 We are excited to see the community's feedback and contributions to build BigCodeBench in the long run 🤗
+
+## Resources
+We open-source all the artifacts of BigCodeBench, including the tasks, test cases, evaluation framework, and leaderboard. You can find them as follows:
+- [`bigcodebench` GitHub Repository](https://github.com/bigcode-project/bigcodebench)
+- [`bigcodebench` HF Dataset](https://huggingface.co/datasets/bigcode/bigcodebench)
+- [`bigcodebench` HF Leaderboard](https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard)
+- [`bigcodebench` GitHub Pages Leaderboard](https://bigcode-bench.github.io/)
+
+If you have any questions or suggestions, please feel free to open an issue in the  repository or contact us via [terry.zhuo@monash.edu](mailto:terry.zhuo@monash.edu) or [contact@bigcode-project.org](mailto:contact@bigcode-project.org)
 
 ## Citation
 
