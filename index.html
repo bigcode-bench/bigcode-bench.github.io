@@ -12,9 +12,6 @@
     <title>BigCodeBench Leaderboard</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
-    <!-- favicon.svg -->
-    <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👍</text></svg>"> -->
-    <!-- <link rel="icon" href="/favicon.svg" /> -->
     <link
       rel="icon"
       href="https://cdn-avatars.huggingface.co/v1/production/uploads/1659521200179-5e48005437cb5b49818287a5.png"
@@ -148,6 +145,10 @@
         <label class="btn btn-outline-primary" for="Complete">Complete</label>
         <input type="radio" class="btn-check" name="btnradio" id="Instruct" />
         <label class="btn btn-outline-primary" for="Instruct">Instruct</label>
+      </div>
+      <div class="form-check form-switch mt-3">
+        <input class="form-check-input" type="checkbox" id="toggleUnknownSize">
+        <label class="form-check-label" for="toggleUnknownSize">Show Closed Models with Unknown Size</label>
       </div>
       <div id="chart" style="width: 100%; height: 600px"></div>
       <div class="container-fluid d-flex flex-row flex-nowrap">
@@ -305,6 +306,7 @@
       const originTable = document.getElementById("origin");
       const benchmarkRadio = document.getElementById("Benchmark");
       const chartDom = document.getElementById("chart");
+      const toggleUnknownSize = document.getElementById("toggleUnknownSize");
       var chart = echarts.init(chartDom);
 
       const dataUrl = "results.json";
@@ -555,15 +557,19 @@
         table.appendChild(tbody);
       };
 
-      const displayChart = (score) => {
+      const displayChart = (score, showUnknownSize = true) => {
         // sort first
-        const data = globalData
+        let data = globalData
           .filter((model) => {
             return model["pass@1"][score] != null;
           })
           .sort((a, b) => {
             return b["pass@1"][score] - a["pass@1"][score];
           });
+
+        if (!showUnknownSize) {
+          data = data.filter((model) => model["size"] != null);
+        }
 
         const sizeList = [
           ...new Set(
@@ -651,14 +657,20 @@
         clearTable();
         displayTable(originTable, "complete");
         clearChart();
-        displayChart("complete");
+        displayChart("complete", toggleUnknownSize.checked);
       });
 
       instructRadio.addEventListener("click", function () {
         clearTable();
         displayTable(originTable, "instruct");
         clearChart();
-        displayChart("instruct");
+        displayChart("instruct", toggleUnknownSize.checked);
+      });
+
+      toggleUnknownSize.addEventListener("change", function () {
+        const score = completeRadio.checked ? "complete" : "instruct";
+        clearChart();
+        displayChart(score, toggleUnknownSize.checked);
       });
 
       completeRadio.click();
