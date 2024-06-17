@@ -8,6 +8,7 @@
         },
         "prompted": true,
         "size": 6.7,
+        "direct_complete": false,
         "lazy": false
     },
     "StarCoder2-15B-Instruct-v0.1": {
@@ -19,6 +20,7 @@
         },
         "prompted": true,
         "size": 15,
+        "direct_complete": false,
         "lazy": true
     },
     "StarCoder2-3B": {
@@ -30,6 +32,7 @@
         },
         "prompted": false,
         "size": 3,
+        "direct_complete": true,
         "lazy": false
     },
     "StarCoder2-7B": {
@@ -41,6 +44,7 @@
         },
         "prompted": false,
         "size": 7,
+        "direct_complete": true,
         "lazy": false
     },
     "StarCoder2-15B": {
@@ -52,6 +56,7 @@
         },
         "prompted": false,
         "size": 15,
+        "direct_complete": true,
         "lazy": false
     },
     "CodeQwen1.5-7B": {
@@ -63,6 +68,7 @@
         },
         "prompted": false,
         "size": 7,
+        "direct_complete": true,
         "lazy": false
     },
     "CodeGemma-2B": {
@@ -74,6 +80,7 @@
         },
         "prompted": false,
         "size": 2,
+        "direct_complete": true,
         "lazy": false
     },
     "CodeGemma-7B": {
@@ -85,6 +92,7 @@
         },
         "prompted": false,
         "size": 7,
+        "direct_complete": true,
         "lazy": false
     },
     "CodeGemma-7B-Instruct": {
@@ -96,6 +104,7 @@
         },
         "prompted": true,
         "size": 7,
+        "direct_complete": false,
         "lazy": false
     },
     "GPT-3.5-Turbo-0125": {
@@ -107,6 +116,7 @@
         },
         "prompted": true,
         "size": null,
+        "direct_complete": false,
         "lazy": false
     },
     "GPT-4o-2024-05-13": {
@@ -118,6 +128,7 @@
         },
         "prompted": true,
         "size": null,
+        "direct_complete": false,
         "lazy": true
     },
     "GPT-4-Turbo-2024-04-09": {
@@ -129,6 +140,7 @@
         },
         "prompted": true,
         "size": null,
+        "direct_complete": false,
         "lazy": false
     },
     "GPT-4-0613": {
@@ -140,6 +152,7 @@
         },
         "prompted": true,
         "size": null,
+        "direct_complete": false,
         "lazy": true
     },
     "CodeLlama-7B-Base": {
@@ -151,6 +164,7 @@
         },
         "prompted": false,
         "size": 7,
+        "direct_complete": true,
         "lazy": false
     },
     "CodeLlama-13B-Base": {
@@ -162,6 +176,7 @@
         },
         "prompted": false,
         "size": 13,
+        "direct_complete": true,
         "lazy": false
     },
     "CodeLlama-7B-Instruct": {
@@ -173,6 +188,7 @@
         },
         "prompted": true,
         "size": 7,
+        "direct_complete": false,
         "lazy": false
     },
     "CodeLlama-13B-Instruct": {
@@ -184,6 +200,7 @@
         },
         "prompted": true,
         "size": 13,
+        "direct_complete": false,
         "lazy": true
     },
     "Mistral-Large-2402": {
@@ -195,6 +212,7 @@
         },
         "prompted": true,
         "size": null,
+        "direct_complete": false,
         "lazy": false
     },
     "Mistral-Small-2402": {
@@ -206,6 +224,7 @@
         },
         "prompted": true,
         "size": null,
+        "direct_complete": false,
         "lazy": true
     },
     "Mixtral-8x22B-Base": {
@@ -217,6 +236,7 @@
         },
         "prompted": false,
         "size": 44,
+        "direct_complete": false,
         "lazy": false
     },
     "Mixtral-8x22B-Instruct": {
@@ -228,6 +248,7 @@
         },
         "prompted": true,
         "size": 44,
+        "direct_complete": false,
         "lazy": false
     },
     "CodeLlama-34B-Base": {
@@ -239,6 +260,7 @@
         },
         "prompted": false,
         "size": 34,
+        "direct_complete": true,
         "lazy": false
     },
     "CodeLlama-34B-Instruct": {
@@ -250,6 +272,7 @@
         },
         "prompted": true,
         "size": 34,
+        "direct_complete": false,
         "lazy": false
     },
     "CodeLlama-70B-Base": {
@@ -261,6 +284,7 @@
         },
         "prompted": false,
         "size": 70,
+        "direct_complete": true,
         "lazy": false
     },
     "CodeLlama-70B-Instruct": {
@@ -272,6 +296,7 @@
         },
         "prompted": true,
         "size": 70,
+        "direct_complete": false,
         "lazy": false
     },
     "CodeQwen1.5-7B-Chat": {
@@ -283,6 +308,7 @@
         },
         "prompted": true,
         "size": 7,
+        "direct_complete": false,
         "lazy": false
     },
     "Qwen1.5-110B-Chat": {
@@ -294,6 +320,7 @@
         },
         "prompted": true,
         "size": 110,
+        "direct_complete": false,
         "lazy": true
     },
     "Qwen1.5-72B-Chat": {
@@ -305,6 +332,7 @@
         },
         "prompted": true,
         "size": 72,
+        "direct_complete": false,
         "lazy": false
     },
     "Qwen1.5-32B-Chat": {
@@ -316,6 +344,7 @@
         },
         "prompted": true,
         "size": 32,
+        "direct_complete": false,
         "lazy": false
     },
     "DeepSeek-V2-Chat": {
@@ -327,6 +356,7 @@
         },
         "prompted": true,
         "size": 21,
+        "direct_complete": false,
         "lazy": false
     },
     "DeepSeek-Coder-1.3B-Base": {
@@ -338,6 +368,7 @@
         },
         "prompted": false,
         "size": 1.3,
+        "direct_complete": true,
         "lazy": false
     },
     "DeepSeek-Coder-1.3B-Instruct": {
@@ -349,6 +380,7 @@
         },
         "prompted": true,
         "size": 1.3,
+        "direct_complete": false,
         "lazy": false
     },
     "DeepSeek-Coder-33B-Base": {
@@ -360,6 +392,7 @@
         },
         "prompted": false,
         "size": 33,
+        "direct_complete": true,
         "lazy": false
     },
     "DeepSeek-Coder-33B-Instruct": {
@@ -371,6 +404,7 @@
         },
         "prompted": true,
         "size": 33,
+        "direct_complete": false,
         "lazy": false
     },
     "DeepSeek-Coder-6.7B-Base": {
@@ -382,6 +416,7 @@
         },
         "prompted": false,
         "size": 6.7,
+        "direct_complete": true,
         "lazy": false
     },
     "DeepSeek-Coder-6.7B-Instruct": {
@@ -393,6 +428,7 @@
         },
         "prompted": true,
         "size": 6.7,
+        "direct_complete": false,
         "lazy": false
     },
     "Llama-3-70B-Base": {
@@ -404,6 +440,7 @@
         },
         "prompted": false,
         "size": 70,
+        "direct_complete": true,
         "lazy": false
     },
     "Llama-3-70B-Instruct": {
@@ -415,6 +452,7 @@
         },
         "prompted": true,
         "size": 70,
+        "direct_complete": false,
         "lazy": false
     },
     "Llama-3-8B-Base": {
@@ -426,6 +464,7 @@
         },
         "prompted": false,
         "size": 8,
+        "direct_complete": true,
         "lazy": false
     },
     "Llama-3-8B-Instruct": {
@@ -437,6 +476,7 @@
         },
         "prompted": true,
         "size": 8,
+        "direct_complete": false,
         "lazy": false
     },
     "Granite-Code-3B-Instruct": {
@@ -448,6 +488,7 @@
         },
         "prompted": true,
         "size": 3,
+        "direct_complete": false,
         "lazy": false
     },
     "Granite-Code-8B-Instruct": {
@@ -459,6 +500,7 @@
         },
         "prompted": true,
         "size": 8,
+        "direct_complete": false,
         "lazy": false
     },
     "Granite-Code-20B-Instruct": {
@@ -470,6 +512,7 @@
         },
         "prompted": true,
         "size": 20,
+        "direct_complete": false,
         "lazy": false
     },
     "Granite-Code-34B-Instruct": {
@@ -481,6 +524,7 @@
         },
         "prompted": true,
         "size": 34,
+        "direct_complete": false,
         "lazy": false
     },
     "Granite-Code-3B-Base": {
@@ -492,6 +536,7 @@
         },
         "prompted": false,
         "size": 3,
+        "direct_complete": true,
         "lazy": false
     },
     "Granite-Code-8B-Base": {
@@ -503,6 +548,7 @@
         },
         "prompted": false,
         "size": 8,
+        "direct_complete": true,
         "lazy": false
     },
     "Granite-Code-20B-Base": {
@@ -514,6 +560,7 @@
         },
         "prompted": false,
         "size": 20,
+        "direct_complete": true,
         "lazy": false
     },
     "Granite-Code-34B-Base": {
@@ -525,6 +572,7 @@
         },
         "prompted": false,
         "size": 34,
+        "direct_complete": true,
         "lazy": false
     },
     "Claude-3-Haiku-20240307": {
@@ -536,6 +584,7 @@
         },
         "prompted": true,
         "size": null,
+        "direct_complete": false,
         "lazy": false
     },
     "Claude-3-Sonnet-20240229": {
@@ -547,6 +596,7 @@
         },
         "prompted": true,
         "size": null,
+        "direct_complete": false,
         "lazy": false
     },
     "Claude-3-Opus-20240229": {
@@ -558,6 +608,7 @@
         },
         "prompted": true,
         "size": null,
+        "direct_complete": false,
         "lazy": false
     },
     "Yi-1.5-34B-Chat": {
@@ -569,6 +620,7 @@
         },
         "prompted": true,
         "size": 34,
+        "direct_complete": false,
         "lazy": false
     },
     "Yi-1.5-34B": {
@@ -580,6 +632,7 @@
         },
         "prompted": false,
         "size": 34,
+        "direct_complete": true,
         "lazy": false
     },
     "Yi-1.5-9B-Chat": {
@@ -591,6 +644,7 @@
         },
         "prompted": true,
         "size": 9,
+        "direct_complete": false,
         "lazy": false
     },
     "Yi-1.5-9B": {
@@ -602,6 +656,7 @@
         },
         "prompted": false,
         "size": 9,
+        "direct_complete": true,
         "lazy": false
     },
     "Yi-1.5-6B-Chat": {
@@ -613,6 +668,7 @@
         },
         "prompted": true,
         "size": 9,
+        "direct_complete": false,
         "lazy": false
     },
     "Yi-1.5-6B": {
@@ -624,6 +680,7 @@
         },
         "prompted": false,
         "size": 9,
+        "direct_complete": true,
         "lazy": false
     },
     "Qwen2-57B-A14B": {
@@ -635,6 +692,7 @@
         },
         "prompted": true,
         "size": 14,
+        "direct_complete": false,
         "lazy": false
     },
     "Qwen2-7B-Instruct": {
@@ -646,6 +704,7 @@
         },
         "prompted": true,
         "size": 7,
+        "direct_complete": false,
         "lazy": true
     },
     "Qwen2-72B-Chat": {
@@ -657,6 +716,7 @@
         },
         "prompted": true,
         "size": 72,
+        "direct_complete": false,
         "lazy": false
     },
     "Gemini-1.5-Pro-API-0514": {
@@ -668,6 +728,7 @@
         },
         "prompted": true,
         "size": null,
+        "direct_complete": false,
         "lazy": false
     },
     "Gemini-1.5-Flash-API-0514": {
@@ -679,6 +740,7 @@
         },
         "prompted": true,
         "size": null,
+        "direct_complete": false,
         "lazy": false
     },
     "OpenCodeInterpreter-DS-33B": {
@@ -688,8 +750,9 @@
             "instruct": null,
             "complete": 51.0
         },
-        "prompted": false,
+        "prompted": true,
         "size": 33,
+        "direct_complete": true,
         "lazy": false
     },
     "OpenCodeInterpreter-DS-6.7B": {
@@ -699,8 +762,9 @@
             "instruct": null,
             "complete": 44.6
         },
-        "prompted": false,
+        "prompted": true,
         "size": 6.7,
+        "direct_complete": false,
         "lazy": false
     },
     "OpenCodeInterpreter-DS-1.3B": {
@@ -710,8 +774,9 @@
             "instruct": null,
             "complete": 29.8
         },
-        "prompted": false,
+        "prompted": true,
         "size": 1.3,
+        "direct_complete": false,
         "lazy": false
     },
     "Phi-3-medium-128k-instruct": {
@@ -723,6 +788,7 @@
         },
         "prompted": true,
         "size": 14,
+        "direct_complete": false,
         "lazy": false
     },
     "Phi-3-small-128k-instruct": {
@@ -734,6 +800,7 @@
         },
         "prompted": true,
         "size": 7,
+        "direct_complete": false,
         "lazy": false
     },
     "Codestral-22B-v0.1": {
@@ -743,8 +810,9 @@
             "instruct": null,
             "complete": 52.8
         },
-        "prompted": false,
+        "prompted": true,
         "size": 22,
+        "direct_complete": true,
         "lazy": false
     },
     "Mistral-7B-Instruct-v0.3": {
@@ -756,6 +824,7 @@
         },
         "prompted": true,
         "size": 7,
+        "direct_complete": false,
         "lazy": false
     },
     "Mistral-7B-v0.3": {
@@ -767,6 +836,7 @@
         },
         "prompted": false,
         "size": 7,
+        "direct_complete": true,
         "lazy": false
     },
     "Command R+": {
@@ -778,6 +848,19 @@
         },
         "prompted": true,
         "size": 104,
+        "direct_complete": false,
+        "lazy": false
+    },
+    "DeepSeek-Coder-V2": {
+        "link": "https://www.deepseek.com/",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 48.2,
+            "complete": 59.7
+        },
+        "prompted": true,
+        "size": 21,
+        "direct_complete": false,
         "lazy": false
     }
 }
