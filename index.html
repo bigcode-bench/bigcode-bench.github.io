@@ -480,6 +480,7 @@
           .sort((a, b) => {
             return b["pass@1"][score] - a["pass@1"][score];
           });
+      
         var thead = document.createElement("thead");
         var headerRow = document.createElement("tr");
         // add rank
@@ -497,26 +498,34 @@
         });
         thead.appendChild(headerRow);
         table.appendChild(thead);
-
+      
         var tbody = document.createElement("tbody");
-        // add rank
         var rank = 1;
-        data.forEach((row) => {
+        var previousScore = null;
+        var actualRank = 1;
+      
+        data.forEach((row, index) => {
           var dataRow = document.createElement("tr");
           var rankCell = document.createElement("td");
-          rankCell.textContent = rank;
+      
+          if (row["pass@1"][score] !== previousScore) {
+            actualRank = index + 1;
+            previousScore = row["pass@1"][score];
+          }
+      
+          rankCell.textContent = actualRank;
           dataRow.appendChild(rankCell);
+      
           var modelCell = document.createElement("td");
-          if (rank == 1) {
+          if (actualRank == 1) {
             modelCell.textContent = "🥇 ";
-          } else if (rank == 2) {
+          } else if (actualRank == 2) {
             modelCell.textContent = "🥈 ";
-          } else if (rank == 3) {
+          } else if (actualRank == 3) {
             modelCell.textContent = "🥉 ";
           } else {
             modelCell.textContent = "";
           }
-          rank++;
           var modelLink = document.createElement("a");
           modelLink.href = row["link"];
           modelLink.textContent = row["Model"];
@@ -555,7 +564,7 @@
             passCell.textContent = row["pass@1"][score];
           }
           passCell.style.backgroundColor = "#EEFFEE";
-          passCell.style.fontWeight = "bold"
+          passCell.style.fontWeight = "bold";
           dataRow.appendChild(passCell);
           tbody.appendChild(dataRow);
         });
