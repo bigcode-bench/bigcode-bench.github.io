@@ -309,7 +309,7 @@
         "size": 70,
         "direct_complete": true,
         "lazy": false,
-        "elo_mle": 1027
+        "elo_mle": 1026
     },
     "CodeLlama-70B-Instruct": {
         "link": "https://huggingface.co/codellama/CodeLlama-70b-Instruct-hf",
@@ -322,7 +322,7 @@
         "size": 70,
         "direct_complete": false,
         "lazy": false,
-        "elo_mle": 1106
+        "elo_mle": 1107
     },
     "CodeQwen1.5-7B-Chat": {
         "link": "https://huggingface.co/Qwen/CodeQwen1.5-7B-Chat",
@@ -361,7 +361,7 @@
         "size": 72,
         "direct_complete": false,
         "lazy": false,
-        "elo_mle": 971
+        "elo_mle": 972
     },
     "Qwen1.5-32B-Chat": {
         "link": "https://huggingface.co/Qwen/Qwen1.5-32B-Chat",
@@ -439,7 +439,7 @@
         "size": 33,
         "direct_complete": false,
         "lazy": false,
-        "elo_mle": 1124
+        "elo_mle": 1123
     },
     "DeepSeek-Coder-6.7B-Base": {
         "link": "https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-base",
@@ -478,7 +478,7 @@
         "size": 70,
         "direct_complete": true,
         "lazy": false,
-        "elo_mle": 1017
+        "elo_mle": 1018
     },
     "Llama-3-70B-Instruct": {
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct",
@@ -491,7 +491,7 @@
         "size": 70,
         "direct_complete": false,
         "lazy": false,
-        "elo_mle": 1166
+        "elo_mle": 1165
     },
     "Llama-3-8B-Base": {
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3-8B",
@@ -504,7 +504,7 @@
         "size": 8,
         "direct_complete": true,
         "lazy": false,
-        "elo_mle": 811
+        "elo_mle": 810
     },
     "Llama-3-8B-Instruct": {
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct",
@@ -569,7 +569,7 @@
         "size": 34,
         "direct_complete": false,
         "lazy": false,
-        "elo_mle": 1034
+        "elo_mle": 1033
     },
     "Granite-Code-3B-Base": {
         "link": "https://huggingface.co/ibm-granite/granite-3b-code-base",
@@ -634,7 +634,7 @@
         "size": null,
         "direct_complete": false,
         "lazy": false,
-        "elo_mle": 1108
+        "elo_mle": 1107
     },
     "Claude-3-Sonnet-20240229": {
         "link": "https://www.anthropic.com/news/claude-3-family",
@@ -790,7 +790,7 @@
         "size": null,
         "direct_complete": false,
         "lazy": false,
-        "elo_mle": 1215
+        "elo_mle": 1214
     },
     "Gemini-1.5-Flash-API-0514": {
         "link": "https://deepmind.google/technologies/gemini/flash/",
@@ -998,7 +998,7 @@
         "size": 6.7,
         "direct_complete": false,
         "lazy": false,
-        "elo_mle": 1018
+        "elo_mle": 1017
     },
     "Gemma-2-9B-Instruct": {
         "link": "https://huggingface.co/google/gemma-2-9b-it",
@@ -1011,7 +1011,7 @@
         "size": 9,
         "direct_complete": false,
         "lazy": false,
-        "elo_mle": 977
+        "elo_mle": 978
     },
     "AutoCoder": {
         "link": "https://huggingface.co/Bin12345/AutoCoder",
@@ -1054,7 +1054,7 @@
     },
     "ReflectionCoder-DS-33B": {
         "link": "https://huggingface.co/SenseLLM/ReflectionCoder-DS-33B",
-        "open-data": "None",
+        "open-data": "Partial",
         "pass@1": {
             "instruct": null,
             "complete": 53.0
@@ -1063,11 +1063,11 @@
         "size": 33,
         "direct_complete": true,
         "lazy": false,
-        "elo_mle": 1152
+        "elo_mle": 1151
     },
     "ReflectionCoder-DS-6.7B": {
         "link": "https://huggingface.co/SenseLLM/ReflectionCoder-DS-6.7B",
-        "open-data": "None",
+        "open-data": "Partial",
         "pass@1": {
             "instruct": null,
             "complete": 46.2
@@ -1080,7 +1080,7 @@
     },
     "ReflectionCoder-CL-34B": {
         "link": "https://huggingface.co/SenseLLM/ReflectionCoder-CL-34B",
-        "open-data": "None",
+        "open-data": "Partial",
         "pass@1": {
             "instruct": null,
             "complete": 47.3
@@ -1093,7 +1093,7 @@
     },
     "ReflectionCoder-CL-7B": {
         "link": "https://huggingface.co/SenseLLM/ReflectionCoder-CL-7B",
-        "open-data": "None",
+        "open-data": "Partial",
         "pass@1": {
             "instruct": null,
             "complete": 38.3
