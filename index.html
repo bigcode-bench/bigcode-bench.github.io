@@ -588,14 +588,14 @@
           });
 
         if (!showUnknownSize) {
-          data = data.filter((model) => model["size"] != null);
+          data = data.filter((model) => model["act_param"] != null);
         }
 
         const sizeList = [
           ...new Set(
             data
-              .filter((model) => model["size"] != null)
-              .map((model) => Math.round(model["size"])),
+              .filter((model) => model["act_param"] != null)
+              .map((model) => Math.round(model["act_param"])),
           ),
         ].sort((a, b) => {
           return a - b;
@@ -614,7 +614,7 @@
 
         [nonPromptedModels, promptedModels].forEach((series, idx) => {
           series.forEach((model) => {
-            if (model["size"] == null) {
+            if (model["act_param"] == null) {
               chartOption.series[idx].markLine.data.push({
                 name: model["Model"],
                 yAxis: model["pass@1"][score],
@@ -622,7 +622,7 @@
             } else {
               chartOption.series[idx].data.push({
                 name: model["Model"],
-                value: [`${Math.round(model["size"])}`, model["pass@1"][score]],
+                value: [`${Math.round(model["act_param"])}`, model["pass@1"][score]],
               });
             }
           });
@@ -633,12 +633,12 @@
           .concat([[-50, 0]]);
         sizeList.forEach((size, idx) => {
           const bestNonPromptedModel = nonPromptedModels
-            .filter((model) => Math.round(model["size"]) == size)
+            .filter((model) => Math.round(model["act_param"]) == size)
             .sort((a, b) => {
               return b["pass@1"][score] - a["pass@1"][score];
             })[0];
           const bestPromptedModel = promptedModels
-            .filter((model) => Math.round(model["size"]) == size)
+            .filter((model) => Math.round(model["act_param"]) == size)
             .sort((a, b) => {
               return b["pass@1"][score] - a["pass@1"][score];
             })[0];
