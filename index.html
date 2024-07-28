@@ -124,6 +124,12 @@
             alt="paper"
             class="img-fluid"
         /></a>
+        <a href="https://huggingface.co/blog/terryyz/bigcodebench-hard"
+          ><img
+            src="https://img.shields.io/badge/Blog-Hard-orange.svg?style=for-the-badge"
+            alt="paper"
+            class="img-fluid"
+        /></a>
       </div>
       <div class="btn-group" role="group" id="Benchmark">
         <input
@@ -136,6 +142,8 @@
         <label class="btn btn-outline-primary" for="Complete">Complete</label>
         <input type="radio" class="btn-check" name="btnradio" id="Instruct" />
         <label class="btn btn-outline-primary" for="Instruct">Instruct</label>
+        <input type="radio" class="btn-check" name="btnradio" id="Average" />
+        <label class="btn btn-outline-primary" for="Average">Average</label>
       </div>
       <div class="form-check form-switch mt-3">
         <input class="form-check-input" type="checkbox" id="toggleUnknownSize">
@@ -320,6 +328,7 @@
       data[Model]["pass@1"] = {
         "complete": ...,
         "instruct": ...,
+        "average": ...
       }
     */
       if (xhr.status === 200) {
@@ -328,6 +337,10 @@
           return {
             Model: key,
             ...data[key],
+            "pass@1": {
+              ...data[key]["pass@1"],
+              "average": calcAverage(data[key]["pass@1"]["complete"], data[key]["pass@1"]["instruct"])
+            }
           };
         });
       } else {
@@ -456,7 +469,7 @@
 
       const theaders = ["Model", "Pass@1"];
 
-      // score: 'complete', 'instruct'
+      // score: 'complete', 'instruct', 'average'
       const displayTable = (table, score) => {
         // filter out Null
         data = globalData
@@ -652,6 +665,7 @@
 
       const completeRadio = document.getElementById("Complete");
       const instructRadio = document.getElementById("Instruct");
+      const averageRadio = document.getElementById("Average");
 
       completeRadio.addEventListener("click", function () {
         clearTable();
@@ -667,8 +681,15 @@
         displayChart("instruct", toggleUnknownSize.checked);
       });
 
+      averageRadio.addEventListener("click", function () {
+        clearTable();
+        displayTable(originTable, "average");
+        clearChart();
+        displayChart("average", toggleUnknownSize.checked);
+      });
+
       toggleUnknownSize.addEventListener("change", function () {
-        const score = completeRadio.checked ? "complete" : "instruct";
+        const score = completeRadio.checked ? "complete" : instructRadio.checked ? "instruct" : "average";
         clearChart();
         displayChart(score, toggleUnknownSize.checked);
       });
