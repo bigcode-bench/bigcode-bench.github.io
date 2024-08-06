@@ -148,13 +148,13 @@
           <label class="btn btn-outline-full" for="Full">Full</label>
       </div>
         <div class="btn-group" role="group" id="Benchmark">
-            <input type="radio" class="btn-check" name="btnradio" id="Complete" checked />
-            <label class="btn btn-outline-primary" for="Complete">Complete</label>
-            <input type="radio" class="btn-check" name="btnradio" id="Instruct" />
-            <label class="btn btn-outline-primary" for="Instruct">Instruct</label>
-            <input type="radio" class="btn-check" name="btnradio" id="Average" />
-            <label class="btn btn-outline-primary" for="Average">Average</label>
-        </div>
+          <input type="radio" class="btn-check" name="btnradio" id="Complete" />
+          <label class="btn btn-outline-primary" for="Complete">Complete</label>
+          <input type="radio" class="btn-check" name="btnradio" id="Instruct" />
+          <label class="btn btn-outline-primary" for="Instruct">Instruct</label>
+          <input type="radio" class="btn-check" name="btnradio" id="Average" checked />
+          <label class="btn btn-outline-primary" for="Average">Average</label>
+      </div>
         <div class="form-check form-switch mt-3">
             <input class="form-check-input" type="checkbox" id="toggleUnknownSize">
             <label class="form-check-label" for="toggleUnknownSize">Show Models with Unknown Sizes</label>
@@ -687,10 +687,10 @@
             displayChart(score, toggleUnknownSize.checked);
         });
 
-        completeRadio.click();
+        averageRadio.click();
 
         window.addEventListener("resize", () => {
-            this.chart.resize();
+            chart.resize();
         });
     </script>
 </body>
