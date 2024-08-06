@@ -301,26 +301,27 @@
 
         // Function to load data based on the selected subset
         function loadData() {
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", dataUrl, false); // Synchronous request
-            xhr.send();
-
-            if (xhr.status === 200) {
-                data = JSON.parse(xhr.responseText);
-                data = Object.keys(data).map((key) => ({
-                    Model: key,
-                    ...data[key],
-                    "pass@1": {
-                        ...data[key]["pass@1"],
-                        "average": calcAverage(data[key]["pass@1"]["complete"], data[key]["pass@1"]["instruct"])
-                    }
-                }));
-                displayTable(originTable, "complete"); // Refresh table with new data
-                displayChart("complete", toggleUnknownSize.checked); // Refresh chart with new data
-            } else {
-                alert("Failed to load data from " + dataUrl);
-            }
-        }
+          var xhr = new XMLHttpRequest();
+          xhr.open("GET", dataUrl, true); // Asynchronous request
+          xhr.onload = function() {
+              if (xhr.status === 200) {
+                  globalData = JSON.parse(xhr.responseText);
+                  globalData = Object.keys(globalData).map((key) => ({
+                      Model: key,
+                      ...globalData[key],
+                      "pass@1": {
+                          ...globalData[key]["pass@1"],
+                          "average": calcAverage(globalData[key]["pass@1"]["complete"], globalData[key]["pass@1"]["instruct"])
+                      }
+                  }));
+                  displayTable(originTable, "complete"); // Refresh table with new data
+                  displayChart("complete", toggleUnknownSize.checked); // Refresh chart with new data
+              } else {
+                  alert("Failed to load data from " + dataUrl);
+              }
+          };
+          xhr.send();
+      }
 
         // Event listeners for the subset radio buttons
         document.getElementById("Hard").addEventListener("change", function () {
