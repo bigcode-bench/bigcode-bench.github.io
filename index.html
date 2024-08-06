@@ -175,6 +175,13 @@
                         version 0.1.0;
                     </li>
                     <li>
+                        Hard Set vs Full Set:
+                        <br />
+                        <strong>Hard Set</strong>: A subset of ~150 BigCodeBench tasks which is more user-facing and challenging.
+                        <br />
+                        <strong>Full Set</strong>: The full set of 1140 BigCodeBench tasks.
+                    </li>
+                    <li>
                         Models are ranked according to (calibrated) Pass@1 using greedy decoding. Setup details can be
                         found
                         <a href="https://github.com/bigcode-project/bigcodebench/blob/main/bigcodebench/generate.py">here</a>.
@@ -182,11 +189,10 @@
                     <li>
                         <i>Complete</i> vs <i>Instruct</i>:
                         <br />
-                        <i><strong><u>Complete</u></strong></i>: Code Completion based on the (verbose) structured
+                        <i><strong><u>Complete</u></strong></i>: Code Completion based on the structured long-context
                         docstring. This variant tests if the models are good at coding.
                         <br />
-                        <strong><i><u>Instruct</u></i> (🔥Vibe Check🔥)</strong>: Code Generation based on the (less
-                        verbose) NL-oriented instructions. This variant tests if the models are really capable enough to
+                        <strong><i><u>Instruct</u></i> (🔥Vibe Check🔥)</strong>: Code Generation based on the brief NL-oriented instructions. This variant tests if the models are really capable enough to
                         understand human intents to code.
                     </li>
                     <li>
@@ -299,7 +305,7 @@
 
         var dataUrl = "results-hard.json"; // Default data source
         var globalData;
-        var currentSubset = "complete";
+        var currentSplit = "average";
         // Function to load data based on the selected subset
         function loadData() {
           var xhr = new XMLHttpRequest();
@@ -315,8 +321,8 @@
                           "average": calcAverage(globalData[key]["pass@1"]["complete"], globalData[key]["pass@1"]["instruct"])
                       }
                   }));
-                  displayTable(originTable, currentSubset);
-                  displayChart(currentSubset, toggleUnknownSize.checked);
+                  displayTable(originTable, currentSplit);
+                  displayChart(currentSplit, toggleUnknownSize.checked);
               } else {
                   alert("Failed to load data from " + dataUrl);
               }
