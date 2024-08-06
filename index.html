@@ -298,11 +298,12 @@
         var chart = echarts.init(chartDom);
 
         var dataUrl = "results-hard.json"; // Default data source
-
+        var globalData;
+        var currentSubset = "complete";
         // Function to load data based on the selected subset
         function loadData() {
           var xhr = new XMLHttpRequest();
-          xhr.open("GET", dataUrl, true); // Asynchronous request
+          xhr.open("GET", dataUrl, true);
           xhr.onload = function() {
               if (xhr.status === 200) {
                   globalData = JSON.parse(xhr.responseText);
@@ -314,8 +315,8 @@
                           "average": calcAverage(globalData[key]["pass@1"]["complete"], globalData[key]["pass@1"]["instruct"])
                       }
                   }));
-                  displayTable(originTable, "complete"); // Refresh table with new data
-                  displayChart("complete", toggleUnknownSize.checked); // Refresh chart with new data
+                  displayTable(originTable, currentSubset);
+                  displayChart(currentSubset, toggleUnknownSize.checked);
               } else {
                   alert("Failed to load data from " + dataUrl);
               }
@@ -471,104 +472,84 @@
 
         // score: 'complete', 'instruct', 'average'
         const displayTable = (table, score) => {
-            // filter out Null
-            data = globalData
-                .filter((row) => {
-                    return row["pass@1"][score] != null;
-                })
-                .sort((a, b) => {
-                    return b["pass@1"][score] - a["pass@1"][score];
-                });
-
-            var thead = document.createElement("thead");
-            var headerRow = document.createElement("tr");
-            // add rank
-            var th = document.createElement("th");
-            th.textContent = "#";
-            headerRow.appendChild(th);
-            // headers
-            theaders.forEach(function (header) {
-                var th = document.createElement("th");
-                th.textContent = header;
-                if (header == "Pass@1") {
-                    th.style.backgroundColor = "#EEFFEE";
-                }
-                headerRow.appendChild(th);
-            });
-            thead.appendChild(headerRow);
-            table.appendChild(thead);
-
-            var tbody = document.createElement("tbody");
-            var rank = 1;
-            var previousScore = null;
-            var actualRank = 1;
-
-            data.forEach((row, index) => {
-                var dataRow = document.createElement("tr");
-                var rankCell = document.createElement("td");
-
-                if (row["pass@1"][score] !== previousScore) {
-                    actualRank = index + 1;
-                    previousScore = row["pass@1"][score];
-                }
-
-                rankCell.textContent = actualRank;
-                dataRow.appendChild(rankCell);
-
-                var modelCell = document.createElement("td");
-                if (actualRank == 1) {
-                    modelCell.textContent = "🥇 ";
-                } else if (actualRank == 2) {
-                    modelCell.textContent = "🥈 ";
-                } else if (actualRank == 3) {
-                    modelCell.textContent = "🥉 ";
-                } else {
-                    modelCell.textContent = "";
-                }
-                var modelLink = document.createElement("a");
-                modelLink.href = row["link"];
-                modelLink.textContent = row["Model"];
-                modelLink.classList.add("link-underline-primary");
-                modelLink.classList.add("text-nowrap");
-                modelCell.appendChild(modelLink);
-                modelCell.classList.add("d-flex");
-                modelCell.classList.add("flex-nowrap");
-                var prompted = row["prompted"];
-                var opendata = row["open-data"];
-                var lazy = row["lazy"];
-                if (prompted) {
-                    // add a symbol to indicate the model is prompted
-                    var promptedSymbol = document.createElement("span");
-                    promptedSymbol.textContent = "✨";
-                    modelCell.appendChild(promptedSymbol);
-                }
-                if (opendata.toUpperCase() == "FULL") {
-                    // add a symbol to indicate the model is fully open-sourced
-                    var promptedSymbol = document.createElement("span");
-                    promptedSymbol.textContent = "💚";
-                    modelCell.appendChild(promptedSymbol);
-                } else if (opendata.toUpperCase() == "PARTIAL") {
-                    // add a symbol to indicate the model is partially open-sourced
-                    // i.e., a subset of the model implementation is close-sourced
-                    var promptedSymbol = document.createElement("span");
-                    promptedSymbol.textContent = "💙";
-                    modelCell.appendChild(promptedSymbol);
-                }
-                dataRow.appendChild(modelCell);
-                var passCell = document.createElement("td");
-                passCell.classList.add("text-nowrap");
-                if (lazy) {
-                    passCell.textContent = row["pass@1"][score] + "💤";
-                } else {
-                    passCell.textContent = row["pass@1"][score];
-                }
-                passCell.style.backgroundColor = "#EEFFEE";
-                passCell.style.fontWeight = "bold";
-                dataRow.appendChild(passCell);
-                tbody.appendChild(dataRow);
-            });
-            table.appendChild(tbody);
-        };
+          // Clear existing table content
+          table.innerHTML = '';
+      
+          // Filter out Null and sort data
+          const data = globalData
+              .filter((row) => row["pass@1"][score] != null)
+              .sort((a, b) => b["pass@1"][score] - a["pass@1"][score]);
+      
+          // Create table header
+          const thead = document.createElement("thead");
+          const headerRow = document.createElement("tr");
+          
+          // Add rank header
+          const rankHeader = document.createElement("th");
+          rankHeader.textContent = "#";
+          headerRow.appendChild(rankHeader);
+          
+          // Add other headers
+          theaders.forEach(function (header) {
+              const th = document.createElement("th");
+              th.textContent = header;
+              if (header == "Pass@1") {
+                  th.style.backgroundColor = "#EEFFEE";
+              }
+              headerRow.appendChild(th);
+          });
+          thead.appendChild(headerRow);
+          table.appendChild(thead);
+      
+          // Create table body
+          const tbody = document.createElement("tbody");
+          let previousScore = null;
+          let actualRank = 1;
+      
+          data.forEach((row, index) => {
+              const dataRow = document.createElement("tr");
+              const rankCell = document.createElement("td");
+      
+              if (row["pass@1"][score] !== previousScore) {
+                  actualRank = index + 1;
+                  previousScore = row["pass@1"][score];
+              }
+      
+              rankCell.textContent = actualRank;
+              dataRow.appendChild(rankCell);
+      
+              const modelCell = document.createElement("td");
+              modelCell.textContent = actualRank <= 3 ? ["🥇 ", "🥈 ", "🥉 "][actualRank - 1] : "";
+      
+              const modelLink = document.createElement("a");
+              modelLink.href = row["link"];
+              modelLink.textContent = row["Model"];
+              modelLink.classList.add("link-underline-primary", "text-nowrap");
+              modelCell.appendChild(modelLink);
+              modelCell.classList.add("d-flex", "flex-nowrap");
+      
+              if (row["prompted"]) {
+                  const promptedSymbol = document.createElement("span");
+                  promptedSymbol.textContent = "✨";
+                  modelCell.appendChild(promptedSymbol);
+              }
+      
+              // Add open-data and lazy symbols here if needed
+      
+              dataRow.appendChild(modelCell);
+      
+              const passCell = document.createElement("td");
+              passCell.classList.add("text-nowrap");
+              passCell.textContent = row["pass@1"][score] + (row["lazy"] ? "💤" : "");
+              passCell.style.backgroundColor = "#EEFFEE";
+              passCell.style.fontWeight = "bold";
+              dataRow.appendChild(passCell);
+      
+              tbody.appendChild(dataRow);
+          });
+      
+          table.appendChild(tbody);
+      };
 
         const displayChart = (score, showUnknownSize = true) => {
             // sort first
