@@ -296,7 +296,7 @@
         "moe": false,
         "size": 34,
         "act_param": 34,
-        "elo_mle": 869
+        "elo_mle": 870
     },
     "CodeLlama-70B-Base": {
         "link": "https://huggingface.co/codellama/CodeLlama-70b-hf",
@@ -491,7 +491,7 @@
         "moe": false,
         "size": 70,
         "act_param": 70,
-        "elo_mle": 1108
+        "elo_mle": 1109
     },
     "Llama-3-8B-Base": {
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3-8B",
@@ -517,7 +517,7 @@
         "moe": false,
         "size": 8,
         "act_param": 8,
-        "elo_mle": 900
+        "elo_mle": 899
     },
     "Granite-Code-3B-Instruct": {
         "link": "https://huggingface.co/ibm-granite/granite-3b-code-instruct",
@@ -673,7 +673,7 @@
         "moe": false,
         "size": 34,
         "act_param": 34,
-        "elo_mle": 960
+        "elo_mle": 959
     },
     "Yi-1.5-34B": {
         "link": "https://huggingface.co/01-ai/Yi-1.5-34B",
@@ -881,7 +881,7 @@
         "moe": false,
         "size": 22,
         "act_param": 22,
-        "elo_mle": 1084
+        "elo_mle": 1085
     },
     "Codestral-Mamba": {
         "link": "https://huggingface.co/mistralai/mamba-codestral-7B-v0.1",
@@ -907,7 +907,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 737
+        "elo_mle": 738
     },
     "Mistral-7B-v0.3": {
         "link": "https://huggingface.co/mistralai/Mistral-7B-v0.3",
@@ -966,7 +966,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "complete": 11.5
+            "complete": 30.6
         },
         "prompted": false,
         "moe": true,
@@ -1050,7 +1050,7 @@
         "moe": false,
         "size": 6.7,
         "act_param": 6.7,
-        "elo_mle": 997
+        "elo_mle": 996
     },
     "AutoCoder-QW-7B": {
         "link": "https://huggingface.co/Bin12345/AutoCoder_QW_7B",
@@ -1141,7 +1141,7 @@
         "moe": false,
         "size": 3.8,
         "act_param": 3.8,
-        "elo_mle": 907
+        "elo_mle": 906
     },
     "InternLM2.5-7B-Chat": {
         "link": "https://huggingface.co/internlm/internlm2_5-7b-chat",
@@ -1180,7 +1180,7 @@
         "moe": true,
         "size": 236,
         "act_param": 21,
-        "elo_mle": 1196
+        "elo_mle": 1195
     },
     "Gemma-2-27B-Instruct": {
         "link": "https://huggingface.co/google/gemma-2-27b-it",
@@ -1323,7 +1323,7 @@
         "moe": false,
         "size": 72,
         "act_param": 72,
-        "elo_mle": 998
+        "elo_mle": 999
     },
     "WhiteRabbitNeo-33B-v1.5": {
         "link": "https://huggingface.co/WhiteRabbitNeo/WhiteRabbitNeo-33B-v1.5",
@@ -1342,8 +1342,8 @@
         "link": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407",
         "open-data": "None",
         "pass@1": {
-            "instruct": 22.3,
-            "complete": 29.7
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1355,8 +1355,8 @@
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct",
         "open-data": "None",
         "pass@1": {
-            "instruct": 13.5,
-            "complete": 13.5
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1368,8 +1368,8 @@
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3.1-70B-Instruct",
         "open-data": "None",
         "pass@1": {
-            "instruct": 23.6,
-            "complete": 28.4
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1381,8 +1381,8 @@
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3.1-405B-Instruct",
         "open-data": "None",
         "pass@1": {
-            "instruct": 22.3,
-            "complete": 30.4
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1394,8 +1394,8 @@
         "link": "https://www.deepseek.com/",
         "open-data": "None",
         "pass@1": {
-            "instruct": 25.7,
-            "complete": 33.1
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": true,
@@ -1407,8 +1407,8 @@
         "link": "https://huggingface.co/microsoft/Phi-3.5-mini-instruct",
         "open-data": "None",
         "pass@1": {
-            "instruct": 14.2,
-            "complete": 16.2
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1420,8 +1420,8 @@
         "link": "https://huggingface.co/nv-mistralai/Mistral-Nemo-12B-Instruct",
         "open-data": "None",
         "pass@1": {
-            "instruct": 11.5,
-            "complete": 21.6
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1433,8 +1433,8 @@
         "link": "https://huggingface.co/wyt2000/InverseCoder-CL-13B",
         "open-data": "Partial",
         "pass@1": {
-            "instruct": 12.8,
-            "complete": 14.9
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1446,8 +1446,8 @@
         "link": "https://huggingface.co/wyt2000/InverseCoder-CL-7B",
         "open-data": "Partial",
         "pass@1": {
-            "instruct": 14.2,
-            "complete": 12.8
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1459,8 +1459,8 @@
         "link": "https://huggingface.co/wyt2000/InverseCoder-DS-6.7B",
         "open-data": "Partial",
         "pass@1": {
-            "instruct": 10.8,
-            "complete": 14.9
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1472,8 +1472,8 @@
         "link": "https://deepmind.google/technologies/gemini/pro",
         "open-data": "None",
         "pass@1": {
-            "instruct": 25.0,
-            "complete": 29.7
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1485,8 +1485,8 @@
         "link": "https://openai.com/index/introducing-structured-outputs-in-the-api/",
         "open-data": "None",
         "pass@1": {
-            "instruct": 25.0,
-            "complete": 36.5
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1498,8 +1498,8 @@
         "link": "https://huggingface.co/abacusai/Dracarys-Llama-3.1-70B-Instruct",
         "open-data": "None",
         "pass@1": {
-            "instruct": 20.9,
-            "complete": 27.7
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1511,8 +1511,8 @@
         "link": "https://huggingface.co/abacusai/Dracarys-72B-Instruct",
         "open-data": "None",
         "pass@1": {
-            "instruct": 18.2,
-            "complete": 27.0
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1524,8 +1524,8 @@
         "link": "https://deepmind.google/technologies/gemini/pro",
         "open-data": "None",
         "pass@1": {
-            "instruct": 27.0,
-            "complete": 31.8
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1537,8 +1537,8 @@
         "link": "https://deepmind.google/technologies/gemini/flash/",
         "open-data": "None",
         "pass@1": {
-            "instruct": 19.6,
-            "complete": 23.6
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1550,8 +1550,8 @@
         "link": "https://www.deepseek.com/",
         "open-data": "None",
         "pass@1": {
-            "instruct": 23.0,
-            "complete": 29.1
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": true,
@@ -1576,8 +1576,8 @@
         "link": "https://huggingface.co/CohereForAI/c4ai-command-r-plus-08-2024",
         "open-data": "None",
         "pass@1": {
-            "instruct": 11.5,
-            "complete": 14.9
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1589,21 +1589,21 @@
         "link": "https://huggingface.co/01-ai/Yi-Coder-9B-Chat",
         "open-data": "None",
         "pass@1": {
-            "instruct": 11.5,
-            "complete": 17.6
+            "instruct": 38.1,
+            "complete": 49.0
         },
         "prompted": true,
         "moe": false,
         "size": 9,
         "act_param": 9,
-        "elo_mle": 1027
+        "elo_mle": 1026
     },
     "Reflection-Llama-3.1-70B": {
         "link": "https://huggingface.co/mattshumer/ref_70_e3",
         "open-data": "None",
         "pass@1": {
-            "instruct": 23.0,
-            "complete": 33.1
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1615,8 +1615,8 @@
         "link": "https://huggingface.co/mattshumer/ref_70_e3",
         "open-data": "None",
         "pass@1": {
-            "instruct": 25.7,
-            "complete": 25.0
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1628,8 +1628,8 @@
         "link": "https://o1.ai/o1-preview",
         "open-data": "None",
         "pass@1": {
-            "instruct": 23.0,
-            "complete": 34.5
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1641,8 +1641,8 @@
         "link": "https://o1.ai/o1-preview",
         "open-data": "None",
         "pass@1": {
-            "instruct": 27.7,
-            "complete": 27.0
+            "instruct": null,
+            "complete": null
         },
         "prompted": true,
         "moe": false,
@@ -1654,8 +1654,8 @@
         "link": "https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct",
         "open-data": "None",
         "pass@1": {
-            "instruct": 4.7,
-            "complete": 6.1
+            "instruct": 27.0,
+            "complete": 32.7
         },
         "prompted": true,
         "moe": false,
@@ -1668,7 +1668,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 40.4,
-            "complete": 20.3
+            "complete": 48.8
         },
         "prompted": true,
         "moe": false,
