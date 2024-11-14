@@ -221,7 +221,7 @@
                         concretely reason about contamination.
                     </li>
                     <li>
-                        "Size" here is the amount of activated model weight during inference.
+                        "Size" here is the number of model parameters during inference.
                     </li>
                 </ol>
             </div>
@@ -568,14 +568,14 @@
                 });
 
             if (!showUnknownSize) {
-                data = data.filter((model) => model["act_param"] != null);
+                data = data.filter((model) => model["size"] != null);
             }
 
             const sizeList = [
                 ...new Set(
                     data
-                    .filter((model) => model["act_param"] != null)
-                    .map((model) => Math.round(model["act_param"])),
+                    .filter((model) => model["size"] != null)
+                    .map((model) => Math.round(model["size"])),
                 ),
             ].sort((a, b) => {
                 return a - b;
@@ -594,7 +594,7 @@
 
             [nonPromptedModels, promptedModels].forEach((series, idx) => {
                 series.forEach((model) => {
-                    if (model["act_param"] == null) {
+                    if (model["size"] == null) {
                         chartOption.series[idx].markLine.data.push({
                             name: model["Model"],
                             yAxis: model["pass@1"][score],
@@ -602,7 +602,7 @@
                     } else {
                         chartOption.series[idx].data.push({
                             name: model["Model"],
-                            value: [`${Math.round(model["act_param"])}`, model["pass@1"][score]],
+                            value: [`${Math.round(model["size"])}`, model["pass@1"][score]],
                         });
                     }
                 });
@@ -619,12 +619,12 @@
                 ]);
             sizeList.forEach((size, idx) => {
                 const bestNonPromptedModel = nonPromptedModels
-                    .filter((model) => Math.round(model["act_param"]) == size)
+                    .filter((model) => Math.round(model["size"]) == size)
                     .sort((a, b) => {
                         return b["pass@1"][score] - a["pass@1"][score];
                     })[0];
                 const bestPromptedModel = promptedModels
-                    .filter((model) => Math.round(model["act_param"]) == size)
+                    .filter((model) => Math.round(model["size"]) == size)
                     .sort((a, b) => {
                         return b["pass@1"][score] - a["pass@1"][score];
                     })[0];
