@@ -10,7 +10,7 @@
         "moe": false,
         "size": 6.7,
         "act_param": 6.7,
-        "elo_mle": 935
+        "elo_mle": 933
     },
     "StarCoder2-15B-Instruct-v0.1": {
         "link": "https://huggingface.co/bigcode/starcoder2-15b-instruct-v0.1",
@@ -23,7 +23,7 @@
         "moe": false,
         "size": 15,
         "act_param": 15,
-        "elo_mle": 953
+        "elo_mle": 951
     },
     "StarCoder2-3B": {
         "link": "https://huggingface.co/bigcode/starcoder2-3b",
@@ -114,7 +114,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 892
+        "elo_mle": 890
     },
     "GPT-3.5-Turbo-0125": {
         "link": "https://openai.com/index/new-embedding-models-and-api-updates",
@@ -127,7 +127,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1044
+        "elo_mle": 1042
     },
     "GPT-4o-2024-05-13": {
         "link": "https://openai.com/index/hello-gpt-4o/",
@@ -140,7 +140,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1153
+        "elo_mle": 1150
     },
     "GPT-4-Turbo-2024-04-09": {
         "link": "https://openai.com/blog/new-models-and-developer-products-announced-at-devday",
@@ -153,7 +153,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1218
+        "elo_mle": 1216
     },
     "GPT-4-0613": {
         "link": "https://openai.com/blog/new-models-and-developer-products-announced-at-devday",
@@ -166,7 +166,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1012
+        "elo_mle": 1010
     },
     "CodeLlama-7B-Base": {
         "link": "https://huggingface.co/codellama/CodeLlama-7b-hf",
@@ -205,7 +205,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 702
+        "elo_mle": 700
     },
     "CodeLlama-13B-Instruct": {
         "link": "https://huggingface.co/codellama/CodeLlama-13b-Instruct-hf",
@@ -218,7 +218,7 @@
         "moe": false,
         "size": 13,
         "act_param": 13,
-        "elo_mle": 833
+        "elo_mle": 831
     },
     "Mistral-Large-2402": {
         "link": "https://mistral.ai/news/mistral-large/",
@@ -231,7 +231,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 838
+        "elo_mle": 837
     },
     "Mistral-Small-2402": {
         "link": "https://mistral.ai/news/mistral-large/",
@@ -244,7 +244,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 954
+        "elo_mle": 952
     },
     "Mixtral-8x22B-Base": {
         "link": "https://huggingface.co/mistralai/Mixtral-8x22B-v0.1",
@@ -270,7 +270,7 @@
         "moe": false,
         "size": 176,
         "act_param": 44,
-        "elo_mle": 1051
+        "elo_mle": 1048
     },
     "CodeLlama-34B-Base": {
         "link": "https://huggingface.co/codellama/CodeLlama-34b-hf",
@@ -296,7 +296,7 @@
         "moe": false,
         "size": 34,
         "act_param": 34,
-        "elo_mle": 886
+        "elo_mle": 884
     },
     "CodeLlama-70B-Base": {
         "link": "https://huggingface.co/codellama/CodeLlama-70b-hf",
@@ -322,7 +322,7 @@
         "moe": false,
         "size": 70,
         "act_param": 70,
-        "elo_mle": 952
+        "elo_mle": 951
     },
     "CodeQwen1.5-7B-Chat": {
         "link": "https://huggingface.co/Qwen/CodeQwen1.5-7B-Chat",
@@ -335,7 +335,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 1013
+        "elo_mle": 1011
     },
     "Qwen1.5-110B-Chat": {
         "link": "https://huggingface.co/Qwen/Qwen1.5-110B-Chat",
@@ -348,7 +348,7 @@
         "moe": false,
         "size": 110,
         "act_param": 110,
-        "elo_mle": 984
+        "elo_mle": 981
     },
     "Qwen1.5-72B-Chat": {
         "link": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat",
@@ -361,7 +361,7 @@
         "moe": false,
         "size": 72,
         "act_param": 72,
-        "elo_mle": 919
+        "elo_mle": 917
     },
     "Qwen1.5-32B-Chat": {
         "link": "https://huggingface.co/Qwen/Qwen1.5-32B-Chat",
@@ -374,7 +374,7 @@
         "moe": false,
         "size": 32,
         "act_param": 32,
-        "elo_mle": 892
+        "elo_mle": 889
     },
     "DeepSeek-V2-Chat": {
         "link": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
@@ -387,7 +387,7 @@
         "moe": true,
         "size": 236,
         "act_param": 21,
-        "elo_mle": 1027
+        "elo_mle": 1025
     },
     "DeepSeek-Coder-1.3B-Base": {
         "link": "https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base",
@@ -413,7 +413,7 @@
         "moe": false,
         "size": 1.3,
         "act_param": 1.3,
-        "elo_mle": 615
+        "elo_mle": 613
     },
     "DeepSeek-Coder-33B-Base": {
         "link": "https://huggingface.co/deepseek-ai/deepseek-coder-33b-base",
@@ -439,7 +439,7 @@
         "moe": false,
         "size": 33,
         "act_param": 33,
-        "elo_mle": 1039
+        "elo_mle": 1036
     },
     "DeepSeek-Coder-6.7B-Base": {
         "link": "https://huggingface.co/deepseek-ai/deepseek-coder-6.7b-base",
@@ -465,7 +465,7 @@
         "moe": false,
         "size": 6.7,
         "act_param": 6.7,
-        "elo_mle": 929
+        "elo_mle": 928
     },
     "Llama-3-70B-Base": {
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3-70B",
@@ -491,7 +491,7 @@
         "moe": false,
         "size": 70,
         "act_param": 70,
-        "elo_mle": 1120
+        "elo_mle": 1117
     },
     "Llama-3-8B-Base": {
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3-8B",
@@ -517,7 +517,7 @@
         "moe": false,
         "size": 8,
         "act_param": 8,
-        "elo_mle": 818
+        "elo_mle": 817
     },
     "Granite-Code-3B-Instruct": {
         "link": "https://huggingface.co/ibm-granite/granite-3b-code-instruct",
@@ -556,7 +556,7 @@
         "moe": false,
         "size": 20,
         "act_param": 20,
-        "elo_mle": 907
+        "elo_mle": 905
     },
     "Granite-Code-34B-Instruct": {
         "link": "https://huggingface.co/ibm-granite/granite-34b-code-instruct",
@@ -569,7 +569,7 @@
         "moe": false,
         "size": 34,
         "act_param": 34,
-        "elo_mle": 977
+        "elo_mle": 975
     },
     "Granite-Code-3B-Base": {
         "link": "https://huggingface.co/ibm-granite/granite-3b-code-base",
@@ -634,7 +634,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1022
+        "elo_mle": 1020
     },
     "Claude-3-Sonnet-20240229": {
         "link": "https://www.anthropic.com/news/claude-3-family",
@@ -647,7 +647,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1097
+        "elo_mle": 1095
     },
     "Claude-3-Opus-20240229": {
         "link": "https://www.anthropic.com/news/claude-3-family",
@@ -660,7 +660,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1136
+        "elo_mle": 1134
     },
     "Yi-1.5-34B-Chat": {
         "link": "https://huggingface.co/01-ai/Yi-1.5-34B-Chat",
@@ -673,7 +673,7 @@
         "moe": false,
         "size": 34,
         "act_param": 34,
-        "elo_mle": 849
+        "elo_mle": 848
     },
     "Yi-1.5-34B": {
         "link": "https://huggingface.co/01-ai/Yi-1.5-34B",
@@ -699,7 +699,7 @@
         "moe": false,
         "size": 9,
         "act_param": 9,
-        "elo_mle": 908
+        "elo_mle": 906
     },
     "Yi-1.5-9B": {
         "link": "https://huggingface.co/01-ai/Yi-1.5-9B",
@@ -725,7 +725,7 @@
         "moe": false,
         "size": 6,
         "act_param": 6,
-        "elo_mle": 762
+        "elo_mle": 760
     },
     "Yi-1.5-6B": {
         "link": "https://huggingface.co/01-ai/Yi-1.5-6B",
@@ -751,7 +751,7 @@
         "moe": true,
         "size": 57,
         "act_param": 14,
-        "elo_mle": 919
+        "elo_mle": 917
     },
     "Qwen2-7B-Instruct": {
         "link": "https://huggingface.co/Qwen/Qwen2-7B-Instruct",
@@ -764,7 +764,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 911
+        "elo_mle": 908
     },
     "Qwen2-72B-Chat": {
         "link": "https://huggingface.co/Qwen/Qwen2-72B-Chat",
@@ -777,7 +777,7 @@
         "moe": false,
         "size": 72,
         "act_param": 72,
-        "elo_mle": 1059
+        "elo_mle": 1057
     },
     "Gemini-1.5-Pro-API-0514": {
         "link": "https://deepmind.google/technologies/gemini/pro",
@@ -790,7 +790,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1126
+        "elo_mle": 1124
     },
     "Gemini-1.5-Flash-API-0514": {
         "link": "https://deepmind.google/technologies/gemini/flash/",
@@ -803,7 +803,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1102
+        "elo_mle": 1100
     },
     "OpenCodeInterpreter-DS-33B": {
         "link": "https://huggingface.co/m-a-p/OpenCodeInterpreter-DS-33B",
@@ -829,7 +829,7 @@
         "moe": false,
         "size": 6.7,
         "act_param": 6.7,
-        "elo_mle": 978
+        "elo_mle": 976
     },
     "OpenCodeInterpreter-DS-1.3B": {
         "link": "https://huggingface.co/m-a-p/OpenCodeInterpreter-DS-1.3B",
@@ -842,7 +842,7 @@
         "moe": false,
         "size": 1.3,
         "act_param": 1.3,
-        "elo_mle": 713
+        "elo_mle": 711
     },
     "Phi-3-Medium-128K-Instruct": {
         "link": "https://huggingface.co/microsoft/Phi-3-medium-128k-instruct",
@@ -855,7 +855,7 @@
         "moe": false,
         "size": 14,
         "act_param": 14,
-        "elo_mle": 934
+        "elo_mle": 933
     },
     "Phi-3-Small-128K-Instruct": {
         "link": "https://huggingface.co/microsoft/Phi-3-small-128k-instruct",
@@ -868,7 +868,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 912
+        "elo_mle": 910
     },
     "Codestral-22B-v0.1": {
         "link": "https://huggingface.co/mistralai/Codestral-22B-v0.1",
@@ -881,7 +881,7 @@
         "moe": false,
         "size": 22,
         "act_param": 22,
-        "elo_mle": 1059
+        "elo_mle": 1057
     },
     "Codestral-Mamba": {
         "link": "https://huggingface.co/mistralai/mamba-codestral-7B-v0.1",
@@ -894,7 +894,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 952
+        "elo_mle": 950
     },
     "Mistral-7B-Instruct-v0.3": {
         "link": "https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3",
@@ -907,7 +907,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 753
+        "elo_mle": 751
     },
     "Mistral-7B-v0.3": {
         "link": "https://huggingface.co/mistralai/Mistral-7B-v0.3",
@@ -933,7 +933,7 @@
         "moe": false,
         "size": 104,
         "act_param": 104,
-        "elo_mle": 960
+        "elo_mle": 958
     },
     "DeepSeek-Coder-V2-Instruct": {
         "link": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct",
@@ -946,7 +946,7 @@
         "moe": true,
         "size": 236,
         "act_param": 21,
-        "elo_mle": 1164
+        "elo_mle": 1161
     },
     "DeepSeek-Coder-V2-Lite-Instruct": {
         "link": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
@@ -959,7 +959,7 @@
         "moe": true,
         "size": 16,
         "act_param": 2.4,
-        "elo_mle": 1006
+        "elo_mle": 1004
     },
     "DeepSeek-Coder-V2-Lite-Base": {
         "link": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Base",
@@ -985,7 +985,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1186
+        "elo_mle": 1184
     },
     "Hermes-2-Theta-Llama-3-70B": {
         "link": "https://huggingface.co/NousResearch/Hermes-2-Theta-Llama-3-70B",
@@ -998,7 +998,7 @@
         "moe": false,
         "size": 70,
         "act_param": 70,
-        "elo_mle": 1087
+        "elo_mle": 1085
     },
     "WaveCoder-Ultra-6.7B": {
         "link": "https://huggingface.co/microsoft/wavecoder-ultra-6.7b",
@@ -1011,7 +1011,7 @@
         "moe": false,
         "size": 6.7,
         "act_param": 6.7,
-        "elo_mle": 964
+        "elo_mle": 962
     },
     "Gemma-2-9B-Instruct": {
         "link": "https://huggingface.co/google/gemma-2-9b-it",
@@ -1024,7 +1024,7 @@
         "moe": false,
         "size": 9,
         "act_param": 9,
-        "elo_mle": 875
+        "elo_mle": 873
     },
     "AutoCoder": {
         "link": "https://huggingface.co/Bin12345/AutoCoder",
@@ -1037,7 +1037,7 @@
         "moe": false,
         "size": 33,
         "act_param": 33,
-        "elo_mle": 999
+        "elo_mle": 997
     },
     "AutoCoder-S-6.7B": {
         "link": "https://huggingface.co/Bin12345/AutoCoder_S_6.7B",
@@ -1050,7 +1050,7 @@
         "moe": false,
         "size": 6.7,
         "act_param": 6.7,
-        "elo_mle": 877
+        "elo_mle": 874
     },
     "AutoCoder-QW-7B": {
         "link": "https://huggingface.co/Bin12345/AutoCoder_QW_7B",
@@ -1063,7 +1063,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 882
+        "elo_mle": 880
     },
     "ReflectionCoder-DS-33B": {
         "link": "https://huggingface.co/SenseLLM/ReflectionCoder-DS-33B",
@@ -1076,7 +1076,7 @@
         "moe": false,
         "size": 33,
         "act_param": 33,
-        "elo_mle": 1029
+        "elo_mle": 1026
     },
     "ReflectionCoder-DS-6.7B": {
         "link": "https://huggingface.co/SenseLLM/ReflectionCoder-DS-6.7B",
@@ -1089,7 +1089,7 @@
         "moe": false,
         "size": 6.7,
         "act_param": 6.7,
-        "elo_mle": 972
+        "elo_mle": 970
     },
     "ReflectionCoder-CL-34B": {
         "link": "https://huggingface.co/SenseLLM/ReflectionCoder-CL-34B",
@@ -1102,7 +1102,7 @@
         "moe": false,
         "size": 34,
         "act_param": 34,
-        "elo_mle": 937
+        "elo_mle": 936
     },
     "ReflectionCoder-CL-7B": {
         "link": "https://huggingface.co/SenseLLM/ReflectionCoder-CL-7B",
@@ -1115,7 +1115,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 870
+        "elo_mle": 869
     },
     "Phi-3.1-Mini-128K-Instruct": {
         "link": "https://huggingface.co/microsoft/Phi-3-mini-128k-instruct",
@@ -1128,7 +1128,7 @@
         "moe": false,
         "size": 3.8,
         "act_param": 3.8,
-        "elo_mle": 1080
+        "elo_mle": 1077
     },
     "Phi-3-Mini-128K-Instruct": {
         "link": "https://huggingface.co/microsoft/Phi-3-mini-128k-instruct",
@@ -1141,7 +1141,7 @@
         "moe": false,
         "size": 3.8,
         "act_param": 3.8,
-        "elo_mle": 892
+        "elo_mle": 890
     },
     "InternLM2.5-7B-Chat": {
         "link": "https://huggingface.co/internlm/internlm2_5-7b-chat",
@@ -1154,7 +1154,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 734
+        "elo_mle": 733
     },
     "Hermes-2-Pro-Llama-3-70B": {
         "link": "https://huggingface.co/NousResearch/Hermes-2-Pro-Llama-3-70B",
@@ -1167,7 +1167,7 @@
         "moe": false,
         "size": 70,
         "act_param": 70,
-        "elo_mle": 1075
+        "elo_mle": 1073
     },
     "DeepSeek-V2-Chat (2024-06-28)": {
         "link": "https://www.deepseek.com/",
@@ -1180,7 +1180,7 @@
         "moe": true,
         "size": 236,
         "act_param": 21,
-        "elo_mle": 1187
+        "elo_mle": 1185
     },
     "Gemma-2-27B-Instruct": {
         "link": "https://huggingface.co/google/gemma-2-27b-it",
@@ -1193,7 +1193,7 @@
         "moe": false,
         "size": 27,
         "act_param": 27,
-        "elo_mle": 1052
+        "elo_mle": 1050
     },
     "Artigenz-Coder-DS-6.7B": {
         "link": "https://huggingface.co/Artigenz/Artigenz-Coder-DS-6.7B",
@@ -1206,7 +1206,7 @@
         "moe": false,
         "size": 6.7,
         "act_param": 6.7,
-        "elo_mle": 956
+        "elo_mle": 953
     },
     "OpenChat-3.6-8B-20240522": {
         "link": "https://huggingface.co/openchat/openchat-3.6-8b-20240522",
@@ -1219,7 +1219,7 @@
         "moe": false,
         "size": 8,
         "act_param": 8,
-        "elo_mle": 908
+        "elo_mle": 906
     },
     "Phind-CodeLlama-34B-v2": {
         "link": "https://huggingface.co/Phind/Phind-CodeLlama-34B-v2",
@@ -1232,7 +1232,7 @@
         "moe": false,
         "size": 34,
         "act_param": 34,
-        "elo_mle": 963
+        "elo_mle": 961
     },
     "Yi-Large": {
         "link": "https://www.lingyiwanwu.com/",
@@ -1245,7 +1245,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1008
+        "elo_mle": 1006
     },
     "CodeGeex4-All-9B": {
         "link": "https://huggingface.co/THUDM/codegeex4-all-9b",
@@ -1258,7 +1258,7 @@
         "moe": false,
         "size": 9,
         "act_param": 9,
-        "elo_mle": 1009
+        "elo_mle": 1007
     },
     "GPT-4o-mini-2024-07-18": {
         "link": "https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/",
@@ -1271,7 +1271,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1127
+        "elo_mle": 1124
     },
     "Athene-70B": {
         "link": "https://huggingface.co/Nexusflow/Athene-70B",
@@ -1284,7 +1284,7 @@
         "moe": false,
         "size": 70,
         "act_param": 70,
-        "elo_mle": 1048
+        "elo_mle": 1045
     },
     "Nxcode-CQ-7B-Orpo": {
         "link": "https://huggingface.co/NTQAI/Nxcode-CQ-7B-orpo",
@@ -1297,7 +1297,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 1010
+        "elo_mle": 1009
     },
     "Llama-3-70B-Synthia-v3.5": {
         "link": "https://huggingface.co/migtissera/Llama-3-70B-Synthia-v3.5",
@@ -1310,7 +1310,7 @@
         "moe": false,
         "size": 70,
         "act_param": 70,
-        "elo_mle": 1110
+        "elo_mle": 1107
     },
     "Tess-v2.5.2-Qwen2-72B": {
         "link": "https://huggingface.co/migtissera/Tess-v2.5.2-Qwen2-72B",
@@ -1323,7 +1323,7 @@
         "moe": false,
         "size": 72,
         "act_param": 72,
-        "elo_mle": 992
+        "elo_mle": 990
     },
     "WhiteRabbitNeo-33B-v1.5": {
         "link": "https://huggingface.co/WhiteRabbitNeo/WhiteRabbitNeo-33B-v1.5",
@@ -1336,7 +1336,7 @@
         "moe": false,
         "size": 33,
         "act_param": 33,
-        "elo_mle": 1036
+        "elo_mle": 1034
     },
     "Mistral-Large-Instruct-2407": {
         "link": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407",
@@ -1349,7 +1349,7 @@
         "moe": false,
         "size": 123,
         "act_param": 123,
-        "elo_mle": 1145
+        "elo_mle": 1142
     },
     "Llama-3.1-8B-Instruct": {
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct",
@@ -1362,7 +1362,7 @@
         "moe": false,
         "size": 8,
         "act_param": 8,
-        "elo_mle": 946
+        "elo_mle": 944
     },
     "Llama-3.1-70B-Instruct": {
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3.1-70B-Instruct",
@@ -1375,7 +1375,7 @@
         "moe": false,
         "size": 70,
         "act_param": 70,
-        "elo_mle": 1130
+        "elo_mle": 1128
     },
     "Llama-3.1-405B-Instruct": {
         "link": "https://huggingface.co/meta-llama/Meta-Llama-3.1-405B-Instruct",
@@ -1388,7 +1388,7 @@
         "moe": false,
         "size": 405,
         "act_param": 405,
-        "elo_mle": 1148
+        "elo_mle": 1146
     },
     "DeepSeek-Coder-V2-Instruct (2024-07-24)": {
         "link": "https://www.deepseek.com/",
@@ -1401,7 +1401,7 @@
         "moe": true,
         "size": 236,
         "act_param": 21,
-        "elo_mle": 1200
+        "elo_mle": 1197
     },
     "Phi-3.5-Mini-Instruct": {
         "link": "https://huggingface.co/microsoft/Phi-3.5-mini-instruct",
@@ -1414,7 +1414,7 @@
         "moe": false,
         "size": 3.8,
         "act_param": 3.8,
-        "elo_mle": 968
+        "elo_mle": 966
     },
     "Mistral-Nemo-12B-Instruct": {
         "link": "https://huggingface.co/nv-mistralai/Mistral-Nemo-12B-Instruct",
@@ -1427,7 +1427,7 @@
         "moe": false,
         "size": 12,
         "act_param": 12,
-        "elo_mle": 995
+        "elo_mle": 993
     },
     "InverseCoder-CL-13B": {
         "link": "https://huggingface.co/wyt2000/InverseCoder-CL-13B",
@@ -1440,7 +1440,7 @@
         "moe": false,
         "size": 13,
         "act_param": 13,
-        "elo_mle": 957
+        "elo_mle": 955
     },
     "InverseCoder-CL-7B": {
         "link": "https://huggingface.co/wyt2000/InverseCoder-CL-7B",
@@ -1453,7 +1453,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 947
+        "elo_mle": 945
     },
     "InverseCoder-DS-6.7B": {
         "link": "https://huggingface.co/wyt2000/InverseCoder-DS-6.7B",
@@ -1466,7 +1466,7 @@
         "moe": false,
         "size": 6.7,
         "act_param": 6.7,
-        "elo_mle": 934
+        "elo_mle": 932
     },
     "Gemini-1.5-Pro-Exp-0801": {
         "link": "https://deepmind.google/technologies/gemini/pro",
@@ -1479,7 +1479,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1157
+        "elo_mle": 1155
     },
     "GPT-4o-2024-08-06": {
         "link": "https://openai.com/index/introducing-structured-outputs-in-the-api/",
@@ -1492,7 +1492,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1210
+        "elo_mle": 1207
     },
     "Dracarys-Llama-3.1-70B-Instruct": {
         "link": "https://huggingface.co/abacusai/Dracarys-Llama-3.1-70B-Instruct",
@@ -1505,7 +1505,7 @@
         "moe": false,
         "size": 70,
         "act_param": 70,
-        "elo_mle": 1117
+        "elo_mle": 1115
     },
     "Dracarys-72B-Instruct": {
         "link": "https://huggingface.co/abacusai/Dracarys-72B-Instruct",
@@ -1518,7 +1518,7 @@
         "moe": false,
         "size": 72,
         "act_param": 72,
-        "elo_mle": 1091
+        "elo_mle": 1089
     },
     "Gemini-1.5-Pro-Exp-0827": {
         "link": "https://deepmind.google/technologies/gemini/pro",
@@ -1531,7 +1531,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1185
+        "elo_mle": 1183
     },
     "Gemini-1.5-Flash-Exp-0827": {
         "link": "https://deepmind.google/technologies/gemini/flash/",
@@ -1544,7 +1544,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1072
+        "elo_mle": 1069
     },
     "DeepSeek-V2.5": {
         "link": "https://www.deepseek.com/",
@@ -1557,7 +1557,7 @@
         "moe": true,
         "size": 236,
         "act_param": 21,
-        "elo_mle": 1139
+        "elo_mle": 1137
     },
     "C4AI-Command-R-08-2024": {
         "link": "https://huggingface.co/CohereForAI/c4ai-command-r-08-2024",
@@ -1570,7 +1570,7 @@
         "moe": false,
         "size": 32.3,
         "act_param": 32.3,
-        "elo_mle": 934
+        "elo_mle": 931
     },
     "C4AI-Command-R-Plus-08-2024": {
         "link": "https://huggingface.co/CohereForAI/c4ai-command-r-plus-08-2024",
@@ -1583,7 +1583,7 @@
         "moe": false,
         "size": 104,
         "act_param": 104,
-        "elo_mle": 933
+        "elo_mle": 931
     },
     "Yi-Coder-9B-Chat": {
         "link": "https://huggingface.co/01-ai/Yi-Coder-9B-Chat",
@@ -1596,7 +1596,7 @@
         "moe": false,
         "size": 9,
         "act_param": 9,
-        "elo_mle": 971
+        "elo_mle": 970
     },
     "o1-Preview-2024-09-12 (temperature=1)": {
         "link": "https://openai.com/index/introducing-openai-o1-preview/",
@@ -1609,7 +1609,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1166
+        "elo_mle": 1164
     },
     "o1-Mini-2024-09-12 (temperature=1)": {
         "link": "https://openai.com/index/introducing-openai-o1-preview/",
@@ -1622,7 +1622,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1147
+        "elo_mle": 1146
     },
     "Qwen2.5-Coder-1.5B-Instruct": {
         "link": "https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct",
@@ -1635,7 +1635,7 @@
         "moe": false,
         "size": 1.5,
         "act_param": 1.5,
-        "elo_mle": 748
+        "elo_mle": 746
     },
     "Qwen2.5-Coder-7B-Instruct": {
         "link": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct",
@@ -1648,7 +1648,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 1061
+        "elo_mle": 1060
     },
     "Gemini-1.5-Pro-002": {
         "link": "https://deepmind.google/technologies/gemini/pro",
@@ -1661,7 +1661,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1144
+        "elo_mle": 1142
     },
     "Mistral-Small-Instruct-2409": {
         "link": "https://huggingface.co/mistralai/Mistral-Small-Instruct-2409",
@@ -1674,7 +1674,7 @@
         "moe": false,
         "size": 22.2,
         "act_param": 22.2,
-        "elo_mle": 965
+        "elo_mle": 963
     },
     "Qwen2.5-0.5B-Instruct": {
         "link": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
@@ -1687,7 +1687,7 @@
         "moe": false,
         "size": 0.5,
         "act_param": 0.5,
-        "elo_mle": 490
+        "elo_mle": 486
     },
     "Qwen2.5-1.5B-Instruct": {
         "link": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
@@ -1700,7 +1700,7 @@
         "moe": false,
         "size": 1.5,
         "act_param": 1.5,
-        "elo_mle": 621
+        "elo_mle": 619
     },
     "Qwen2.5-7B-Instruct": {
         "link": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct",
@@ -1713,7 +1713,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 945
+        "elo_mle": 942
     },
     "Qwen2.5-14B-Instruct": {
         "link": "https://huggingface.co/Qwen/Qwen2.5-14B-Instruct",
@@ -1726,7 +1726,7 @@
         "moe": false,
         "size": 14,
         "act_param": 14,
-        "elo_mle": 1061
+        "elo_mle": 1058
     },
     "Qwen2.5-32B-Instruct": {
         "link": "https://huggingface.co/Qwen/Qwen2.5-32B-Instruct",
@@ -1739,7 +1739,7 @@
         "moe": false,
         "size": 32,
         "act_param": 32,
-        "elo_mle": 1121
+        "elo_mle": 1119
     },
     "Qwen2.5-72B-Instruct": {
         "link": "https://huggingface.co/Qwen/Qwen2.5-72B-Instruct",
@@ -1752,7 +1752,7 @@
         "moe": false,
         "size": 72,
         "act_param": 72,
-        "elo_mle": 1130
+        "elo_mle": 1127
     },
     "Llama-3.2-1B-Instruct": {
         "link": "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct",
@@ -1765,7 +1765,7 @@
         "moe": false,
         "size": 1,
         "act_param": 1,
-        "elo_mle": 443
+        "elo_mle": 440
     },
     "Llama-3.2-3B-Instruct": {
         "link": "https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct",
@@ -1778,7 +1778,7 @@
         "moe": false,
         "size": 3,
         "act_param": 3,
-        "elo_mle": 742
+        "elo_mle": 740
     },
     "Llama-3.1-Nemotron-70B-Instruct": {
         "link": "https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
@@ -1791,7 +1791,7 @@
         "moe": false,
         "size": 70,
         "act_param": 70,
-        "elo_mle": 1117
+        "elo_mle": 1114
     },
     "Claude-3.5-Sonnet-20241022": {
         "link": "https://claude.ai/",
@@ -1804,7 +1804,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1194
+        "elo_mle": 1192
     },
     "Granite-3.0-8B-Instruct": {
         "link": "https://huggingface.co/ibm-granite/granite-3.0-8b-instruct",
@@ -1817,7 +1817,7 @@
         "moe": false,
         "size": 8,
         "act_param": 8,
-        "elo_mle": 833
+        "elo_mle": 832
     },
     "Granite-3.0-2B-Instruct": {
         "link": "https://huggingface.co/ibm-granite/granite-3.0-2b-instruct",
@@ -1830,7 +1830,7 @@
         "moe": false,
         "size": 2,
         "act_param": 2,
-        "elo_mle": 519
+        "elo_mle": 520
     },
     "Grok-Beta": {
         "link": "https://grok.com/",
@@ -1843,7 +1843,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1140
+        "elo_mle": 1138
     },
     "Claude-3.5-Haiku-20241022": {
         "link": "https://claude.ai/",
@@ -1856,7 +1856,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1192
+        "elo_mle": 1190
     },
     "Qwen2.5-Coder-32B-Instruct": {
         "link": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct",
@@ -1869,7 +1869,7 @@
         "moe": false,
         "size": 32,
         "act_param": 32,
-        "elo_mle": 1213
+        "elo_mle": 1210
     },
     "OpenCoder-1.5B-Instruct": {
         "link": "https://huggingface.co/infly/OpenCoder-1.5B-Instruct",
@@ -1882,7 +1882,7 @@
         "moe": false,
         "size": 1.5,
         "act_param": 1.5,
-        "elo_mle": 860
+        "elo_mle": 858
     },
     "OpenCoder-8B-Instruct": {
         "link": "https://huggingface.co/infly/OpenCoder-8B-Instruct",
@@ -1895,7 +1895,7 @@
         "moe": false,
         "size": 8,
         "act_param": 8,
-        "elo_mle": 1027
+        "elo_mle": 1025
     },
     "Athene-V2-Agent": {
         "link": "https://huggingface.co/Nexusflow/Athene-V2-Agent",
@@ -1908,7 +1908,7 @@
         "moe": false,
         "size": 72,
         "act_param": 72,
-        "elo_mle": 1220
+        "elo_mle": 1217
     },
     "Athene-V2-Chat": {
         "link": "https://huggingface.co/Nexusflow/Athene-V2-Chat",
@@ -1921,7 +1921,7 @@
         "moe": false,
         "size": 72,
         "act_param": 72,
-        "elo_mle": 1235
+        "elo_mle": 1232
     },
     "Gemini-Exp-1114": {
         "link": "https://deepmind.google/technologies/gemini",
@@ -1934,7 +1934,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1183
+        "elo_mle": 1181
     },
     "GPT-4o-2024-11-20": {
         "link": "https://openai.com/gpt-4o/",
@@ -1947,7 +1947,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1209
+        "elo_mle": 1207
     },
     "Gemini-Exp-1121": {
         "link": "https://deepmind.google/technologies/gemini",
@@ -1960,7 +1960,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1153
+        "elo_mle": 1150
     },
     "Gemini-Exp-1206": {
         "link": "https://deepmind.google/technologies/gemini",
@@ -1973,7 +1973,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1241
+        "elo_mle": 1239
     },
     "Llama-3.3-70B-Instruct": {
         "link": "https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct",
@@ -1986,7 +1986,7 @@
         "moe": false,
         "size": 70,
         "act_param": 70,
-        "elo_mle": 1168
+        "elo_mle": 1166
     },
     "DeepSeek-V2.5-1210": {
         "link": "deepseek-ai/DeepSeek-V2.5-1210",
@@ -1999,7 +1999,7 @@
         "moe": true,
         "size": 236,
         "act_param": 21,
-        "elo_mle": 1146
+        "elo_mle": 1144
     },
     "Gemini-2.0-Flash-Exp": {
         "link": "https://deepmind.google/technologies/gemini",
@@ -2012,7 +2012,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1163
+        "elo_mle": 1161
     },
     "Gemini-2.0-Flash-Thinking-Exp-1219": {
         "link": "https://deepmind.google/technologies/gemini",
@@ -2025,9 +2025,9 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1146
+        "elo_mle": 1144
     },
-    "o1-2024-12-17 (temperature=1)": {
+    "o1-2024-12-17 (temperature=1, reasoning=medium)": {
         "link": "https://openai.com/o1/",
         "open-data": "None",
         "pass@1": {
@@ -2038,6 +2038,19 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1231
+        "elo_mle": 1229
+    },
+    "DeepSeek-V3-Chat": {
+        "link": "https://huggingface.co/deepseek-ai/DeepSeek-V3-Chat",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 28.4,
+            "complete": 40.5
+        },
+        "prompted": true,
+        "moe": true,
+        "size": 685,
+        "act_param": null,
+        "elo_mle": 1270
     }
 }

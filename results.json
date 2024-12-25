@@ -153,7 +153,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "elo_mle": 1167
+        "elo_mle": 1168
     },
     "GPT-4-0613": {
         "link": "https://openai.com/blog/new-models-and-developer-products-announced-at-devday",
@@ -322,7 +322,7 @@
         "moe": false,
         "size": 70,
         "act_param": 70,
-        "elo_mle": 1051
+        "elo_mle": 1050
     },
     "CodeQwen1.5-7B-Chat": {
         "link": "https://huggingface.co/Qwen/CodeQwen1.5-7B-Chat",
@@ -673,7 +673,7 @@
         "moe": false,
         "size": 34,
         "act_param": 34,
-        "elo_mle": 957
+        "elo_mle": 958
     },
     "Yi-1.5-34B": {
         "link": "https://huggingface.co/01-ai/Yi-1.5-34B",
@@ -725,7 +725,7 @@
         "moe": false,
         "size": 6,
         "act_param": 6,
-        "elo_mle": 830
+        "elo_mle": 831
     },
     "Yi-1.5-6B": {
         "link": "https://huggingface.co/01-ai/Yi-1.5-6B",
@@ -855,7 +855,7 @@
         "moe": false,
         "size": 14,
         "act_param": 14,
-        "elo_mle": 1021
+        "elo_mle": 1022
     },
     "Phi-3-Small-128K-Instruct": {
         "link": "https://huggingface.co/microsoft/Phi-3-small-128k-instruct",
@@ -946,7 +946,7 @@
         "moe": true,
         "size": 236,
         "act_param": 21,
-        "elo_mle": 1189
+        "elo_mle": 1188
     },
     "DeepSeek-Coder-V2-Lite-Instruct": {
         "link": "https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
@@ -1102,7 +1102,7 @@
         "moe": false,
         "size": 34,
         "act_param": 34,
-        "elo_mle": 1007
+        "elo_mle": 1008
     },
     "ReflectionCoder-CL-7B": {
         "link": "https://huggingface.co/SenseLLM/ReflectionCoder-CL-7B",
@@ -1154,7 +1154,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 830
+        "elo_mle": 831
     },
     "Hermes-2-Pro-Llama-3-70B": {
         "link": "https://huggingface.co/NousResearch/Hermes-2-Pro-Llama-3-70B",
@@ -1206,7 +1206,7 @@
         "moe": false,
         "size": 6.7,
         "act_param": 6.7,
-        "elo_mle": 1012
+        "elo_mle": 1013
     },
     "OpenChat-3.6-8B-20240522": {
         "link": "https://huggingface.co/openchat/openchat-3.6-8b-20240522",
@@ -1219,7 +1219,7 @@
         "moe": false,
         "size": 8,
         "act_param": 8,
-        "elo_mle": 872
+        "elo_mle": 873
     },
     "Phind-CodeLlama-34B-v2": {
         "link": "https://huggingface.co/Phind/Phind-CodeLlama-34B-v2",
@@ -1687,7 +1687,7 @@
         "moe": false,
         "size": 0.5,
         "act_param": 0.5,
-        "elo_mle": 509
+        "elo_mle": 510
     },
     "Qwen2.5-1.5B-Instruct": {
         "link": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
@@ -1713,7 +1713,7 @@
         "moe": false,
         "size": 7,
         "act_param": 7,
-        "elo_mle": 999
+        "elo_mle": 998
     },
     "Qwen2.5-14B-Instruct": {
         "link": "https://huggingface.co/Qwen/Qwen2.5-14B-Instruct",
@@ -1817,7 +1817,7 @@
         "moe": false,
         "size": 8,
         "act_param": 8,
-        "elo_mle": 867
+        "elo_mle": 868
     },
     "Granite-3.0-2B-Instruct": {
         "link": "https://huggingface.co/ibm-granite/granite-3.0-2b-instruct",
@@ -1986,7 +1986,7 @@
         "moe": false,
         "size": 70,
         "act_param": 70,
-        "elo_mle": 1147
+        "elo_mle": 1146
     },
     "DeepSeek-V2.5-1210": {
         "link": "deepseek-ai/DeepSeek-V2.5-1210",
@@ -2027,7 +2027,7 @@
         "act_param": null,
         "elo_mle": null
     },
-    "o1-2024-12-17 (temperature=1)": {
+    "o1-2024-12-17 (temperature=1, reasoning=medium)": {
         "link": "https://openai.com/o1/",
         "open-data": "None",
         "pass@1": {
@@ -2037,6 +2037,19 @@
         "prompted": true,
         "moe": false,
         "size": null,
+        "act_param": null,
+        "elo_mle": null
+    },
+    "DeepSeek-V3-Chat": {
+        "link": "https://huggingface.co/deepseek-ai/DeepSeek-V3-Chat",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": null,
+            "complete": null
+        },
+        "prompted": true,
+        "moe": true,
+        "size": 685,
         "act_param": null,
         "elo_mle": null
     }
