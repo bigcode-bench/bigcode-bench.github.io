@@ -2066,7 +2066,7 @@
         "act_param": null,
         "elo_mle": 1263
     },
-    "D+": {
+    "DeepSeek-V3-Chat": {
         "link": "https://huggingface.co/deepseek-ai/DeepSeek-V3-Chat",
         "open-data": "None",
         "pass@1": {
