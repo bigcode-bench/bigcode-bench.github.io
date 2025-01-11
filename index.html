@@ -321,6 +321,10 @@
                           "average": calcAverage(globalData[key]["pass@1"]["complete"], globalData[key]["pass@1"]["instruct"])
                       }
                   }));
+                  
+                  // Reset chart data before displaying new data
+                  resetChartData();
+                  
                   displayTable(originTable, currentSplit);
                   displayChart(currentSplit, toggleUnknownSize.checked);
               } else {
@@ -366,6 +370,16 @@
             chartOption.series[1].data = [];
             chartOption.series[0].markLine.data = [];
             chartOption.series[1].markLine.data = [];
+        };
+
+        const resetChartData = () => {
+            // Reset all chart data structures
+            chartOption.xAxis.data = [];
+            chartOption.series[0].data = [];
+            chartOption.series[1].data = [];
+            chartOption.series[0].markLine.data = [];
+            chartOption.series[1].markLine.data = [];
+            chart.setOption(chartOption, true); // Force chart refresh
         };
 
         var chartOption = {
@@ -558,6 +572,9 @@
       };
 
         const displayChart = (score, showUnknownSize = true) => {
+            // Reset chart data at the start
+            resetChartData();
+            
             // sort first
             let data = globalData
                 .filter((model) => {
