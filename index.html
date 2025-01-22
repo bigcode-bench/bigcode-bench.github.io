@@ -305,7 +305,8 @@
 
         var dataUrl = "results-hard.json"; // Default data source
         var globalData;
-        var currentSplit = "average";
+        var currentSplit = "average"; // Track current split
+
         // Function to load data based on the selected subset
         function loadData() {
           var xhr = new XMLHttpRequest();
@@ -678,24 +679,27 @@
         const averageRadio = document.getElementById("Average");
 
         completeRadio.addEventListener("click", function () {
+            currentSplit = "complete";
             clearTable();
-            displayTable(originTable, "complete");
+            displayTable(originTable, currentSplit);
             clearChart();
-            displayChart("complete", toggleUnknownSize.checked);
+            displayChart(currentSplit, toggleUnknownSize.checked);
         });
 
         instructRadio.addEventListener("click", function () {
+            currentSplit = "instruct";
             clearTable();
-            displayTable(originTable, "instruct");
+            displayTable(originTable, currentSplit);
             clearChart();
-            displayChart("instruct", toggleUnknownSize.checked);
+            displayChart(currentSplit, toggleUnknownSize.checked);
         });
 
         averageRadio.addEventListener("click", function () {
+            currentSplit = "average";
             clearTable();
-            displayTable(originTable, "average");
+            displayTable(originTable, currentSplit);
             clearChart();
-            displayChart("average", toggleUnknownSize.checked);
+            displayChart(currentSplit, toggleUnknownSize.checked);
         });
 
         toggleUnknownSize.addEventListener("change", function () {
