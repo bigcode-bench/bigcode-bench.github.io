@@ -1931,7 +1931,7 @@
         "size": 14.7,
         "act_param": 14.7
     },
-    "DeepSeek-R1 (reasoning=medium)": {
+    "DeepSeek-R1)": {
         "link": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
         "open-data": "None",
         "pass@1": {
