@@ -1942,5 +1942,17 @@
         "moe": true,
         "size": 671,
         "act_param": 37
+    },
+    "Gemini-2.0-Flash-Thinking-Exp-01-21": {
+        "link": "https://deepmind.google/technologies/gemini/flash/",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 25.0,
+            "complete": 29.7
+        },
+        "prompted": true,
+        "moe": true,
+        "size": null,
+        "act_param": null
     }
 }
