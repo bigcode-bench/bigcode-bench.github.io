@@ -2014,5 +2014,17 @@
         "moe": false,
         "size": 1.5,
         "act_param": 1.5
+    },
+    "Mistral-Small-24B-Instruct-2501": {
+        "link": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 45.3,
+            "complete": 50.4
+        },
+        "prompted": true,
+        "moe": false,
+        "size": 24,
+        "act_param": 24
     }
 }
