@@ -652,7 +652,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "complete": 9.5
+            "complete": 8.8
         },
         "prompted": false,
         "moe": false,
@@ -1503,7 +1503,7 @@
         "link": "https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct",
         "open-data": "None",
         "pass@1": {
-            "instruct": 4.7,
+            "instruct": 5.4,
             "complete": 6.1
         },
         "prompted": true,
@@ -1515,7 +1515,7 @@
         "link": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct",
         "open-data": "None",
         "pass@1": {
-            "instruct": 20.9,
+            "instruct": 20.3,
             "complete": 20.3
         },
         "prompted": true,
@@ -1715,6 +1715,18 @@
         "size": null,
         "act_param": null
     },
+    "Qwen2.5-Coder-14B-Instruct": {
+        "link": "https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 23.6,
+            "complete": 29.7
+        },
+        "prompted": true,
+        "moe": false,
+        "size": 14,
+        "act_param": 14
+    },
     "Qwen2.5-Coder-32B-Instruct": {
         "link": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct",
         "open-data": "None",
@@ -1912,7 +1924,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 27.7,
-            "complete": 40.5
+            "complete": 39.9
         },
         "prompted": true,
         "moe": true,
@@ -1931,28 +1943,76 @@
         "size": 14.7,
         "act_param": 14.7
     },
-    "DeepSeek-R1": {
-        "link": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+    "DeepSeek-R1-Distill-Llama-70B": {
+        "link": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
         "open-data": "None",
         "pass@1": {
-            "instruct": 29.7,
-            "complete": 40.5
+            "instruct": 20.3,
+            "complete": 20.3
         },
         "prompted": true,
-        "moe": true,
-        "size": 671,
-        "act_param": 37
+        "moe": false,
+        "size": 70,
+        "act_param": 70
     },
-    "Gemini-2.0-Flash-Thinking-Exp-01-21": {
-        "link": "https://deepmind.google/technologies/gemini/flash/",
+    "DeepSeek-R1-Distill-Qwen-32B": {
+        "link": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
         "open-data": "None",
         "pass@1": {
-            "instruct": 25.0,
-            "complete": 29.7
+            "instruct": 23.6,
+            "complete": 29.1
         },
         "prompted": true,
-        "moe": true,
-        "size": null,
-        "act_param": null
+        "moe": false,
+        "size": 32,
+        "act_param": 32
+    },
+    "DeepSeek-R1-Distill-Qwen-14B": {
+        "link": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 20.9,
+            "complete": 20.9
+        },
+        "prompted": true,
+        "moe": false,
+        "size": 14,
+        "act_param": 14
+    },
+    "DeepSeek-R1-Distill-Llama-8B": {
+        "link": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 2.0,
+            "complete": 3.4
+        },
+        "prompted": true,
+        "moe": false,
+        "size": 14,
+        "act_param": 14
+    },
+    "DeepSeek-R1-Distill-Qwen-7B": {
+        "link": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 3.4,
+            "complete": 6.1
+        },
+        "prompted": true,
+        "moe": false,
+        "size": 14,
+        "act_param": 14
+    },
+    "DeepSeek-R1-Distill-Qwen-1.5B": {
+        "link": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 0.0,
+            "complete": null
+        },
+        "prompted": true,
+        "moe": false,
+        "size": 1.5,
+        "act_param": 1.5
     }
 }
