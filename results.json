@@ -2026,5 +2026,41 @@
         "moe": false,
         "size": 24,
         "act_param": 24
+    },
+    "o3-mini-2025-01-31 (temperature=1, reasoning=medium)": {
+        "link": "https://openai.com/index/openai-o3-mini/",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": null,
+            "complete": null
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null
+    },
+    "o3-mini-2025-01-31 (temperature=1, reasoning=low)": {
+        "link": "https://openai.com/index/openai-o3-mini/",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": null,
+            "complete": null
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null
+    },
+    "o3-mini-2025-01-31 (temperature=1, reasoning=high)": {
+        "link": "https://openai.com/index/openai-o3-mini/",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": null,
+            "complete": null
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null
     }
 }
