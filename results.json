@@ -1951,7 +1951,7 @@
             "complete": null
         },
         "prompted": true,
-        "moe": false,
+        "moe": true,
         "size": 671,
         "act_param": 37
     },
