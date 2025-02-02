@@ -1943,6 +1943,18 @@
         "size": 14.7,
         "act_param": 14.7
     },
+    "DeepSeek-R1": {
+        "link": "https://huggingface.co/deepseek-ai/DeepSeek-R1",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 29.7,
+            "complete": 40.5
+        },
+        "prompted": true,
+        "moe": false,
+        "size": 671,
+        "act_param": 37
+    },
     "DeepSeek-R1-Distill-Llama-70B": {
         "link": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
         "open-data": "None",
