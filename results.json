@@ -1860,7 +1860,7 @@
         "act_param": 21
     },
     "Gemini-2.0-Flash-Exp": {
-        "link": "https://deepmind.google/technologies/gemini",
+        "link": "https://blog.google/technology/google-deepmind/gemini-model-updates-february-2025/",
         "open-data": "None",
         "pass@1": {
             "instruct": 45.9,
@@ -1872,6 +1872,18 @@
         "act_param": null
     },
     "Gemini-2.0-Flash-Thinking-Exp-1219": {
+        "link": "https://deepmind.google/technologies/gemini",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": null,
+            "complete": null
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null
+    },
+    "Gemini-2.0-Flash-Thinking-Exp-01-21": {
         "link": "https://deepmind.google/technologies/gemini",
         "open-data": "None",
         "pass@1": {
@@ -2065,6 +2077,42 @@
     },
     "o3-mini-2025-01-31 (temperature=1, reasoning=high)": {
         "link": "https://openai.com/index/openai-o3-mini/",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": null,
+            "complete": null
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null
+    },
+    "Gemini-2.0-Flash-001": {
+        "link": "https://blog.google/technology/google-deepmind/gemini-model-updates-february-2025/",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": null,
+            "complete": null
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null
+    },
+    "Gemini-2.0-Flash-Lite-Preview-02-05": {
+        "link": "https://blog.google/technology/google-deepmind/gemini-model-updates-february-2025/",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": null,
+            "complete": null
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null
+    },
+    "Gemini-2.0-Pro-Exp-02-05": {
+        "link": "https://blog.google/technology/google-deepmind/gemini-model-updates-february-2025/",
         "open-data": "None",
         "pass@1": {
             "instruct": null,
