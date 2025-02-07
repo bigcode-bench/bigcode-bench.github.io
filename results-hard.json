@@ -2122,5 +2122,41 @@
         "moe": false,
         "size": null,
         "act_param": null
+    },
+    "Sky-T1-32B-Flash": {
+        "link": "https://huggingface.co/NovaSky-AI/Sky-T1-32B-Flash",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 25.7,
+            "complete": 27.7
+        },
+        "prompted": true,
+        "moe": false,
+        "size": 32,
+        "act_param": 32
+    },
+    "Sky-T1-32B-Preview": {
+        "link": "https://huggingface.co/NovaSky-AI/Sky-T1-32B-Preview",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 26.4,
+            "complete": 29.7
+        },
+        "prompted": true,
+        "moe": false,
+        "size": 32,
+        "act_param": 32
+    },
+    "QwQ-32B-Preview": {
+        "link": "https://huggingface.co/Qwen/QwQ-32B-Preview",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 25.0,
+            "complete": 28.4
+        },
+        "prompted": true,
+        "moe": false,
+        "size": 32,
+        "act_param": 32
     }
 }
