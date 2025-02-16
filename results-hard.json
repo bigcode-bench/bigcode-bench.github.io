@@ -2158,5 +2158,17 @@
         "moe": false,
         "size": 32,
         "act_param": 32
+    },
+    "ChatGPT-4o-latest-20250129": {
+        "link": "https://chat.openai.com/",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 25.7,
+            "complete": 33.8
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null
     }
 }
