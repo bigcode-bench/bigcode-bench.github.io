@@ -2178,7 +2178,7 @@
             "instruct": null,
             "complete": 20.3
         },
-        "prompted": true,
+        "prompted": false,
         "moe": true,
         "size": 23,
         "act_param": 4
