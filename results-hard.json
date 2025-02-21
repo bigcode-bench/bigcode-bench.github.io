@@ -2176,7 +2176,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "complete": 20.3
+            "complete": 23.6
         },
         "prompted": false,
         "moe": true,
