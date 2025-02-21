@@ -2170,5 +2170,29 @@
         "moe": false,
         "size": null,
         "act_param": null
+    },
+    "KwaiCoder-23B-A4B-v1": {
+        "link": "https://huggingface.co/Kwaipilot/KwaiCoder-23B-A4B-v1",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": null,
+            "complete": 20.3
+        },
+        "prompted": true,
+        "moe": true,
+        "size": 23,
+        "act_param": 4
+    },
+    "Qwen2.5-Max": {
+        "link": "https://qwen2.org/qwen2-5-max/",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 31.1,
+            "complete": 32.4
+        },
+        "prompted": true,
+        "moe": true,
+        "size": null,
+        "act_param": null
     }
 }
