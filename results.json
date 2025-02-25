@@ -2159,6 +2159,18 @@
         "size": 32,
         "act_param": 32
     },
+    "Claude-3.7-Sonnet-20250219": {
+        "link": "https://www.anthropic.com/news/claude-3-7-sonnet",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": null,
+            "complete": null
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null
+    },
     "ChatGPT-4o-latest-20250129": {
         "link": "https://chat.openai.com/",
         "open-data": "None",
@@ -2195,8 +2207,8 @@
         "size": null,
         "act_param": null
     },
-    "Claude-3-Haiku-20240307 (temperature=1, length=12800, reasoning=3200)": {
-        "link": "https://www.anthropic.com/news/claude-3-family",
+    "Claude-3.7-Sonnet-20250219 (temperature=1, length=12800, reasoning=3200)": {
+        "link": "https://www.anthropic.com/news/claude-3-7-sonnet",
         "open-data": "None",
         "pass@1": {
             "instruct": null,
