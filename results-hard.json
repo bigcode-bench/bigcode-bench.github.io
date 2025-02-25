@@ -579,8 +579,8 @@
         "link": "https://www.anthropic.com/news/claude-3-family",
         "open-data": "None",
         "pass@1": {
-            "instruct": 16.9,
-            "complete": 19.6
+            "instruct": 31.8,
+            "complete": 33.8
         },
         "prompted": true,
         "moe": false,
@@ -1931,8 +1931,8 @@
         "size": null,
         "act_param": null
     },
-    "DeepSeek-V3-Chat": {
-        "link": "https://huggingface.co/deepseek-ai/DeepSeek-V3-Chat",
+    "DeepSeek-V3": {
+        "link": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
         "open-data": "None",
         "pass@1": {
             "instruct": 27.7,
@@ -2164,7 +2164,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 25.7,
-            "complete": 33.8
+            "complete": 33.1
         },
         "prompted": true,
         "moe": false,
@@ -2187,11 +2187,23 @@
         "link": "https://qwen2.org/qwen2-5-max/",
         "open-data": "None",
         "pass@1": {
-            "instruct": 31.1,
-            "complete": 32.4
+            "instruct": 29.1,
+            "complete": 35.8
         },
         "prompted": true,
         "moe": true,
+        "size": null,
+        "act_param": null
+    },
+    "Claude-3-Haiku-20240307 (temperature=1, length=12800, reasoning=3200)": {
+        "link": "https://www.anthropic.com/news/claude-3-family",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 32.4,
+            "complete": 39.2
+        },
+        "prompted": true,
+        "moe": false,
         "size": null,
         "act_param": null
     }
