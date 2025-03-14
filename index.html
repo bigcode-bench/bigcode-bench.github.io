@@ -166,6 +166,12 @@
           <input type="radio" class="btn-check" name="btnradio" id="Average" checked />
           <label class="btn btn-outline-primary" for="Average">Average</label>
       </div>
+        <div class="btn-group" role="group" id="ViewType" style="margin-left: 10px;">
+          <input type="radio" class="btn-check" name="viewType" id="SizeView" checked />
+          <label class="btn btn-outline-secondary" for="SizeView">Size View</label>
+          <input type="radio" class="btn-check" name="viewType" id="TimeView" />
+          <label class="btn btn-outline-secondary" for="TimeView">Time View</label>
+        </div>
         <div class="form-check form-switch mt-3">
             <input class="form-check-input" type="checkbox" id="toggleUnknownSize">
             <label class="form-check-label" for="toggleUnknownSize">Show Models with Unknown Sizes</label>
@@ -316,11 +322,14 @@
         const benchmarkRadio = document.getElementById("Benchmark");
         const chartDom = document.getElementById("chart");
         const toggleUnknownSize = document.getElementById("toggleUnknownSize");
+        const sizeViewRadio = document.getElementById("SizeView");
+        const timeViewRadio = document.getElementById("TimeView");
         var chart = echarts.init(chartDom);
 
         var dataUrl = "results-hard.json"; // Default data source
         var globalData;
         var currentSplit = "average"; // Track current split
+        var currentView = "size"; // Track current view type (size or time)
 
         // Function to load data based on the selected subset
         function loadData() {
@@ -342,7 +351,11 @@
                   resetChartData();
                   
                   displayTable(originTable, currentSplit);
-                  displayChart(currentSplit, toggleUnknownSize.checked);
+                  if (currentView === "size") {
+                      displayChart(currentSplit, toggleUnknownSize.checked);
+                  } else {
+                      displayTimeChart(currentSplit, toggleUnknownSize.checked);
+                  }
               } else {
                   alert("Failed to load data from " + dataUrl);
               }
@@ -365,8 +378,38 @@
             }
         });
 
+        // Event listeners for view type radio buttons
+        sizeViewRadio.addEventListener("change", function() {
+            if (this.checked) {
+                currentView = "size";
+                resetChartData();
+                displayChart(currentSplit, toggleUnknownSize.checked);
+            }
+        });
+
+        timeViewRadio.addEventListener("change", function() {
+            if (this.checked) {
+                currentView = "time";
+                resetChartData();
+                displayTimeChart(currentSplit, toggleUnknownSize.checked);
+            }
+        });
+
         // Initial data load
         loadData();
+
+        // Function to create a visual performance bar for the tooltip
+        const createPerformanceBar = (score) => {
+            const maxWidth = 100;
+            const width = Math.min(maxWidth, score);
+            const color = score > 50 ? '#4caf50' : score > 30 ? '#ff9800' : '#f44336';
+            
+            return `<div style="margin-top:3px;">Performance: 
+                   <div style="display:inline-block;background:#eee;width:${maxWidth}px;height:10px;">
+                     <div style="background:${color};height:10px;width:${width}px;"></div>
+                   </div>
+                 </div>`;
+        };
 
         const calcAverage = (a, b) => {
             if (a == null || b == null) {
@@ -442,6 +485,12 @@
             },
             tooltip: {
                 trigger: "item",
+                formatter: function(params) {
+                    return params.data.name + '<br/>' + 
+                           'Date: ' + params.data.date + '<br/>' +
+                           'Score: ' + params.data.value[1] + '<br/>' +
+                           'Size: ' + (params.data.size ? params.data.size + 'B' : 'Unknown');
+                },
                 axisPointer: {
                     type: "cross",
                 },
@@ -499,6 +548,96 @@
                             },
                         },
                         data: [],
+                    },
+                },
+            ],
+        };
+
+        // Time chart option
+        var timeChartOption = {
+            grid: {
+                left: "1%",
+                right: "4%",
+                bottom: "3%",
+                containLabel: true,
+            },
+            xAxis: {
+                name: "Time",
+                type: "category",
+                data: [],
+                axisLabel: {
+                    formatter: function (value) {
+                        return value;
+                    },
+                    interval: 0,
+                    rotate: 30,
+                    margin: 15
+                },
+            },
+            yAxis: {
+                name: "PASS@1 (greedy decoding)",
+                type: "value",
+                show: true,
+                nameTextStyle: {
+                    align: "left",
+                },
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: "gray",
+                        type: "dashed",
+                    },
+                },
+            },
+            legend: {
+                data: ["base", "instructed"],
+                itemStyle: {
+                    opacity: 1.0,
+                },
+            },
+            tooltip: {
+                trigger: "item",
+                formatter: function(params) {
+                    return params.data.name + '<br/>' + 
+                           'Date: ' + params.data.date + '<br/>' +
+                           'Score: ' + params.data.value[1] + '<br/>' +
+                           'Size: ' + (params.data.size ? params.data.size + 'B' : 'Unknown');
+                },
+                axisPointer: {
+                    type: "cross",
+                },
+            },
+            series: [
+                {
+                    name: "base",
+                    type: "scatter",
+                    data: [],
+                    symbolSize: function(data) {
+                        // Scale symbol size based on model size
+                        return data[2] ? Math.max(5, Math.min(20, data[2] * 1.5)) : 7;
+                    },
+                    itemStyle: {
+                        color: "#91cc75",
+                        opacity: 0.5,
+                    },
+                    emphasis: {
+                        focus: "series",
+                    },
+                },
+                {
+                    name: "instructed",
+                    type: "scatter",
+                    data: [],
+                    symbolSize: function(data) {
+                        // Scale symbol size based on model size
+                        return data[2] ? Math.max(5, Math.min(20, data[2] * 1.5)) : 7;
+                    },
+                    itemStyle: {
+                        color: "#5470c6",
+                        opacity: 0.5,
+                    },
+                    emphasis: {
+                        focus: "series",
                     },
                 },
             ],
@@ -587,6 +726,12 @@
           table.appendChild(tbody);
       };
 
+        // Function to clean model names by removing parenthetical parts
+        const cleanModelName = (name) => {
+            // Remove anything in parentheses at the end of the name
+            return name.replace(/\s*\([^)]*\)\s*$/, '');
+        };
+
         const displayChart = (score, showUnknownSize = true) => {
             // Reset chart data at the start
             resetChartData();
@@ -673,9 +818,10 @@
                         position: "top",
                         offset: offsets[idx],
                         formatter: function (params) {
-                            return params.data.name;
+                            return cleanModelName(params.data.name);
                         },
                         color: "inherit",
+                        opacity: 1.0  // Ensure label is fully opaque
                     };
                 };
                 if (bestNonPromptedModel) {
@@ -689,6 +835,375 @@
             chart.setOption(chartOption);
         };
 
+        // Function to display time-based chart
+        const displayTimeChart = (score, showUnknownSize = true) => {
+            // Create a new chart option for time view
+            const timeOption = JSON.parse(JSON.stringify(timeChartOption));
+            
+            // Update tooltip formatter
+            timeOption.tooltip.formatter = function(params) {
+                return params.data.name + '<br/>' + 
+                       'Date: ' + params.data.date + '<br/>' +
+                       'Score: ' + params.data.value[1] + '<br/>' +
+                       'Size: ' + (params.data.size ? params.data.size + 'B' : 'Unknown');
+            };
+            
+            // Filter and sort data
+            let data = globalData
+                .filter((model) => {
+                    return model["pass@1"][score] != null && model["date"] != null;
+                })
+                .sort((a, b) => {
+                    return new Date(a["date"]) - new Date(b["date"]);
+                });
+
+            if (!showUnknownSize) {
+                data = data.filter((model) => model["size"] != null);
+            }
+
+            // Group dates by two-month periods
+            const dateGroups = {};
+            data.forEach(model => {
+                const date = new Date(model.date);
+                const year = date.getFullYear();
+                // Group by pairs of months (0-1, 2-3, 4-5, 6-7, 8-9, 10-11)
+                const twoMonthPeriod = Math.floor(date.getMonth() / 2);
+                const yearPeriod = `${year}-${String(twoMonthPeriod).padStart(1, '0')}`;
+                if (!dateGroups[yearPeriod]) {
+                    dateGroups[yearPeriod] = [];
+                }
+                dateGroups[yearPeriod].push(model);
+            });
+
+            // Create x-axis labels (dates) with formatted display names
+            const dateLabels = Object.keys(dateGroups).sort();
+            timeOption.xAxis.data = dateLabels.map(period => {
+                const [year, twoMonthNum] = period.split('-');
+                const startMonth = parseInt(twoMonthNum) * 2;
+                const endMonth = startMonth + 1;
+                const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                return `${monthNames[startMonth]}-${monthNames[endMonth]} ${year}`;
+            });
+
+            // Set y-axis max
+            timeOption.yAxis.max = Math.ceil(Math.max(...data.map((model) => model["pass@1"][score])) * 1.1);
+
+            // Separate models by prompted status
+            const nonPromptedModels = data.filter(model => model["prompted"] == false);
+            const promptedModels = data.filter(model => model["prompted"] == true);
+
+            // Function to find top model for each date group
+            const findTopModels = (models, dateGroup) => {
+                return models
+                    .filter(model => {
+                        const date = new Date(model.date);
+                        const yearPeriod = `${date.getFullYear()}-${String(Math.floor(date.getMonth() / 2)).padStart(1, '0')}`;
+                        return yearPeriod === dateGroup;
+                    })
+                    .sort((a, b) => b["pass@1"][score] - a["pass@1"][score]);
+            };
+
+            // Function to calculate symbol size based on model size (logarithmic scale)
+            const calculateSymbolSize = (size) => {
+                if (size === null || size === undefined) {
+                    // This will be updated with the max size after we process all models
+                    return 0;
+                }
+                // Use logarithmic scale with base multiplier for better size distinction
+                return 5 + Math.log2(size) * 8;
+            };
+
+            // Find the largest known model size for setting unknown model sizes
+            const maxModelSize = Math.max(...data
+                .filter(model => model.size !== null && model.size !== undefined)
+                .map(model => calculateSymbolSize(model.size)));
+
+            // Create series for unknown size models (to be rendered first/bottom)
+            const unknownSizeBaseSeries = {
+                name: "base (unknown size)",
+                type: "scatter",
+                data: [],
+                showInLegend: false,
+                symbolSize: function(data) {
+                    return maxModelSize * 0.8; // Make unknown size models slightly smaller
+                },
+                itemStyle: {
+                    color: "#ff0000",
+                    opacity: 0.2
+                },
+                emphasis: {
+                    focus: "series",
+                }
+            };
+            
+            const unknownSizeInstructedSeries = {
+                name: "instructed (unknown size)",
+                type: "scatter",
+                data: [],
+                showInLegend: false,
+                symbolSize: function(data) {
+                    return maxModelSize * 0.8; // Make unknown size models slightly smaller
+                },
+                itemStyle: {
+                    color: "#ff0000",
+                    opacity: 0.2
+                },
+                emphasis: {
+                    focus: "series",
+                }
+            };
+            
+            // Create series for known size models (to be rendered last/top)
+            const knownSizeBaseSeries = {
+                name: "base",
+                type: "scatter",
+                data: [],
+                symbolSize: function(data) {
+                    return calculateSymbolSize(data[2]);
+                },
+                itemStyle: {
+                    color: "#91cc75",
+                    opacity: 0.2
+                },
+                emphasis: {
+                    focus: "series",
+                }
+            };
+            
+            const knownSizeInstructedSeries = {
+                name: "instructed",
+                type: "scatter",
+                data: [],
+                symbolSize: function(data) {
+                    return calculateSymbolSize(data[2]);
+                },
+                itemStyle: {
+                    color: "#5470c6",
+                    opacity: 0.2
+                },
+                emphasis: {
+                    focus: "series",
+                }
+            };
+
+            // Add data points to appropriate series based on known/unknown size
+            [nonPromptedModels, promptedModels].forEach((seriesModels, seriesIdx) => {
+                dateLabels.forEach((dateGroup, dateIdx) => {
+                    const modelsInGroup = findTopModels(seriesModels, dateGroup);
+                    
+                    // Add all models in the group
+                    modelsInGroup.forEach((model, modelIdx) => {
+                        const date = new Date(model.date);
+                        const yearPeriod = `${date.getFullYear()}-${String(Math.floor(date.getMonth() / 2)).padStart(1, '0')}`;
+                        const xIndex = dateLabels.indexOf(yearPeriod);
+                        
+                        // Create data point
+                        const dataPoint = {
+                            name: model.Model,
+                            date: model.date,
+                            size: model.size,
+                            value: [xIndex, model["pass@1"][score], model.size || 0]
+                        };
+                        
+                        // Add to appropriate series based on known/unknown size
+                        if (model.size === null || model.size === undefined) {
+                            // Unknown size models
+                            if (seriesIdx === 0) {
+                                unknownSizeBaseSeries.data.push(dataPoint);
+                            } else {
+                                unknownSizeInstructedSeries.data.push(dataPoint);
+                            }
+                        } else {
+                            // Known size models
+                            if (seriesIdx === 0) {
+                                knownSizeBaseSeries.data.push(dataPoint);
+                            } else {
+                                knownSizeInstructedSeries.data.push(dataPoint);
+                            }
+                        }
+                    });
+                });
+            });
+
+            // Get top 30% performing models across all time periods
+            const getTop30PercentModels = (models, hasKnownSize) => {
+                // Filter models based on whether they have known size
+                const filteredModels = hasKnownSize ? 
+                    models.filter(model => model.size !== null && model.size !== undefined) :
+                    models.filter(model => model.size === null || model.size === undefined);
+                
+                // Sort by performance
+                const sortedModels = [...filteredModels].sort((a, b) => b["pass@1"][score] - a["pass@1"][score]);
+                
+                // Take top 30%
+                const cutoffIndex = Math.max(1, Math.floor(sortedModels.length * 0.3));
+                const topModels = sortedModels.slice(0, cutoffIndex);
+                
+                // Get the minimum score in the top 30%
+                const minScore = topModels.length > 0 ? topModels[topModels.length - 1]["pass@1"][score] : 0;
+                
+                // Return all models that meet or exceed this score
+                return filteredModels.filter(model => model["pass@1"][score] >= minScore);
+            };
+
+            // Add trend lines for known size models
+            const addTrendLine = (models, name, color, hasKnownSize) => {
+                const topModels = getTop30PercentModels(models, hasKnownSize);
+                
+                // Group top models by date
+                const trendData = [];
+                dateLabels.forEach((dateGroup, idx) => {
+                    const modelsInPeriod = topModels.filter(model => {
+                        const date = new Date(model.date);
+                        const yearPeriod = `${date.getFullYear()}-${String(Math.floor(date.getMonth() / 2)).padStart(1, '0')}`;
+                        return yearPeriod === dateGroup;
+                    });
+                    
+                    if (modelsInPeriod.length > 0) {
+                        // Find the best model in this period
+                        const bestModel = modelsInPeriod.reduce((best, current) => 
+                            current["pass@1"][score] > best["pass@1"][score] ? current : best, modelsInPeriod[0]);
+                        
+                        trendData.push([idx, bestModel["pass@1"][score]]);
+                    }
+                });
+                
+                // Only add trend line if we have data points
+                if (trendData.length > 0) {
+                    timeOption.series.push({
+                        name: name,
+                        type: 'line',
+                        smooth: true,
+                        symbol: 'none',
+                        sampling: 'average',
+                        itemStyle: {
+                            color: color
+                        },
+                        lineStyle: {
+                            width: 2,
+                            type: 'solid'
+                        },
+                        data: trendData
+                    });
+                }
+            };
+
+            // Add trend lines
+            // Removed trend lines as requested
+
+            // Add series to chart in specific order (unknown size first, then known size)
+            timeOption.series = [
+                unknownSizeBaseSeries,
+                unknownSizeInstructedSeries,
+                knownSizeBaseSeries,
+                knownSizeInstructedSeries
+            ];
+
+            // Update legend
+            timeOption.legend.data = [
+                'base', 
+                'instructed'
+            ];
+
+            // Highlight the best models in each time period
+            dateLabels.forEach((dateGroup, idx) => {
+                // Find best base model with known size
+                const bestBaseModels = knownSizeBaseSeries.data
+                    .filter(point => point.value[0] === idx)
+                    .sort((a, b) => b.value[1] - a.value[1]);
+                
+                // Find best instructed model with known size
+                const bestInstructedModels = knownSizeInstructedSeries.data
+                    .filter(point => point.value[0] === idx)
+                    .sort((a, b) => b.value[1] - a.value[1]);
+                
+                // Find best base model with unknown size
+                const bestUnknownBaseModels = unknownSizeBaseSeries.data
+                    .filter(point => point.value[0] === idx)
+                    .sort((a, b) => b.value[1] - a.value[1]);
+                
+                // Find best instructed model with unknown size
+                const bestUnknownInstructedModels = unknownSizeInstructedSeries.data
+                    .filter(point => point.value[0] === idx)
+                    .sort((a, b) => b.value[1] - a.value[1]);
+                
+                // Highlight best base model
+                if (bestBaseModels.length > 0) {
+                    const bestModel = bestBaseModels[0];
+                    bestModel.itemStyle = {
+                        color: "#91cc75",
+                        opacity: 0.7
+                    };
+                    bestModel.label = {
+                        show: true,
+                        position: "top",
+                        formatter: function(params) {
+                            return cleanModelName(params.data.name);
+                        },
+                        color: "inherit",
+                        opacity: 1.0  // Ensure label is fully opaque
+                    };
+                }
+                
+                // Highlight best instructed model
+                if (bestInstructedModels.length > 0) {
+                    const bestModel = bestInstructedModels[0];
+                    bestModel.itemStyle = {
+                        color: "#5470c6",
+                        opacity: 0.7
+                    };
+                    bestModel.label = {
+                        show: true,
+                        position: "top",
+                        formatter: function(params) {
+                            return cleanModelName(params.data.name);
+                        },
+                        color: "inherit",
+                        opacity: 1.0  // Ensure label is fully opaque
+                    };
+                }
+                
+                // Highlight best unknown base model in red
+                if (bestUnknownBaseModels.length > 0) {
+                    const bestModel = bestUnknownBaseModels[0];
+                    bestModel.itemStyle = {
+                        color: "#ff0000",  // Red color
+                        opacity: 0.7
+                    };
+                    bestModel.label = {
+                        show: true,
+                        position: "top",
+                        formatter: function(params) {
+                            return cleanModelName(params.data.name);
+                        },
+                        color: "inherit",
+                        opacity: 1.0  // Ensure label is fully opaque
+                    };
+                }
+                
+                // Highlight best unknown instructed model in red
+                if (bestUnknownInstructedModels.length > 0) {
+                    const bestModel = bestUnknownInstructedModels[0];
+                    bestModel.itemStyle = {
+                        color: "#ff0000",  // Red color
+                        opacity: 0.7
+                    };
+                    bestModel.label = {
+                        show: true,
+                        position: "top",
+                        formatter: function(params) {
+                            return cleanModelName(params.data.name);
+                        },
+                        color: "inherit",
+                        opacity: 1.0  // Ensure label is fully opaque
+                    };
+                }
+            });
+
+            // Set the chart option
+            chart.setOption(timeOption, true);
+        };
+
         const completeRadio = document.getElementById("Complete");
         const instructRadio = document.getElementById("Instruct");
         const averageRadio = document.getElementById("Average");
@@ -697,30 +1212,50 @@
             currentSplit = "complete";
             clearTable();
             displayTable(originTable, currentSplit);
-            clearChart();
-            displayChart(currentSplit, toggleUnknownSize.checked);
+            if (currentView === "size") {
+                clearChart();
+                displayChart(currentSplit, toggleUnknownSize.checked);
+            } else {
+                resetChartData();
+                displayTimeChart(currentSplit, toggleUnknownSize.checked);
+            }
         });
 
         instructRadio.addEventListener("click", function () {
             currentSplit = "instruct";
             clearTable();
             displayTable(originTable, currentSplit);
-            clearChart();
-            displayChart(currentSplit, toggleUnknownSize.checked);
+            if (currentView === "size") {
+                clearChart();
+                displayChart(currentSplit, toggleUnknownSize.checked);
+            } else {
+                resetChartData();
+                displayTimeChart(currentSplit, toggleUnknownSize.checked);
+            }
         });
 
         averageRadio.addEventListener("click", function () {
             currentSplit = "average";
             clearTable();
             displayTable(originTable, currentSplit);
-            clearChart();
-            displayChart(currentSplit, toggleUnknownSize.checked);
+            if (currentView === "size") {
+                clearChart();
+                displayChart(currentSplit, toggleUnknownSize.checked);
+            } else {
+                resetChartData();
+                displayTimeChart(currentSplit, toggleUnknownSize.checked);
+            }
         });
 
         toggleUnknownSize.addEventListener("change", function () {
             const score = completeRadio.checked ? "complete" : instructRadio.checked ? "instruct" : "average";
-            clearChart();
-            displayChart(score, toggleUnknownSize.checked);
+            if (currentView === "size") {
+                clearChart();
+                displayChart(score, toggleUnknownSize.checked);
+            } else {
+                resetChartData();
+                displayTimeChart(score, toggleUnknownSize.checked);
+            }
         });
 
         averageRadio.click();
