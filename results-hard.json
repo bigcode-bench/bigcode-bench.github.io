@@ -706,7 +706,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "complete": 9.5
+            "complete": 8.8
         },
         "prompted": false,
         "moe": false,
@@ -1628,7 +1628,7 @@
         "link": "https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct",
         "open-data": "None",
         "pass@1": {
-            "instruct": 4.7,
+            "instruct": 5.4,
             "complete": 6.1
         },
         "prompted": true,
@@ -2179,8 +2179,8 @@
         },
         "prompted": true,
         "moe": false,
-        "size": 14,
-        "act_param": 14,
+        "size": 8,
+        "act_param": 8,
         "date": "2025-01-20"
     },
     "DeepSeek-R1-Distill-Qwen-7B": {
@@ -2192,8 +2192,8 @@
         },
         "prompted": true,
         "moe": false,
-        "size": 14,
-        "act_param": 14,
+        "size": 7,
+        "act_param": 7,
         "date": "2025-01-20"
     },
     "DeepSeek-R1-Distill-Qwen-1.5B": {
@@ -2403,5 +2403,70 @@
         "size": null,
         "act_param": null,
         "date": "2025-02-19"
+    },
+    "WarriorCoder-6.7B (Reproduced)": {
+        "link": "https://arxiv.org/abs/2412.17395",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 14.2,
+            "complete": null
+        },
+        "prompted": true,
+        "moe": false,
+        "size": 6.7,
+        "act_param": 6.7,
+        "date": "2025-02-18"
+    },
+    "Gemma-3-27B-Instruct": {
+        "link": "https://huggingface.co/google/gemma-3-27b-it",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 25.0,
+            "complete": 27.0
+        },
+        "prompted": true,
+        "moe": false,
+        "size": 27,
+        "act_param": 27,
+        "date": "2025-03-12"
+    },
+    "QwQ-32B (w/ Reasoning)": {
+        "link": "https://huggingface.co/Qwen/QwQ-32B",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 29.7,
+            "complete": 28.4
+        },
+        "prompted": true,
+        "moe": false,
+        "size": 32,
+        "act_param": 32,
+        "date": "2025-03-06"
+    },
+    "DeepSeek-V3-0324": {
+        "link": "https://huggingface.co/deepseek-ai/DeepSeek-V3-0324",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 27.7,
+            "complete": 35.8
+        },
+        "prompted": true,
+        "moe": true,
+        "size": 671,
+        "act_param": 37,
+        "date": "2025-03-24"
+    },
+    "Gemini-2.5-Pro-Exp-03-25": {
+        "link": "https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 29.7,
+            "complete": 36.5
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": 37,
+        "date": "2025-03-25"
     }
 }
