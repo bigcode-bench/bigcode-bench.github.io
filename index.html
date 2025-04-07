@@ -219,7 +219,7 @@
                                 Face Leaderboard</a></u>!
                     </li>
                     <li>
-                        🧠 indicates an evaluation setup with the thinking process during generation, which is done without prefilling.
+                        🧠 indicates an evaluation setup without response prefilling during generation, potentially leading to the reasoning process.
                     </li>
                     <li>
                         ✨ marks models evaluated using a chat setting, while others perform direct code completion. We
@@ -1443,7 +1443,7 @@
                     size: model.size,
                     modelType: model.modelType,
                     hasReasoning: hasReasoning,
-                    reasoningType: hasReasoning ? 'With reasoning process' : 'Without reasoning process'
+                    reasoningType: hasReasoning ? 'Without prefilling' : 'With prefilling'
                 };
             });
             
@@ -1451,8 +1451,8 @@
             const originalBarData = [...barData];
             let filteredBarData = [...barData];
             const legendStatus = {
-                'With reasoning process': true,
-                'Without reasoning process': true
+                'Without prefilling': true,
+                'With prefilling': true
             };
             
             // Create a new chart option
@@ -1474,7 +1474,7 @@
                         }
                         
                         let typeLabel = params.data.modelType === 'top' ? "Top by score" : "Latest by date";
-                        let reasoningStatus = params.data.hasReasoning ? "With reasoning process" : "Without reasoning process";
+                        let reasoningStatus = params.data.hasReasoning ? "Without prefilling" : "With prefilling";
                         
                         return `${params.data.name}<br/>
                                 Type: ${typeLabel}<br/>
@@ -1485,7 +1485,7 @@
                     }
                 },
                 legend: {
-                    data: ['With reasoning process', 'Without reasoning process'],
+                    data: ['Without prefilling', 'With prefilling'],
                     top: 0,
                     itemWidth: 25,
                     itemHeight: 14,
@@ -1553,7 +1553,7 @@
             
             // Separate series for legend display only
             topLatestOption.series.push({
-                name: 'With reasoning process',
+                name: 'Without prefilling',
                 type: 'bar',
                 itemStyle: {
                     color: '#5470c6',
@@ -1569,7 +1569,7 @@
             });
             
             topLatestOption.series.push({
-                name: 'Without reasoning process',
+                name: 'With prefilling',
                 type: 'bar',
                 itemStyle: {
                     color: '#91cc75'
@@ -1593,10 +1593,10 @@
                 
                 // Update the chart based on the current legend selection
                 let updatedFilteredData = originalBarData.filter(item => {
-                    if (item.hasReasoning && !legendStatus['With reasoning process']) {
+                    if (item.hasReasoning && !legendStatus['Without prefilling']) {
                         return false;
                     }
-                    if (!item.hasReasoning && !legendStatus['Without reasoning process']) {
+                    if (!item.hasReasoning && !legendStatus['With prefilling']) {
                         return false;
                     }
                     return true;
