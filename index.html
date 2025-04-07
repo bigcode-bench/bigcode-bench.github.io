@@ -123,7 +123,7 @@
 <body>
     <div id="content" class="container-fluid d-flex flex-column align-items-center gap-3">
         <h1 class="text-nowrap mt-5">🌸 BigCodeBench Leaderboard</h1>
-        <div class="alert alert-info border border-info p-4 text-center" style="background-color: #f8f9fa; max-width: 800px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <!-- <div class="alert alert-info border border-info p-4 text-center" style="background-color: #f8f9fa; max-width: 800px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
             <p class="mb-0 fw-bold" style="font-size: 1.3em;">
                 🎉 Check out our latest work
                 <br> 
@@ -133,7 +133,7 @@
                 <br>
                 featuring real-time code execution for any programs!
             </p>
-        </div>
+        </div> -->
         <h3 class="fw-light text-nowrap">
             <small id="warning">BigCodeBench evaluates LLMs with <strong><u>practical</u></strong> and
                 <strong><u>challenging</u></strong> programming tasks.<br /></small>
@@ -145,8 +145,8 @@
             <a href="https://huggingface.co/spaces/bigcode/bigcodebench-leaderboard"><img
                     src="https://img.shields.io/badge/huggingface-🤗_Leaderboard-yellow.svg?style=for-the-badge"
                     alt="leaderboard" class="img-fluid" /></a>
-            <a href="https://arxiv.org/abs/2406.15877"><img
-                    src="https://img.shields.io/badge/arXiv-2406.15877-b31b1b.svg?style=for-the-badge" alt="paper"
+            <a href="https://openreview.net/forum?id=YrycTjllL0"><img
+                    src="https://img.shields.io/badge/ICLR'25-Oral-4caf50.svg?style=for-the-badge" alt="paper"
                     class="img-fluid" /></a>
             <a href="https://huggingface.co/blog/terryyz/bigcodebench-hard"><img
                     src="https://img.shields.io/badge/Blog-Hard-orange.svg?style=for-the-badge" alt="paper"
@@ -167,7 +167,9 @@
           <label class="btn btn-outline-primary" for="Average">Average</label>
       </div>
         <div class="btn-group" role="group" id="ViewType" style="margin-left: 10px;">
-          <input type="radio" class="btn-check" name="viewType" id="SizeView" checked />
+          <input type="radio" class="btn-check" name="viewType" id="TopLatestView" checked />
+          <label class="btn btn-outline-secondary" for="TopLatestView">Recommendation</label>
+          <input type="radio" class="btn-check" name="viewType" id="SizeView" />
           <label class="btn btn-outline-secondary" for="SizeView">Size View</label>
           <input type="radio" class="btn-check" name="viewType" id="TimeView" />
           <label class="btn btn-outline-secondary" for="TimeView">Time View</label>
@@ -176,8 +178,8 @@
             <input class="form-check-input" type="checkbox" id="toggleUnknownSize">
             <label class="form-check-label" for="toggleUnknownSize">Show Models with Unknown Sizes</label>
         </div>
-        <div id="chart" style="width: 100%; height: 600px"></div>
-        <div class="container-fluid d-flex flex-row flex-nowrap">
+        <div id="chart" style="width: 100%; height: 750px; margin-bottom: 0;"></div>
+        <div class="container-fluid d-flex flex-row flex-nowrap" style="margin-top: -40px;">
             <div class="container-fluid d-flex flex-column align-items-center">
                 <table id="origin" class="table table-responsive table-striped table-bordered flex-shrink-1 border border-3"></table>
             </div>
@@ -217,12 +219,8 @@
                                 Face Leaderboard</a></u>!
                     </li>
                     <li>
-                        💤 indicates the models having at least a difference of 1% between the calibrated Pass@1 and the
-                        original one. What does this imply? Instruction-tuned models <u><a
-                                href="https://community.openai.com/t/why-i-think-gpt-is-now-lazy">can be
-                                lazy</a></u>, omitting essential code parts and thus failing on some tasks.
-                        Therefore, we add the missing parts during evaluation, and report the calibrated Pass@1 score as
-                        default,
+                        🧠 indicates an evaluation setup with the thinking process during generation, which is done without prefilling.
+                    </li>
                     <li>
                         ✨ marks models evaluated using a chat setting, while others perform direct code completion. We
                         note that some instruction-tuned models miss the chat template in their tokenizer configuration.
@@ -322,6 +320,7 @@
         const benchmarkRadio = document.getElementById("Benchmark");
         const chartDom = document.getElementById("chart");
         const toggleUnknownSize = document.getElementById("toggleUnknownSize");
+        const topLatestViewRadio = document.getElementById("TopLatestView");
         const sizeViewRadio = document.getElementById("SizeView");
         const timeViewRadio = document.getElementById("TimeView");
         var chart = echarts.init(chartDom);
@@ -329,7 +328,7 @@
         var dataUrl = "results-hard.json"; // Default data source
         var globalData;
         var currentSplit = "average"; // Track current split
-        var currentView = "size"; // Track current view type (size or time)
+        var currentView = "top-latest"; // Track current view type (top-latest, size or time)
 
         // Function to load data based on the selected subset
         function loadData() {
@@ -353,8 +352,10 @@
                   displayTable(originTable, currentSplit);
                   if (currentView === "size") {
                       displayChart(currentSplit, toggleUnknownSize.checked);
-                  } else {
+                  } else if (currentView === "time") {
                       displayTimeChart(currentSplit, toggleUnknownSize.checked);
+                  } else {
+                      displayTopLatestChart(currentSplit, toggleUnknownSize.checked);
                   }
               } else {
                   alert("Failed to load data from " + dataUrl);
@@ -379,6 +380,14 @@
         });
 
         // Event listeners for view type radio buttons
+        topLatestViewRadio.addEventListener("change", function() {
+            if (this.checked) {
+                currentView = "top-latest";
+                resetChartData();
+                displayTopLatestChart(currentSplit, toggleUnknownSize.checked);
+            }
+        });
+
         sizeViewRadio.addEventListener("change", function() {
             if (this.checked) {
                 currentView = "size";
@@ -446,9 +455,9 @@
                 data: ["pass@1*"],
             },
             grid: {
-                left: "1%",
+                left: "10%",
                 right: "4%",
-                bottom: "3%",
+                bottom: "12%",
                 containLabel: true,
             },
             xAxis: {
@@ -466,8 +475,13 @@
                 name: "PASS@1 (greedy decoding)",
                 type: "value",
                 show: true,
+                nameLocation: 'middle',
+                nameGap: 50,
                 nameTextStyle: {
+                    padding: [0, 0, 0, 10],
                     align: "left",
+                    fontSize: 12,
+                    fontWeight: 'bold'
                 },
                 splitLine: {
                     show: true,
@@ -556,9 +570,9 @@
         // Time chart option
         var timeChartOption = {
             grid: {
-                left: "1%",
+                left: "10%",
                 right: "4%",
-                bottom: "3%",
+                bottom: "12%",
                 containLabel: true,
             },
             xAxis: {
@@ -578,8 +592,13 @@
                 name: "PASS@1 (greedy decoding)",
                 type: "value",
                 show: true,
+                nameLocation: 'middle',
+                nameGap: 50,
                 nameTextStyle: {
+                    padding: [0, 0, 0, 10],
                     align: "left",
+                    fontSize: 12,
+                    fontWeight: 'bold'
                 },
                 splitLine: {
                     show: true,
@@ -654,6 +673,9 @@
           const data = globalData
               .filter((row) => row["pass@1"][score] != null)
               .sort((a, b) => b["pass@1"][score] - a["pass@1"][score]);
+          
+          // Find maximum score to create relative scale
+          const maxScore = data.length > 0 ? data[0]["pass@1"][score] : 100;
       
           // Create table header
           const thead = document.createElement("thead");
@@ -708,22 +730,87 @@
                   promptedSymbol.textContent = "✨";
                   modelCell.appendChild(promptedSymbol);
               }
+              
+              // Add 🧠 symbol for models with prefill=false (with thinking process)
+              if (row["prefill"] === false) {
+                  const thinkingSymbol = document.createElement("span");
+                  thinkingSymbol.textContent = "🧠";
+                  modelCell.appendChild(thinkingSymbol);
+              }
       
               // Add open-data and lazy symbols here if needed
       
               dataRow.appendChild(modelCell);
       
+              // Create cell with progress bar for Pass@1
               const passCell = document.createElement("td");
               passCell.classList.add("text-nowrap");
-              passCell.textContent = row["pass@1"][score] + (row["lazy"] ? "💤" : "");
-              passCell.style.backgroundColor = "#EEFFEE";
-              passCell.style.fontWeight = "bold";
+              passCell.style.padding = "4px 8px";
+              
+              // Calculate score percentage relative to the highest score
+              const scoreValue = parseFloat(row["pass@1"][score]);
+              const scorePercentage = (scoreValue / maxScore) * 100;
+              
+              // Create container for the progress bar
+              const barContainer = document.createElement("div");
+              barContainer.style.position = "relative";
+              barContainer.style.width = "100%";
+              barContainer.style.height = "100%";
+              barContainer.style.minHeight = "30px";
+              barContainer.style.display = "flex";
+              barContainer.style.alignItems = "center";
+              barContainer.style.border = "1px solid #e0e0e0";
+              barContainer.style.borderRadius = "4px";
+              barContainer.style.overflow = "hidden";
+              
+              // Create the progress bar
+              const progressBar = document.createElement("div");
+              progressBar.style.position = "absolute";
+              progressBar.style.height = "100%";
+              progressBar.style.width = `${scorePercentage}%`;
+              progressBar.style.backgroundColor = getScoreColor(scoreValue);
+              progressBar.style.opacity = "0.4";
+              progressBar.style.top = "0";
+              progressBar.style.left = "0";
+              
+              // Create text element for the score
+              const scoreText = document.createElement("span");
+              scoreText.textContent = scoreValue + (row["lazy"] ? "💤" : "");
+              scoreText.style.position = "relative";
+              scoreText.style.zIndex = "1";
+              scoreText.style.paddingLeft = "8px";
+              scoreText.style.fontWeight = "bold";
+              scoreText.style.color = "#000";
+              scoreText.style.minWidth = "40px";
+              
+              // Add elements to the cell
+              barContainer.appendChild(progressBar);
+              barContainer.appendChild(scoreText);
+              passCell.appendChild(barContainer);
+              
               dataRow.appendChild(passCell);
       
               tbody.appendChild(dataRow);
           });
       
           table.appendChild(tbody);
+          
+          // Add a note explaining the brain emoji
+          const noteDiv = document.createElement("div");
+          noteDiv.classList.add("mt-2", "small", "text-muted");
+          table.parentNode.appendChild(noteDiv);
+      };
+      
+      // Function to get color based on score value
+      const getScoreColor = (score) => {
+          // Create a gradual color scale from red to yellow to green
+          if (score >= 80) return "#00c853"; // Bright green for excellent scores
+          if (score >= 60) return "#4caf50"; // Green for good scores
+          if (score >= 50) return "#8bc34a"; // Light green for above average
+          if (score >= 40) return "#ffc107"; // Amber for average scores
+          if (score >= 30) return "#ff9800"; // Orange for below average
+          if (score >= 20) return "#ff5722"; // Deep orange for poor
+          return "#f44336";                  // Red for very poor scores
       };
 
         // Function to clean model names by removing parenthetical parts
@@ -1215,9 +1302,12 @@
             if (currentView === "size") {
                 clearChart();
                 displayChart(currentSplit, toggleUnknownSize.checked);
-            } else {
+            } else if (currentView === "time") {
                 resetChartData();
                 displayTimeChart(currentSplit, toggleUnknownSize.checked);
+            } else {
+                resetChartData();
+                displayTopLatestChart(currentSplit, toggleUnknownSize.checked);
             }
         });
 
@@ -1228,9 +1318,12 @@
             if (currentView === "size") {
                 clearChart();
                 displayChart(currentSplit, toggleUnknownSize.checked);
-            } else {
+            } else if (currentView === "time") {
                 resetChartData();
                 displayTimeChart(currentSplit, toggleUnknownSize.checked);
+            } else {
+                resetChartData();
+                displayTopLatestChart(currentSplit, toggleUnknownSize.checked);
             }
         });
 
@@ -1241,9 +1334,12 @@
             if (currentView === "size") {
                 clearChart();
                 displayChart(currentSplit, toggleUnknownSize.checked);
-            } else {
+            } else if (currentView === "time") {
                 resetChartData();
                 displayTimeChart(currentSplit, toggleUnknownSize.checked);
+            } else {
+                resetChartData();
+                displayTopLatestChart(currentSplit, toggleUnknownSize.checked);
             }
         });
 
@@ -1252,9 +1348,12 @@
             if (currentView === "size") {
                 clearChart();
                 displayChart(score, toggleUnknownSize.checked);
-            } else {
+            } else if (currentView === "time") {
                 resetChartData();
                 displayTimeChart(score, toggleUnknownSize.checked);
+            } else {
+                resetChartData();
+                displayTopLatestChart(score, toggleUnknownSize.checked);
             }
         });
 
@@ -1263,6 +1362,258 @@
         window.addEventListener("resize", () => {
             chart.resize();
         });
+
+        // Function to display Recommendation chart
+        const displayTopLatestChart = (score, showUnknownSize = true) => {
+            // Filter models with valid scores for the current split
+            let validModels = globalData.filter((model) => model["pass@1"][score] != null);
+            
+            // Apply size filter if requested
+            if (!showUnknownSize) {
+                validModels = validModels.filter(model => model.size != null);
+            }
+            
+            // Get top 5 models by score
+            let topModels = [...validModels]
+                .sort((a, b) => b["pass@1"][score] - a["pass@1"][score])
+                .slice(0, 5)
+                .map(model => ({...model, modelType: 'top'}));
+            
+            // Keep track of models already in topModels to avoid duplicates
+            const topModelIds = new Set(topModels.map(model => model.Model));
+            
+            // Get latest 5 models by date (excluding those already in topModels)
+            let latestModels = validModels
+                .filter(model => model.date && !topModelIds.has(model.Model))
+                .sort((a, b) => {
+                    const dateA = new Date(a.date);
+                    const dateB = new Date(b.date);
+                    return dateB - dateA;
+                })
+                .slice(0, 5)
+                .map(model => ({...model, modelType: 'latest'}));
+            
+            // If we have fewer than 5 latest models, get more based on score (that aren't already in topModels)
+            if (latestModels.length < 5) {
+                const additionalModels = validModels
+                    .filter(model => !topModelIds.has(model.Model) && 
+                                    !latestModels.some(m => m.Model === model.Model))
+                    .sort((a, b) => b["pass@1"][score] - a["pass@1"][score])
+                    .slice(0, 5 - latestModels.length)
+                    .map(model => ({...model, modelType: 'latest'}));
+                
+                latestModels = [...latestModels, ...additionalModels];
+            }
+
+            // Ensure we have exactly 5 models in each category (or as many as possible)
+            topModels = topModels.slice(0, 5);
+            latestModels = latestModels.slice(0, 5);
+            
+            // Combine all models and prepare data for the chart
+            const allModels = [...topModels, ...latestModels]
+                .sort((a, b) => b["pass@1"][score] - a["pass@1"][score]);
+            
+            // Prepare data for visualization with information about reasoning process
+            const barData = allModels.map(model => {
+                const cleanedName = cleanModelName(model.Model);
+                const displayName = model.date ? `${cleanedName} (${model.date.substring(0, 7)})` : cleanedName;
+                const hasReasoning = model.prefill === false;
+                
+                // Use the score to determine color (higher score = better color)
+                const scoreColor = getScoreColor(model["pass@1"][score]);
+                
+                return {
+                    displayName: displayName,
+                    value: model["pass@1"][score],
+                    itemStyle: { 
+                        color: scoreColor,
+                        opacity: 0.7,
+                        borderRadius: [3, 3, 0, 0],
+                        // Add decal only for models with reasoning
+                        decal: hasReasoning ? {
+                            symbol: 'rect',
+                            dashArrayX: [4, 3],
+                            dashArrayY: [2, 5],
+                            rotation: 0.785398, // 45 degrees in radians
+                            color: 'rgba(0, 0, 0, 0.3)'
+                        } : null
+                    },
+                    name: model.Model,
+                    date: model.date,
+                    size: model.size,
+                    modelType: model.modelType,
+                    hasReasoning: hasReasoning,
+                    reasoningType: hasReasoning ? 'With reasoning process' : 'Without reasoning process'
+                };
+            });
+            
+            // Store original data for filtering when legend is clicked
+            const originalBarData = [...barData];
+            let filteredBarData = [...barData];
+            const legendStatus = {
+                'With reasoning process': true,
+                'Without reasoning process': true
+            };
+            
+            // Create a new chart option
+            const topLatestOption = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params) {
+                        if (!params.data.name) return '';
+                        
+                        // Format the date nicely if available
+                        let dateDisplay = 'Unknown';
+                        if (params.data.date && params.data.date !== 'Unknown Date') {
+                            const dateObj = new Date(params.data.date);
+                            dateDisplay = dateObj.toLocaleDateString('en-US', { 
+                                year: 'numeric', 
+                                month: 'short', 
+                                day: 'numeric' 
+                            });
+                        }
+                        
+                        let typeLabel = params.data.modelType === 'top' ? "Top by score" : "Latest by date";
+                        let reasoningStatus = params.data.hasReasoning ? "With reasoning process" : "Without reasoning process";
+                        
+                        return `${params.data.name}<br/>
+                                Type: ${typeLabel}<br/>
+                                Score: ${params.data.value.toFixed(1)}<br/>
+                                Date: ${dateDisplay}<br/>
+                                Size: ${params.data.size ? params.data.size + 'B' : 'Unknown'}<br/>
+                                ${reasoningStatus}`;
+                    }
+                },
+                legend: {
+                    data: ['With reasoning process', 'Without reasoning process'],
+                    top: 0,
+                    itemWidth: 25,
+                    itemHeight: 14,
+                    textStyle: {
+                        fontSize: 12
+                    },
+                    selected: legendStatus
+                },
+                grid: {
+                    left: '10%',  
+                    right: '4%',
+                    bottom: '12%',
+                    top: '40px', 
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    data: filteredBarData.map(item => item.displayName),
+                    axisLabel: {
+                        interval: 0,
+                        rotate: 45,
+                        margin: 30,
+                        fontSize: 11,
+                        formatter: function(value) {
+                            return value;
+                        }
+                    },
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                },
+                yAxis: {
+                    name: "PASS@1 (greedy decoding)",
+                    type: 'value',
+                    nameLocation: 'middle',
+                    nameGap: 50,
+                    nameTextStyle: {
+                        padding: [0, 0, 0, 10],
+                        align: 'left',
+                        fontSize: 12,
+                        fontWeight: 'bold'
+                    },
+                    max: Math.ceil(Math.max(...allModels.map(model => model["pass@1"][score])) * 1.1)
+                },
+                series: [
+                    {
+                        name: 'Models',
+                        type: 'bar',
+                        barWidth: filteredBarData.length <= 6 ? '60%' : '80%',
+                        barMaxWidth: 160,
+                        label: {
+                            show: true,
+                            position: 'top',
+                            formatter: function(params) {
+                                return params.data.value.toFixed(1);
+                            },
+                            fontSize: 14,
+                            fontWeight: 'bold',
+                            distance: 5
+                        },
+                        data: filteredBarData
+                    }
+                ]
+            };
+            
+            // Separate series for legend display only
+            topLatestOption.series.push({
+                name: 'With reasoning process',
+                type: 'bar',
+                itemStyle: {
+                    color: '#5470c6',
+                    decal: {
+                        symbol: 'rect',
+                        dashArrayX: [4, 3],
+                        dashArrayY: [2, 5],
+                        rotation: 0.785398, // 45 degrees in radians
+                        color: 'rgba(0, 0, 0, 0.3)'
+                    }
+                },
+                data: []
+            });
+            
+            topLatestOption.series.push({
+                name: 'Without reasoning process',
+                type: 'bar',
+                itemStyle: {
+                    color: '#91cc75'
+                },
+                data: []
+            });
+            
+            // Show message if no models were found
+            if (allModels.length === 0) {
+                alert("No valid models found for the selected split. Please check your data.");
+            } else {
+                console.log(`Showing ${topModels.length} top models and ${latestModels.length} latest models in a mixed view`);
+            }
+
+            // Set the chart option
+            chart.setOption(topLatestOption, true);
+            
+            // Add legend click handler
+            chart.on('legendselectchanged', function(params) {
+                legendStatus[params.name] = params.selected[params.name];
+                
+                // Update the chart based on the current legend selection
+                let updatedFilteredData = originalBarData.filter(item => {
+                    if (item.hasReasoning && !legendStatus['With reasoning process']) {
+                        return false;
+                    }
+                    if (!item.hasReasoning && !legendStatus['Without reasoning process']) {
+                        return false;
+                    }
+                    return true;
+                });
+                
+                // Update only what's necessary
+                chart.setOption({
+                    xAxis: {
+                        data: updatedFilteredData.map(item => item.displayName)
+                    },
+                    series: [{
+                        data: updatedFilteredData,
+                        barWidth: updatedFilteredData.length <= 6 ? '60%' : '80%'
+                    }]
+                });
+            });
+        };
     </script>
 </body>
 
