@@ -738,55 +738,46 @@
                   modelCell.appendChild(thinkingSymbol);
               }
       
-              // Add open-data and lazy symbols here if needed
-      
-              dataRow.appendChild(modelCell);
-      
-              // Create cell with progress bar for Pass@1
-              const passCell = document.createElement("td");
-              passCell.classList.add("text-nowrap");
-              passCell.style.padding = "4px 8px";
-              
-              // Calculate score percentage relative to the highest score
+              // Calculate score percentage on an absolute 100% scale
               const scoreValue = parseFloat(row["pass@1"][score]);
-              const scorePercentage = (scoreValue / maxScore) * 100;
+              const scorePercentage = scoreValue; // Use the actual score as percentage (0-100 scale)
               
-              // Create container for the progress bar
-              const barContainer = document.createElement("div");
-              barContainer.style.position = "relative";
-              barContainer.style.width = "100%";
-              barContainer.style.height = "100%";
-              barContainer.style.minHeight = "30px";
-              barContainer.style.display = "flex";
-              barContainer.style.alignItems = "center";
-              barContainer.style.border = "1px solid #e0e0e0";
-              barContainer.style.borderRadius = "4px";
-              barContainer.style.overflow = "hidden";
+              // Update model cell to include the background score bar
+              modelCell.style.position = "relative";
+              modelCell.style.overflow = "hidden";
               
-              // Create the progress bar
+              // Create the progress bar and add it to the model cell first (so it's behind the content)
               const progressBar = document.createElement("div");
               progressBar.style.position = "absolute";
               progressBar.style.height = "100%";
               progressBar.style.width = `${scorePercentage}%`;
               progressBar.style.backgroundColor = getScoreColor(scoreValue);
-              progressBar.style.opacity = "0.4";
+              progressBar.style.opacity = "0.3";
               progressBar.style.top = "0";
               progressBar.style.left = "0";
+              progressBar.style.zIndex = "0";
+              
+              // Insert the progress bar as the first child of the model cell
+              modelCell.insertBefore(progressBar, modelCell.firstChild);
+              
+              // Make sure other content in model cell is above the progress bar
+              modelLink.style.position = "relative";
+              modelLink.style.zIndex = "1";
+              
+              dataRow.appendChild(modelCell);
+      
+              // Create cell for Pass@1 score display (without progress bar)
+              const passCell = document.createElement("td");
+              passCell.classList.add("text-nowrap");
+              passCell.style.padding = "4px 8px";
               
               // Create text element for the score
               const scoreText = document.createElement("span");
               scoreText.textContent = scoreValue + (row["lazy"] ? "💤" : "");
-              scoreText.style.position = "relative";
-              scoreText.style.zIndex = "1";
-              scoreText.style.paddingLeft = "8px";
               scoreText.style.fontWeight = "bold";
-              scoreText.style.color = "#000";
-              scoreText.style.minWidth = "40px";
               
-              // Add elements to the cell
-              barContainer.appendChild(progressBar);
-              barContainer.appendChild(scoreText);
-              passCell.appendChild(barContainer);
+              // Add score text to the pass cell
+              passCell.appendChild(scoreText);
               
               dataRow.appendChild(passCell);
       
