@@ -2715,7 +2715,7 @@
         "date": "2025-04-02",
         "prefill": false
     },
-    "DeepCoder-14B-Preview (w/ Reasoning)": {
+    "DeepCoder-14B-Preview (w/ Reasoning, 12800 tokens)": {
         "link": "https://huggingface.co/agentica-org/DeepCoder-14B-Preview",
         "open-data": "None",
         "pass@1": {
@@ -2727,6 +2727,20 @@
         "size": 14,
         "act_param": 14,
         "date": "2025-04-09",
+        "prefill": false
+    },
+    "Optimus-Alpha": {
+        "link": "https://openrouter.ai/openrouter/optimus-alpha",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 30.4,
+            "complete": 35.1
+        },
+        "prompted": true,
+        "moe": true,
+        "size": null,
+        "act_param": null,
+        "date": "2025-04-10",
         "prefill": false
     }
 }
