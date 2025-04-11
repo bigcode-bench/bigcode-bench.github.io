@@ -2743,7 +2743,7 @@
         "date": "2025-04-10",
         "prefill": false
     },
-    "Grok-3-Mini-Beta (reasoning=low)": {
+    "Grok-3-Mini-Beta (temperature=1, reasoning=low)": {
         "link": "https://x.ai/news/grok-3",
         "open-data": "None",
         "pass@1": {
@@ -2754,10 +2754,10 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "date": "2025-02-15",
+        "date": "2025-04-11",
         "prefill": false
     },
-    "Grok-3-Mini-Beta (reasoning=high)": {
+    "Grok-3-Mini-Beta (temperature=1, reasoning=high)": {
         "link": "https://x.ai/news/grok-3",
         "open-data": "None",
         "pass@1": {
@@ -2768,7 +2768,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "date": "2025-02-15",
+        "date": "2025-04-11",
         "prefill": false
     },
     "Grok-3-Beta": {
@@ -2782,7 +2782,7 @@
         "moe": false,
         "size": null,
         "act_param": null,
-        "date": "2025-02-15",
+        "date": "2025-04-11",
         "prefill": false
     }
 }
