@@ -1040,7 +1040,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "complete": 11.5
+            "complete": 12.8
         },
         "prompted": false,
         "moe": true,
@@ -1753,7 +1753,7 @@
         "link": "https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct",
         "open-data": "None",
         "pass@1": {
-            "instruct": 5.4,
+            "instruct": 4.7,
             "complete": 6.1
         },
         "prompted": true,
@@ -2257,8 +2257,8 @@
         "link": "https://huggingface.co/deepseek-ai/DeepSeek-V3",
         "open-data": "None",
         "pass@1": {
-            "instruct": 27.7,
-            "complete": 39.9
+            "instruct": 28.4,
+            "complete": 40.5
         },
         "prompted": true,
         "moe": true,
@@ -2593,7 +2593,7 @@
         "link": "https://arxiv.org/abs/2412.17395",
         "open-data": "None",
         "pass@1": {
-            "instruct": 14.2,
+            "instruct": 15.5,
             "complete": null
         },
         "prompted": true,
@@ -2664,7 +2664,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 16.9,
-            "complete": 16.9
+            "complete": 15.5
         },
         "prompted": true,
         "moe": true,
@@ -2719,8 +2719,8 @@
         "link": "https://huggingface.co/agentica-org/DeepCoder-14B-Preview",
         "open-data": "None",
         "pass@1": {
-            "instruct": 18.2,
-            "complete": 23.0
+            "instruct": 16.9,
+            "complete": 22.3
         },
         "prompted": true,
         "moe": false,
@@ -2741,6 +2741,48 @@
         "size": null,
         "act_param": null,
         "date": "2025-04-10",
+        "prefill": false
+    },
+    "Grok-3-Mini-Beta (reasoning=low)": {
+        "link": "https://x.ai/news/grok-3",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 31.1,
+            "complete": 31.1
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null,
+        "date": "2025-02-15",
+        "prefill": false
+    },
+    "Grok-3-Mini-Beta (reasoning=high)": {
+        "link": "https://x.ai/news/grok-3",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 23.6,
+            "complete": 29.7
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null,
+        "date": "2025-02-15",
+        "prefill": false
+    },
+    "Grok-3-Beta": {
+        "link": "https://x.ai/news/grok-3",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": 27.0,
+            "complete": 39.2
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null,
+        "date": "2025-02-15",
         "prefill": false
     }
 }
