@@ -732,7 +732,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "complete": 40.3
+            "complete": 40.0
         },
         "prompted": false,
         "moe": false,
@@ -2715,7 +2715,7 @@
         "date": "2025-04-02",
         "prefill": false
     },
-    "DeepCoder-14B-Preview (w/ Reasoning, 12800 tokens)": {
+    "DeepCoder-14B-Preview (w/ Reasoning, 64k tokens, temperature=0.6)": {
         "link": "https://huggingface.co/agentica-org/DeepCoder-14B-Preview",
         "open-data": "None",
         "pass@1": {
