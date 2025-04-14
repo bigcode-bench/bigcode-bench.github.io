@@ -2784,5 +2784,47 @@
         "act_param": null,
         "date": "2025-04-11",
         "prefill": false
+    },
+    "GPT-4.1-2025-04-14": {
+        "link": "https://openai.com/index/gpt-4-1/",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": null,
+            "complete": null
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null,
+        "date": "2025-04-14",
+        "prefill": false
+    },
+    "GPT-4.1-Nano-2025-04-14": {
+        "link": "https://openai.com/index/gpt-4-1/",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": null,
+            "complete": null
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null,
+        "date": "2025-04-14",
+        "prefill": false
+    },
+    "GPT-4.1-Mini-2025-04-14": {
+        "link": "https://openai.com/index/gpt-4-1/",
+        "open-data": "None",
+        "pass@1": {
+            "instruct": null,
+            "complete": null
+        },
+        "prompted": true,
+        "moe": false,
+        "size": null,
+        "act_param": null,
+        "date": "2025-04-14",
+        "prefill": false
     }
 }
