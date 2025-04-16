@@ -788,7 +788,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "complete": 27.4
+            "complete": 27.5
         },
         "prompted": false,
         "moe": false,
@@ -984,7 +984,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "complete": 23.8
+            "complete": 23.5
         },
         "prompted": false,
         "moe": false,
@@ -1040,7 +1040,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "complete": 45.3
+            "complete": 30.6
         },
         "prompted": false,
         "moe": true,
@@ -2817,7 +2817,7 @@
         "link": "https://openai.com/index/gpt-4-1/",
         "open-data": "None",
         "pass@1": {
-            "instruct": null,
+            "instruct": 48.9,
             "complete": null
         },
         "prompted": true,

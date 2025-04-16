@@ -1040,7 +1040,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": null,
-            "complete": 12.8
+            "complete": 11.5
         },
         "prompted": false,
         "moe": true,
@@ -1753,7 +1753,7 @@
         "link": "https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct",
         "open-data": "None",
         "pass@1": {
-            "instruct": 4.7,
+            "instruct": 5.4,
             "complete": 6.1
         },
         "prompted": true,
@@ -2593,7 +2593,7 @@
         "link": "https://arxiv.org/abs/2412.17395",
         "open-data": "None",
         "pass@1": {
-            "instruct": 15.5,
+            "instruct": 14.2,
             "complete": null
         },
         "prompted": true,
@@ -2664,7 +2664,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 16.9,
-            "complete": 15.5
+            "complete": 16.9
         },
         "prompted": true,
         "moe": true,
@@ -2677,8 +2677,8 @@
         "link": "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct",
         "open-data": "None",
         "pass@1": {
-            "instruct": 25.0,
-            "complete": 31.1
+            "instruct": 27.7,
+            "complete": 29.1
         },
         "prompted": true,
         "moe": true,
@@ -2789,8 +2789,8 @@
         "link": "https://openai.com/index/gpt-4-1/",
         "open-data": "None",
         "pass@1": {
-            "instruct": 29.7,
-            "complete": 33.1
+            "instruct": 31.8,
+            "complete": 33.8
         },
         "prompted": true,
         "moe": false,
@@ -2803,8 +2803,8 @@
         "link": "https://openai.com/index/gpt-4-1/",
         "open-data": "None",
         "pass@1": {
-            "instruct": 30.4,
-            "complete": 31.1
+            "instruct": 28.4,
+            "complete": 31.8
         },
         "prompted": true,
         "moe": false,
@@ -2818,7 +2818,7 @@
         "open-data": "None",
         "pass@1": {
             "instruct": 31.8,
-            "complete": 34.5
+            "complete": 31.8
         },
         "prompted": true,
         "moe": false,
